@@ -1,0 +1,1379 @@
+PATIENT_ID,text_diagnosis
+8300,MIGRAINE
+7313,JAUNDICE
+3813,JAUNDICE
+8765,URINARY TRACT INFECTION
+10036,VARICOSE VEINS
+3039,TYPHOID
+9156,IMPETIGO
+8241,CHICKEN POX
+8478,PEPTIC ULCER DISEASE
+8117,PNEUMONIA
+9117,DIABETES
+11099,TYPHOID
+235,PEPTIC ULCER DISEASE
+10437,DIMORPHIC HEMORRHOID
+10704,PNEUMONIA
+19,JAUNDICE
+7350,MALARIA
+5067,ARTHRITIS
+9803,CHICKEN POX
+1783,CERVICAL SPONDYLOSIS
+3925,CHICKEN POX
+7670,PNEUMONIA
+1642,JAUNDICE
+3107,PSORIASIS
+9417,ARTHRITIS
+1138,IMPETIGO
+7910,COMMON COLD
+6268,PSORIASIS
+2657,DIABETES
+10639,IMPETIGO
+8694,VARICOSE VEINS
+9782,DIABETES
+3386,MALARIA
+2645,MIGRAINE
+799,"DIMORPHIC HEMORRHOID is less likely due to the absence of specific symptoms related to it. The symptoms described, such as constipation and stomach discomfort, along with a mild fever, could be related to several conditions. However, given the options, the most likely related condition is not directly listed among the top possibilities based on the given symptoms. Still, considering the closest match based on the given symptoms like stomach discomfort, the closest disease from the list is likely to be PEPTIC ULCER DISEASE or GASTROESOPHAGEAL REFLUX DISEASE, but the presence of constipation and mild fever makes it a bit less straightforward. 
+
+Given the choices and focusing on the symptom of stomach discomfort, the best match is GASTROESOPHAGEAL REFLUX DISEASE. 
+
+GASTROESOPHAGEAL REFLUX DISEASE"
+1725,DENGUE
+6525,DENGUE
+9508,DIMORPHIC HEMORRHOID
+7846,VARICOSE VEINS
+1818,JAUNDICE
+7870,PSORIASIS
+4114,COMMON COLD
+6541,PSORIASIS
+8620,GASTROESOPHAGEAL REFLUX DISEASE
+8426,MALARIA
+11048,GASTROESOPHAGEAL REFLUX DISEASE
+1219,PSORIASIS
+5853,"IMPETIGO is not the best fit as it typically presents with honey-colored crusts rather than pus-filled pimples and blackheads. The symptoms described are more characteristic of ACNE, given the mention of pus-filled pimples and blackheads.
+
+ACNE."
+190,IMPETIGO
+7676,TYPHOID
+6287,TYPHOID
+8412,PNEUMONIA
+10258,GASTROESOPHAGEAL REFLUX DISEASE
+7290,ARTHRITIS
+1964,CERVICAL SPONDYLOSIS
+2886,PNEUMONIA
+6686,TYPHOID
+7646,CERVICAL SPONDYLOSIS
+6066,VARICOSE VEINS
+8552,HYPERTENSION
+7932,MIGRAINE
+4949,PNEUMONIA
+10202,PSORIASIS
+5298,MALARIA
+3738,CHICKEN POX
+2280,JAUNDICE
+10596,CERVICAL SPONDYLOSIS
+5191,ARTHRITIS
+22,PNEUMONIA
+2962,PNEUMONIA
+3415,MIGRAINE
+8397,ARTHRITIS
+9716,PNEUMONIA
+4163,GASTROESOPHAGEAL REFLUX DISEASE
+2815,CHICKEN POX
+5066,PSORIASIS
+9892,PNEUMONIA
+3539,DIMORPHIC HEMORRHOID.
+10064,IMPETIGO
+8798,MALARIA
+2981,JAUNDICE
+2935,PNEUMONIA
+9437,PNEUMONIA
+1351,IMpetigo
+4971,PNEUMONIA
+3509,ACNE
+1261,IMPETIGO
+8137,MIGRAINE
+593,"ANXIETY is not in the list, but based on the given options, the closest match is likely related to a condition that can cause or be associated with the described symptoms. Among the given diseases, the most plausible one is MIGRAINE, as it can sometimes be associated with dizziness and could potentially impact concentration due to the severity of the headache or due to associated symptoms like photophobia or phonophobia, though anxiety is not a direct symptom. However, a more likely condition related to dizziness and anxiousness could be related to HYPERTENSION, as it can cause or be associated with dizziness. Yet, the direct link to loss of concentration and anxiousness is more complex.
+
+The best answer is HYPERTENSION."
+10641,TYPHOID
+321,PNEUMONIA
+4180,CERVICAL SPONDYLOSIS
+1406,GASTROESOPHAGEAL REFLUX DISEASE
+6714,PEPTIC ULCER DISEASE
+4716,ALLERGY
+7100,URINARY TRACT INFECTION
+885,PSORIASIS
+6038,IMPETIGO
+6944,PNEUMONIA
+677,JAUNDICE
+206,GASTROESOPHAGEAL REFLUX DISEASE
+10923,VARICOSE VEINS
+4138,TYPHOID
+7465,HYPERTENSION
+9795,TYPHOID
+8189,DIABETES
+3491,MALARIA
+2534,MALARIA
+7330,PNEUMONIA
+8071,JAUNDICE
+5597,MIGRAINE
+11070,MIGRAINE
+3185,PSORIASIS
+10096,GASTROESOPHAGEAL REFLUX DISEASE
+740,PSORIASIS
+10901,TYPHOID
+2383,CERVICAL SPONDYLOSIS
+2348,"IMpetigo is not the best fit here as it typically presents with honey-colored crusts rather than blackheads. The description is more suggestive of ACNE, given the mention of pus-filled pimples and blackheads along with scurring (likely meaning scarring or crusting) of the skin. 
+
+ACNE."
+94,DIABETES
+7260,PNEUMONIA
+9353,DRUG REACTION
+673,URINARY TRACT INFECTION
+10026,GASTROESOPHAGEAL REFLUX DISEASE
+7725,JAUNDICE
+6617,DIABETES
+6810,ARTHRITIS
+2147,DIMORPHIC HEMORRHOID
+3638,ALLERGY
+5914,GASTROESOPHAGEAL REFLUX DISEASE
+371,PSORIASIS
+3567,BRONCHIAL ASTHMA
+9660,MALARIA
+7757,"DIMORPHIC HEMORRHOID is not the most likely answer as the primary symptoms described are constipation and belly pain. The more likely disease is PEPTIC ULCER DISEASE or GASTROESOPHAGEAL REFLUX DISEASE, but given the symptom of constipation, a more related disease could be considered. However, the closest match from the given options is likely to be DIMORPHIC HEMORRHOID due to the mention of ""belly pain"" and ""constipation"" which can be related to gastrointestinal issues. Yet, a more straightforward match is not available. Between the two closest options, the symptoms more directly align with GASTROESOPHAGEAL REFLUX DISEASE or PEPTIC ULCER DISEASE. However, the exact match from the given list based on the information is not straightforward. 
+
+Given the constraint to choose one disease, the best match is: DIMORPHIC HEMORRHOID is less likely; a more plausible answer is not directly available, but considering the closest possible relation and the given constraint, a reasonable choice could be: PEPTIC ULCER DISEASE.
+
+PEPTIC ULCER DISEASE."
+652,GASTROESOPHAGEAL REFLUX DISEASE
+8466,PSORIASIS
+1957,TYPHOID
+6486,CHICKEN POX
+5846,PSORIASIS
+6809,URINARY TRACT INFECTION
+9537,GASTROESOPHAGEAL REFLUX DISEASE
+3947,PNEUMONIA
+4181,MIGRAINE
+10242,DENGUE
+10151,DIABETES
+3263,PSORIASIS
+5065,COMMON COLD
+10870,PSORIASIS
+8158,IMPETIGO
+2429,PEPTIC ULCER DISEASE
+548,DIABETES
+10675,DIMORPHIC HEMORRHOID
+3206,IMPETIGO
+4012,IMpetigo
+8278,PSORIASIS
+7034,"MALARIA and other diseases have some matching symptoms, but given the combination of high fever, chills, headache, excessive sweating, nausea, and muscle ache, the closest match is MALARIA, although severe itching is not a typical symptom. However, considering the given options and symptoms, the best match is MALARIA. 
+
+MALARIA."
+5631,PSORIASIS
+5366,CERVICAL SPONDYLOSIS
+8044,MIGRAINE
+3238,ALLERGY
+8698,TYPHOID
+4587,MALARIA
+5995,DIMORPHIC HEMORRHOID
+6732,DIABETES
+849,TYPHOID
+936,CHICKEN POX
+2925,GASTROESOPHAGEAL REFLUX DISEASE
+6853,CHICKEN POX
+8706,GASTROESOPHAGEAL REFLUX DISEASE
+3522,DIMORPHIC HEMORRHOID
+6981,GASTROESOPHAGEAL REFLUX DISEASE
+5495,TYPHOID
+2569,TYPHOID
+199,VARICOSE VEINS
+5270,URINARY TRACT INFECTION
+643,ALLERGY
+1228,TYPHOID
+9531,HYPERTENSION
+10891,PEPTIC ULCER DISEASE
+6177,PSORIASIS
+11080,PNEUMONIA
+6679,DENGUE
+218,JAUNDICE.
+10345,PSORIASIS
+8325,ACNE
+10372,CERVICAL SPONDYLOSIS
+8068,PSORIASIS
+7320,HYPERTENSION
+9482,URINARY TRACT INFECTION
+7135,PSORIASIS
+6672,GASTROESOPHAGEAL REFLUX DISEASE
+4738,PSORIASIS
+6622,PNEUMONIA
+10049,PSORIASIS
+2819,DENGUE
+6538,MIGRAINE
+2148,DIMORPHIC HEMORRHOID
+4574,DENGUE
+10364,MALARIA
+6798,"IMPetigo is not the best match here due to the mention of blackheads. The symptoms described - a skin rash with pus-filled pimples and blackheads, along with scurring - are more indicative of ACNE. 
+
+ACNE"
+9747,VARICOSE VEINS
+10669,PEPTIC ULCER DISEASE
+8946,TYPHOID
+4230,CHICKEN POX
+10107,ALLERGY
+6801,GASTROESOPHAGEAL REFLUX DISEASE
+10103,PNEUMONIA
+6040,DIABETES
+10993,URINARY TRACT INFECTION
+6708,PSORIASIS
+9835,PSORIASIS
+6530,ALLERGY
+5003,PSORIASIS
+7460,CERVICAL SPONDYLOSIS
+665,MIGRAINE
+7519,GASTROESOPHAGEAL REFLUX DISEASE
+8014,PNEUMONIA
+3194,DENGUE
+5423,ARTHRITIS
+1193,GASTROESOPHAGEAL REFLUX DISEASE
+832,HYPERTENSION
+5006,URINARY TRACT INFECTION
+7894,PSORIASIS
+11050,MALARIA
+4233,PNEUMONIA
+9016,MIGRAINE
+8939,COMMON COLD
+6165,PSORIASIS
+5254,ARTHRITIS
+9516,MIGRAINE
+8097,DIMORPHIC HEMORRHOID
+1088,URINARY TRACT INFECTION
+95,GASTROESOPHAGEAL REFLUX DISEASE
+4715,CERVICAL SPONDYLOSIS
+483,PSORIASIS
+8465,IMPETIGO
+4032,DIMORPHIC HEMORRHOID
+8991,CERVICAL SPONDYLOSIS
+11091,PNEUMONIA
+7394,PNEUMONIA
+5167,URINARY TRACT INFECTION
+1541,CERVICAL SPONDYLOSIS
+4513,COMMON COLD
+1106,DIABETES
+7729,COMMON COLD
+8736,CERVICAL SPONDYLOSIS
+9687,DIABETES
+4288,VARICOSE VEINS
+4506,IMPETIGO
+3504,JAUNDICE
+9430,GASTROESOPHAGEAL REFLUX DISEASE
+2929,PNEUMONIA
+9854,ALLERGY
+5027,PSORIASIS
+7327,PSORIASIS
+7525,DIMORPHIC HEMORRHOID
+6596,GASTROESOPHAGEAL REFLUX DISEASE
+6903,VARICOSE VEINS
+5873,DENGUE
+1164,CERVICAL SPONDYLOSIS
+6500,DENGUE
+6591,IMPETIGO
+3653,DIMORPHIC HEMORRHOID
+5790,PSORIASIS
+9889,DIABETES
+2194,IMPETIGO
+1453,GASTROESOPHAGEAL REFLUX DISEASE
+5575,MIGRAINE
+2214,HYPERTENSION
+6970,VARICOSE VEINS
+3657,DIMORPHIC HEMORRHOID
+2831,CERVICAL SPONDYLOSIS
+1451,HYPERTENSION
+10532,HYPERTENSION
+232,TYPHOID
+3526,PNEUMONIA
+3511,HYPERTENSION
+552,ARTHRITIS
+3704,"MIGRAINE is not the best fit due to the presence of acid reflux and indigestion. Considering the combination of symptoms like acid reflux and indigestion, the most likely disease is GASTROESOPHAGEAL REFLUX DISEASE. 
+
+GASTROESOPHAGEAL REFLUX DISEASE"
+9347,CERVICAL SPONDYLOSIS
+1828,PNEUMONIA
+4327,PSORIASIS
+3425,PSORIASIS
+6378,CERVICAL SPONDYLOSIS
+10125,CERVICAL SPONDYLOSIS
+1504,DIMORPHIC HEMORRHOID
+10867,DIABETES
+7689,TYPHOID
+1681,VARICOSE VEINS
+3848,URINARY TRACT INFECTION
+6391,ARTHRITIS
+6270,COMMON COLD
+9815,DIABETES
+1263,CERVICAL SPONDYLOSIS
+7476,GASTROESOPHAGEAL REFLUX DISEASE
+2771,ALLERGY
+9496,CERVICAL SPONDYLOSIS
+8346,DIMORPHIC HEMORRHOID
+5061,"None of the given diseases directly correlate with the symptoms you've described, which seem more related to gynecological or hormonal issues. However, based on the closest possible relation and the given options, the most likely related condition from the list could be considered as related to an infection or a condition that might cause discomfort or secondary symptoms. Yet, the given symptoms don't directly match the typical presentations of the listed diseases.
+
+Given the constraint to choose one of the listed diseases and based on the symptom of unexpected vaginal discharge which could be related to an infection, the closest match from the provided list would be URINARY TRACT INFECTION, although it's not a perfect match as UTI typically presents with symptoms like dysuria, frequency, etc. However, considering the available options and looking for the closest in terms of an infection, FUNGAL INFECTION could be a plausible choice due to its potential to cause vaginal discharge.
+
+FUNGAL INFECTION."
+4653,MALARIA
+6621,PNEUMONIA
+9727,JAUNDICE
+8519,GASTROESOPHAGEAL REFLUX DISEASE
+7222,IMPETIGO
+7668,JAUNDICE
+3007,PSORIASIS
+7116,PSORIASIS
+5217,GASTROESOPHAGEAL REFLUX DISEASE
+10148,ALLERGY
+5629,CHICKEN POX
+4145,ARTHRITIS
+559,MIGRAINE
+8431,JAUNDICE
+3563,PNEUMONIA
+2463,HYPERTENSION
+10475,CHICKEN POX
+6388,IMPETIGO
+1208,CHICKEN POX
+5535,PNEUMONIA
+10427,DIABETES
+10412,PSORIASIS
+4961,URINARY TRACT INFECTION
+10800,ALLERGY
+1073,IMPETIGO
+6031,PNEUMONIA
+8521,CHICKEN POX
+10236,PSORIASIS
+10792,JAUNDICE
+8259,PNEUMONIA
+7377,PSORIASIS
+4336,PNEUMONIA
+2960,CHICKEN POX
+1191,PNEUMONIA
+5576,DIABETES
+10452,TYPHOID
+7365,PSORIASIS
+5765,IMPETIGO
+8359,MALARIA
+875,CERVICAL SPONDYLOSIS
+5849,DIABETES
+10155,COMMON COLD
+6424,PNEUMONIA
+10077,IMPETIGO
+428,PNEUMONIA
+10480,IMPETIGO
+7726,MALARIA
+2165,MIGRAINE
+1070,"To classify the given symptoms into one of the listed diseases, let's analyze them step by step.
+
+1. **First Set of Symptoms**: High fever, chills, vomiting, and severe itching.
+   - High fever and chills can be associated with infections such as MALARIA, TYPHOID, or DENGUE.
+   - Vomiting can be seen in various conditions including infections like MALARIA, TYPHOID, and DENGUE, as well as in conditions like FOOD POISONING or GASTROESOPHAGEAL REFLUX DISEASE, but it's not specific.
+   - Severe itching is a significant symptom that can be associated with allergic reactions (ALLERGY), skin conditions like PSORIASIS or FUNGAL INFECTION, or CHICKEN POX.
+
+2. **Second Set of Symptoms**: Headache, excessive sweating, nausea, and muscle ache.
+   - Headache can be a symptom of many conditions including MIGRAINE, infections like MALARIA, TYPHOID, or DENGUE, and other conditions.
+   - Excessive sweating can be seen in infections, anxiety, or conditions like HYPERTHYROIDISM (not listed).
+   - Nausea is a non-specific symptom that can be associated with many conditions, including infections and gastrointestinal issues.
+   - Muscle ache is a common symptom in infections like MALARIA, DENGUE, and TYPHOID, as well as in conditions like ARTHRITIS or FIBROMYALGIA (not listed).
+
+Given the combination of symptoms:
+- The presence of high fever, chills, and muscle ache in both sets of symptoms points towards an infectious cause.
+- Severe itching in the first set is notable.
+
+Among the given diseases:
+- **MALARIA** and **DENGUE** are both characterized by high fever, chills, and can cause body aches. However, severe itching is not a hallmark symptom of either.
+- **TYPHOID** can also present with fever, headache, and body aches but again, severe itching is not a typical symptom.
+- **CHICKEN POX** is associated with itching due to the rash, fever, and can cause a feeling of being unwell.
+
+Considering the symptoms and the given options, **CHICKEN POX** is a plausible diagnosis due to the presence of severe itching alongside fever and other non-specific symptoms like feeling awful, which could be related to the overall discomfort caused by the condition.
+
+CHICKEN POX."
+8702,IMPETIGO
+4376,DIMORPHIC HEMORRHOID.
+6937,PNEUMONIA
+7724,DIABETES
+1316,URINARY TRACT INFECTION
+10847,VARICOSE VEINS
+9621,PSORIASIS
+2693,IMPETIGO
+398,CERVICAL SPONDYLOSIS
+9514,ARTHRITIS
+575,PNEUMONIA
+9426,PEPTIC ULCER DISEASE
+5905,IMPETIGO
+5130,DIABETES
+4017,GASTROESOPHAGEAL REFLUX DISEASE
+2656,TYPHOID
+5908,ALLERGY
+784,IMPETIGO
+5033,IMPETIGO
+10426,ACNE
+6777,IMPETIGO
+1614,MALARIA
+1648,PNEUMONIA
+3942,COMMON COLD
+2959,PNEUMONIA
+9102,DENGUE
+11101,DIMORPHIC HEMORRHOID
+7606,CERVICAL SPONDYLOSIS
+10445,DIABETES
+8937,ALLERGY
+9748,PNEUMONIA
+7989,DIMORPHIC HEMORRHOID
+10217,COMMON COLD
+3181,MIGRAINE
+9230,PNEUMONIA
+3763,TYPHOID
+8175,ARTHRITIS
+5015,PSORIASIS
+3095,URINARY TRACT INFECTION
+8440,DRUG REACTION
+2473,GASTROESOPHAGEAL REFLUX DISEASE
+2727,GASTROESOPHAGEAL REFLUX DISEASE
+5662,PNEUMONIA
+8799,IMPETIGO
+662,PSORIASIS
+10533,BRONCHIAL ASTHMA
+7047,COMMON COLD
+7358,DENGUE
+8718,ARTHRITIS
+7388,"IMpetigo is not likely due to the description of ""blackheads and pus-filled pimples"" and ""skin has also been scurrying about"" (which doesn't make medical sense, but could imply itching or crawling sensation). However, the description most closely matches IMPETIGO is not the best fit. A more likely match is ACNE due to the mention of ""blackheads and pus-filled pimples."" 
+
+ACNE."
+8968,GASTROESOPHAGEAL REFLUX DISEASE
+6864,PNEUMONIA
+7107,"To classify the given symptoms into one of the provided diseases, let's analyze the symptoms and match them with the possible diseases.
+
+The symptoms described are swollen lymph nodes causing discomfort in the neck and armpits. Swollen lymph nodes are a sign of the body's immune response to infection or inflammation. Several diseases can cause swollen lymph nodes, but we need to identify which one is listed among the given options.
+
+Let's directly evaluate the given diseases:
+
+1. **VARICOSE VEINS** - Unrelated to swollen lymph nodes.
+2. **DRUG REACTION** - Could potentially cause swollen lymph nodes, but it's not the most directly related condition listed.
+3. **DIABETES** - Not directly associated with swollen lymph nodes as a primary symptom.
+4. **MALARIA** - Can cause lymphadenopathy (swollen lymph nodes), but it's not the most common initial presentation.
+5. **URINARY TRACT INFECTION** - Not typically associated with swollen lymph nodes in the neck and armpits.
+6. **IMPETIGO** - A skin infection that can cause lymphadenopathy.
+7. **ACNE** - Can cause some lymph node swelling if infected, but not typically widespread.
+8. **HYPERTENSION** - Not directly related to swollen lymph nodes.
+9. **PEPTIC ULCER DISEASE** - Not directly associated with swollen lymph nodes.
+10. **CHICKEN POX** - Can cause swollen lymph nodes.
+11. **TYPHOID** - Can cause lymphadenopathy.
+12. **DENGUE** - Can cause lymphadenopathy.
+13. **PNEUMONIA** - Can be associated with lymphadenopathy, especially if it's due to certain infections.
+14. **MIGRAINE** - Not related to swollen lymph nodes.
+15. **GASTROESOPHAGEAL REFLUX DISEASE** - Not directly related to swollen lymph nodes.
+16. **PSORIASIS** - Can have associated lymphadenopathy, but it's more about skin symptoms.
+17. **COMMON COLD** - Can cause mild lymphadenopathy.
+18. **CERVICAL SPONDYLOSIS** - Relates to neck pain but not directly to swollen lymph nodes.
+19. **FUNGAL INFECTION** - Can cause lymphadenopathy, depending on the type and severity.
+20. **ARTHRITIS** - Some forms can cause lymphadenopathy, but it's not a primary symptom.
+21. **ALLERGY** - Can cause lymph node swelling, but it's not the most common or severe symptom.
+22. **BRONCHIAL ASTHMA** - Not directly related to swollen lymph nodes.
+23. **JAUNDICE** - Not directly related to swollen lymph nodes, though some underlying causes might be.
+24. **DIMORPHIC HEMORRHOID** - Not directly related to swollen lymph nodes.
+
+Given the symptom of swollen lymph nodes, diseases like **CHICKEN POX**, **TYPHOID**, **DENGUE**, and **COMMON COLD** are potential candidates because they can cause lymphadenopathy. However, **CHICKEN POX** is a more likely candidate because it is known for causing a rash and swollen lymph nodes among its symptoms.
+
+The best answer is **CHICKEN POX**."
+10883,PSORIASIS
+1327,GASTROESOPHAGEAL REFLUX DISEASE
+231,DIMORPHIC HEMORRHOID
+4231,ARTHRITIS
+4073,DIABETES
+8444,TYPHOID
+3165,VARICOSE VEINS
+9981,COMMON COLD
+7021,VARICOSE VEINS
+4250,CHICKEN POX
+9413,DIABETES
+8481,VARICOSE VEINS
+10626,PEPTIC ULCER DISEASE
+2827,DIABETES
+6126,PNEUMONIA
+5992,ALLERGY
+9776,DIMORPHIC HEMORRHOID
+10496,DIMORPHIC HEMORRHOID
+5481,TYPHOID
+2702,DENGUE
+9105,ALLERGY
+5595,IMPETIGO
+2160,TYPHOID
+4821,ARTHRITIS
+10223,PSORIASIS
+3079,VARICOSE VEINS
+761,MALARIA
+10418,DIABETES
+6831,DENGUE
+4240,GASTROESOPHAGEAL REFLUX DISEASE
+7564,ALLERGY
+3389,IMPETIGO
+9427,JAUNDICE
+3306,CHICKEN POX
+4771,DIABETES
+7630,URINARY TRACT INFECTION
+2791,MALARIA
+10525,PNEUMONIA
+3974,DIMORPHIC HEMORRHOID
+9420,URINARY TRACT INFECTION
+6151,MALARIA
+1863,ACNE
+6091,PNEUMONIA
+3144,PNEUMONIA
+7172,ACNE
+3279,GASTROESOPHAGEAL REFLUX DISEASE
+5460,DIABETES
+8232,PNEUMONIA
+6813,GASTROESOPHAGEAL REFLUX DISEASE
+7875,GASTROESOPHAGEAL REFLUX DISEASE
+5008,DIMORPHIC HEMORRHOID
+9305,VARICOSE VEINS
+5931,CERVICAL SPONDYLOSIS
+4142,TYPHOID
+1240,PNEUMONIA
+8219,PEPTIC ULCER DISEASE
+10567,TYPHOID
+2583,CERVICAL SPONDYLOSIS
+1211,CERVICAL SPONDYLOSIS
+4837,MIGRAINE
+9089,JAUNDICE
+6588,DIMORPHIC HEMORRHOID
+8823,TYPHOID
+4801,TYPHOID
+5212,GASTROESOPHAGEAL REFLUX DISEASE
+5744,PNEUMONIA
+3805,CERVICAL SPONDYLOSIS
+3961,CHICKEN POX
+2470,DENGUE
+88,CHICKEN POX
+5515,PEPTIC ULCER DISEASE
+6384,ALLERGY
+2357,DIMORPHIC HEMORRHOID.
+2093,PSORIASIS
+7511,TYPHOID
+4437,DIMORPHIC HEMORRHOID
+9092,ALLERGY
+6068,JAUNDICE
+1113,PSORIASIS
+10802,PEPTIC ULCER DISEASE
+9194,IMPETIGO
+9288,DIMORPHIC HEMORRHOID
+8560,MIGRAINE
+6370,PEPTIC ULCER DISEASE
+4475,ARTHRITIS
+427,CERVICAL SPONDYLOSIS
+3648,DENGUE
+7349,ARTHRITIS
+6857,GASTROESOPHAGEAL REFLUX DISEASE
+4713,PEPTIC ULCER DISEASE
+952,IMPETIGO
+6701,"IMPETIGO is not the best fit here as it typically presents with honey-colored crusts, not blackheads. The description more closely matches ACNE, given the mention of pus-filled pimples and blackheads, along with sensitive skin.
+
+ACNE"
+2643,PNEUMONIA
+11069,COMMON COLD
+5840,DIABETES
+4907,GASTROESOPHAGEAL REFLUX DISEASE
+1437,DIMORPHIC HEMORRHOID
+2898,PSORIASIS
+6913,MIGRAINE
+3104,ARTHRITIS
+1784,JAUNDICE.
+1910,"BRONCHIAL ASTHMA is not the best fit due to the presence of symptoms like scratchy throat and nasal discharge. The combination of wheezing, feeling sick, scratchy throat, and nasal discharge is more indicative of a respiratory issue that involves an allergic or infectious component. However, the closest match from the given options, focusing on wheezing and considering the other symptoms, would be BRONCHIAL ASTHMA, but a more likely match is COMMON COLD or ALLERGY due to the presence of symptoms like scratchy throat and nasal discharge. Between these, ALLERGY is a strong candidate because it can cause a variety of respiratory symptoms including wheezing. However, the most encompassing choice given the broad range of symptoms (wheezing, feeling sick, scratchy throat, nasal discharge) is likely to be ALLERGY.
+
+ALLERGY"
+7084,TYPHOID
+3607,VARICOSE VEINS
+8143,PEPTIC ULCER DISEASE
+3118,ARTHRITIS
+2754,ALLERGY
+1145,GASTROESOPHAGEAL REFLUX DISEASE
+1352,CERVICAL SPONDYLOSIS
+2015,PSORIASIS
+9460,HYPERTENSION
+3323,DENGUE
+8009,DENGUE
+5594,VARICOSE VEINS
+7467,DIABETES
+8354,DIMORPHIC HEMORRHOID
+9934,DIABETES
+2455,COMMON COLD
+10940,GASTROESOPHAGEAL REFLUX DISEASE
+9499,GASTROESOPHAGEAL REFLUX DISEASE
+8550,"VERTIGO is not an option, however, based on the given symptoms, a related condition that is listed could be considered. The closest match from the given list is: CERVICAL SPONDYLOSIS."
+4259,GASTROESOPHAGEAL REFLUX DISEASE
+3586,TYPHOID
+3063,MALARIA
+2248,VARICOSE VEINS
+4646,GASTROESOPHAGEAL REFLUX DISEASE
+5537,PSORIASIS
+9751,CERVICAL SPONDYLOSIS
+10937,"MIGRAINE is not the best fit due to the diverse range of symptoms described. The presence of digestive difficulties including indigestion and acid reflux, alongside other symptoms, suggests a condition that affects multiple systems. However, upon closer inspection, the combination of symptoms like excessive appetite, digestive difficulties including indigestion, and acid reflux can be related to several conditions. The key is identifying a condition that encompasses or is closely related to these symptoms.
+
+Given the symptoms: frequent headaches, blurred vision, excessive appetite, sore neck, anxiety, irritability, and digestive difficulties including indigestion and acid reflux, the best match is likely related to a condition that can cause or is associated with multiple systemic or related symptoms.
+
+The symptoms of digestive difficulties, including indigestion and acid reflux, are strongly indicative of GASTROESOPHAGEAL REFLUX DISEASE. While other symptoms like headaches, anxiety, and irritability can be associated with various conditions, the direct mention of digestive issues points towards GASTROESOPHAGEAL REFLUX DISEASE as a likely classification.
+
+GASTROESOPHAGEAL REFLUX DISEASE."
+5193,IMPETIGO
+3494,CERVICAL SPONDYLOSIS
+4326,CHICKEN POX
+2689,PNEUMONIA
+4824,DIMORPHIC HEMORRHOID
+3779,JAUNDICE
+3472,TYPHOID
+6634,DENGUE
+4253,CHICKEN POX
+6962,PSORIASIS
+10956,PNEUMONIA
+690,PEPTIC ULCER DISEASE
+5749,CERVICAL SPONDYLOSIS
+217,MALARIA
+400,GASTROESOPHAGEAL REFLUX DISEASE
+752,TYPHOID
+10494,PSORIASIS
+4692,IMpetigo
+9869,CERVICAL SPONDYLOSIS
+6167,GASTROESOPHAGEAL REFLUX DISEASE
+3568,CERVICAL SPONDYLOSIS
+9192,CHICKEN POX
+80,PSORIASIS
+6669,DIMORPHIC HEMORRHOID
+1120,"PSORIASIS is not the best fit due to the mention of ""blackheads and pus-filled pimples"". The description more closely aligns with ACNE due to the specific mention of ""blackheads and pus-filled pimples"".
+
+ACNE."
+8869,DIMORPHIC HEMORRHOID
+5209,MIGRAINE
+9532,JAUNDICE
+8585,JAUNDICE
+7941,COMMON COLD
+8280,DIMORPHIC HEMORRHOID
+6397,CHICKEN POX
+970,DENGUE
+10447,IMPETIGO
+3299,URINARY TRACT INFECTION
+4417,BRONCHIAL ASTHMA
+8700,PSORIASIS
+26,PSORIASIS
+7672,PSORIASIS
+2456,DIMORPHIC HEMORRHOID
+5598,CHICKEN POX
+2260,BRONCHIAL ASTHMA
+8865,DIMORPHIC HEMORRHOID
+8893,"BRONCHIAL ASTHMA is not the best fit due to the absence of specific asthma symptoms like wheezing. The presence of coughing up a lot of goo (likely mucus) and chest heaviness could suggest a respiratory issue. However, the combination of symptoms like red and swollen eyes, sinus blockage, loss of smell, and muscle soreness points more towards an allergic reaction or a common cold. Between the given options, ALLERGY is the most likely disease as it can cause red and swollen eyes, sinus issues, and loss of smell. 
+
+ALLERGY"
+6574,GASTROESOPHAGEAL REFLUX DISEASE
+415,JAUNDICE
+2527,CHICKEN POX
+10462,MIGRAINE
+10431,HYPERTENSION
+9222,DIMORPHIC HEMORRHOID
+2956,DENGUE
+2888,CERVICAL SPONDYLOSIS
+1876,URINARY TRACT INFECTION
+5242,DIABETES
+8871,GASTROESOPHAGEAL REFLUX DISEASE
+4504,PSORIASIS
+8251,ACNE
+8258,COMMON COLD
+2721,MIGRAINE
+4844,"DIMORPHIC HEMORRHOID is less likely as it is related to rectal issues. The given symptoms like changes in bowel movements (constipation and diarrhea), loss of appetite, and fatigue are more related to a gastrointestinal issue. Among the given options, the closest match is PEPTIC ULCER DISEASE, as it can cause changes in appetite and bowel movements, and fatigue is a common associated symptom.
+
+PEPTIC ULCER DISEASE"
+4412,ACNE
+1979,ARTHRITIS
+7165,DIABETES
+7413,ACNE
+6294,PSORIASIS
+1324,JAUNDICE
+9675,"To classify the given symptoms into one of the provided diseases, let's analyze the symptoms and match them with the possible diseases.
+
+The symptoms described are:
+1. Vomiting
+2. Stomach pains
+3. Dizziness
+4. Loss of appetite
+5. Weakness
+6. Pain in arms, back, and neck
+
+First, let's group the symptoms:
+- Gastrointestinal symptoms: vomiting, stomach pains, loss of appetite.
+- General symptoms: dizziness, weakness.
+- Musculoskeletal symptoms: pain in arms, back, and neck.
+
+Now, let's match these with the given diseases:
+- Gastrointestinal symptoms are seen in diseases like PEPTIC ULCER DISEASE and GASTROESOPHAGEAL REFLUX DISEASE.
+- The combination of gastrointestinal symptoms and musculoskeletal pain (arms, back, and neck) is not directly indicative of most of the listed diseases but could be related to a few.
+
+Let's directly examine the most likely diseases based on the given symptoms:
+- **GASTROESOPHAGEAL REFLUX DISEASE (GERD)**: Can cause stomach pains and could be associated with some of the other symptoms indirectly, but the primary symptom is usually heartburn, not explicitly mentioned.
+- **PEPTIC ULCER DISEASE**: Could explain the vomiting, stomach pains, and loss of appetite. The dizziness and weakness could be secondary due to the lack of appetite and possible anemia or dehydration.
+- **CERVICAL SPONDYLOSIS**: Could explain the pain in the neck, arms, and back.
+
+However, upon closer inspection, while the musculoskeletal symptoms (pain in arms, back, and neck) could be related to **CERVICAL SPONDYLOSIS**, this condition doesn't directly explain the gastrointestinal symptoms.
+
+The combination of symptoms like vomiting, stomach pains, loss of appetite, dizziness, and weakness seems to be more directly related to **PEPTIC ULCER DISEASE**, as it can cause significant gastrointestinal distress and secondary symptoms like weakness and dizziness.
+
+PEPTIC ULCER DISEASE."
+101,URINARY TRACT INFECTION
+3634,DIMORPHIC HEMORRHOID
+6071,PSORIASIS
+8913,DENGUE
+8930,ARTHRITIS
+5258,GASTROESOPHAGEAL REFLUX DISEASE
+132,PSORIASIS
+2861,DENGUE
+2964,CHICKEN POX
+9475,CERVICAL SPONDYLOSIS
+5884,PNEUMONIA
+1408,PEPTIC ULCER DISEASE
+6834,TYPHOID
+3708,PSORIASIS
+994,MIGRAINE
+3266,CERVICAL SPONDYLOSIS
+9044,VARICOSE VEINS
+5794,PSORIASIS
+6947,JAUNDICE
+9857,IMpetigo
+5668,CERVICAL SPONDYLOSIS
+9866,DIMORPHIC HEMORRHOID
+3375,VARICOSE VEINS
+9897,PNEUMONIA
+1439,JAUNDICE
+4910,MALARIA
+9805,ARTHRITIS
+4996,PNEUMONIA
+8365,TYPHOID
+4876,URINARY TRACT INFECTION
+9255,DIMORPHIC HEMORRHOID
+6224,DIABETES
+9851,GASTROESOPHAGEAL REFLUX DISEASE
+10584,GASTROESOPHAGEAL REFLUX DISEASE
+7453,JAUNDICE
+10676,PSORIASIS.
+8435,ARTHRITIS
+3967,GASTROESOPHAGEAL REFLUX DISEASE
+2631,URINARY TRACT INFECTION
+4608,DIABETES
+3210,JAUNDICE
+3345,DIABETES
+862,VARICOSE VEINS
+5939,HYPERTENSION
+5416,IMPETIGO
+3674,TYPHOID
+6926,PNEUMONIA
+7704,MALARIA
+10175,PSORIASIS
+1853,IMPETIGO
+10371,GASTROESOPHAGEAL REFLUX DISEASE
+7581,DIABETES
+1785,CHICKEN POX
+3219,HYPERTENSION
+1927,CERVICAL SPONDYLOSIS
+4866,IMPETIGO
+4934,GASTROESOPHAGEAL REFLUX DISEASE
+4041,PNEUMONIA
+1071,PNEUMONIA
+9219,VARICOSE VEINS
+6511,CHICKEN POX
+3891,BRONCHIAL ASTHMA
+6991,PSORIASIS
+7103,ARTHRITIS
+1200,DENGUE
+882,GASTROESOPHAGEAL REFLUX DISEASE
+2778,PNEUMONIA
+6412,PNEUMONIA
+6534,URINARY TRACT INFECTION
+4802,CERVICAL SPONDYLOSIS
+2633,DIMORPHIC HEMORRHOID
+221,URINARY TRACT INFECTION
+4948,DIMORPHIC HEMORRHOID.
+5957,VARICOSE VEINS
+9932,"PSORIASIS is not the best fit due to the description of pus-filled pimples and blackheads. The description more closely aligns with IMPETIGO, which is characterized by pus-filled pimples. 
+
+IMPETIGO"
+1695,CERVICAL SPONDYLOSIS
+4639,CHICKEN POX.
+9911,DENGUE
+2154,COMMON COLD
+2110,JAUNDICE
+3038,DIABETES
+9848,DIABETES
+7055,DIABETES
+9382,MALARIA
+5044,PSORIASIS
+928,DIMORPHIC HEMORRHOID
+5284,URINARY TRACT INFECTION
+10752,ALLERGY
+8139,CHICKEN POX
+9523,PSORIASIS
+7734,TYPHOID
+307,TYPHOID
+7531,MALARIA
+9469,PSORIASIS
+9722,CHICKEN POX
+6001,DIABETES
+9551,DIABETES
+8343,PSORIASIS
+5200,PNEUMONIA
+5042,DENGUE
+2680,ACNE
+8920,CERVICAL SPONDYLOSIS
+7466,PSORIASIS
+1694,COMMON COLD
+5875,CHICKEN POX
+7019,TYPHOID
+8005,TYPHOID
+3221,MALARIA
+2999,DENGUE
+1799,TYPHOID
+5326,VARICOSE VEINS
+6402,DIABETES
+945,GASTROESOPHAGEAL REFLUX DISEASE
+4785,MALARIA
+1098,HYPERTENSION
+9498,IMPETIGO
+5241,ALLERGY
+4421,GASTROESOPHAGEAL REFLUX DISEASE
+2927,PSORIASIS
+8641,GASTROESOPHAGEAL REFLUX DISEASE
+5722,MIGRAINE
+4349,TYPHOID
+120,PSORIASIS
+2340,URINARY TRACT INFECTION
+1835,PNEUMONIA
+3021,GASTROESOPHAGEAL REFLUX DISEASE
+2520,CERVICAL SPONDYLOSIS
+8126,CERVICAL SPONDYLOSIS
+6210,IMpetigo
+124,CHICKEN POX
+9187,PSORIASIS
+10685,GASTROESOPHAGEAL REFLUX DISEASE
+9056,PNEUMONIA
+7059,MIGRAINE
+1289,PNEUMONIA
+2459,CHICKEN POX
+9509,DENGUE
+7821,COMMON COLD
+7931,"DIMORPHIC HEMORRHOID is highly unlikely given the symptoms. The symptoms described are more related to respiratory and gastrointestinal issues. Among the given options, the closest match based on the symptoms like difficulty breathing, chest aches, and sickness (nausea) could be related to GASTROESOPHAGEAL REFLUX DISEASE or another condition. However, ""huge throat"" is not a standard medical symptom description, but it could imply difficulty swallowing or a sensation of throat swelling or obstruction. The symptom of nausea and chest aches at night could be related to GASTROESOPHAGEAL REFLUX DISEASE.
+
+GASTROESOPHAGEAL REFLUX DISEASE."
+1958,CERVICAL SPONDYLOSIS
+2375,URINARY TRACT INFECTION
+6049,IMPETIGO
+238,PNEUMONIA
+10825,PSORIASIS
+8237,IMPETIGO
+10301,ARTHRITIS
+9984,DENGUE
+5779,"None of the given diseases directly correlate with the symptoms described (gaining a lot of weight, being quite fat, having a varying appetite, and desires for various things). However, the closest potential link based on the information given could be related to diseases that might indirectly cause or be associated with changes in appetite or weight. Among the listed diseases, DIABETES is one condition that can cause changes in appetite and weight. 
+
+DIABETES"
+570,IMPETIGO
+8451,CHICKEN POX
+8855,CHICKEN POX
+9818,VARICOSE VEINS
+7491,COMMON COLD
+1519,MIGRAINE
+3620,DENGUE
+6442,MIGRAINE
+3558,JAUNDICE.
+198,PSORIASIS
+7626,PNEUMONIA
+5673,PNEUMONIA
+4901,GASTROESOPHAGEAL REFLUX DISEASE
+8548,DIMORPHIC HEMORRHOID
+3784,PSORIASIS
+3557,IMPETIGO
+7656,IMPETIGO
+10979,COMMON COLD
+4836,CERVICAL SPONDYLOSIS
+10194,COMMON COLD
+1878,MIGRAINE
+6506,PNEUMONIA
+4508,DIMORPHIC HEMORRHOID.
+5323,ARTHRITIS
+2277,PNEUMONIA
+3860,GASTROESOPHAGEAL REFLUX DISEASE
+7184,DENGUE
+5639,ALLERGY
+3103,PNEUMONIA
+6692,JAUNDICE.
+6103,DIMORPHIC HEMORRHOID
+1507,DIMORPHIC HEMORRHOID
+7088,MIGRAINE
+2288,MIGRAINE
+6793,"None of the given diseases directly relate to the symptoms described (visual disruptions, seeing things as distorted, and eyesight difficulties). However, based on the closest possible relation to the given options, the most plausible disease is MIGRAINE, as it can sometimes cause visual disturbances. 
+
+MIGRAINE"
+2589,CHICKEN POX
+4874,URINARY TRACT INFECTION
+2561,DENGUE
+8517,TYPHOID
+2345,GASTROESOPHAGEAL REFLUX DISEASE
+3649,MIGRAINE
+1123,MALARIA
+9273,VARICOSE VEINS
+4518,VARICOSE VEINS
+10613,DIMORPHIC HEMORRHOID
+6368,GASTROESOPHAGEAL REFLUX DISEASE
+3468,PNEUMONIA
+8903,PSORIASIS
+9943,PSORIASIS
+10726,URINARY TRACT INFECTION
+171,PNEUMONIA
+2384,PNEUMONIA
+29,TYPHOID
+4788,JAUNDICE
+5622,ARTHRITIS
+1390,PSORIASIS
+3692,PSORIASIS
+8796,VARICOSE VEINS
+1871,MIGRAINE
+3554,PNEUMONIA
+1382,TYPHOID
+6915,DENGUE
+10801,PSORIASIS
+4495,GASTROESOPHAGEAL REFLUX DISEASE
+7248,IMPETIGO
+9812,JAUNDICE
+3847,ALLERGY
+10300,GASTROESOPHAGEAL REFLUX DISEASE
+5303,PEPTIC ULCER DISEASE
+1137,CERVICAL SPONDYLOSIS
+10246,IMpetigo
+1576,CHICKEN POX
+7464,URINARY TRACT INFECTION
+7152,CHICKEN POX
+3715,PNEUMONIA
+4124,CERVICAL SPONDYLOSIS
+388,COMMON COLD
+4900,IMPETIGO
+10032,DIABETES
+534,ALLERGY
+7796,JAUNDICE
+11047,DIABETES
+4746,PNEUMONIA
+9227,PSORIASIS
+7644,VARICOSE VEINS
+8298,MIGRAINE
+9583,MIGRAINE
+4994,PNEUMONIA
+9600,PSORIASIS
+8829,CERVICAL SPONDYLOSIS
+10401,GASTROESOPHAGEAL REFLUX DISEASE
+4641,MIGRAINE
+6346,URINARY TRACT INFECTION
+7136,MIGRAINE
+2980,TYPHOID
+7914,CHICKEN POX
+1965,ALLERGY
+7286,PNEUMONIA
+7387,CERVICAL SPONDYLOSIS
+779,COMMON COLD
+6011,VARICOSE VEINS
+8328,TYPHOID
+676,MALARIA
+3401,JAUNDICE.
+8648,GASTROESOPHAGEAL REFLUX DISEASE
+3133,VARICOSE VEINS
+1171,PNEUMONIA
+3583,JAUNDICE
+7715,CERVICAL SPONDYLOSIS
+4299,ARTHRITIS
+6030,CERVICAL SPONDYLOSIS
+4381,COMMON COLD
+6891,URINARY TRACT INFECTION
+6080,PNEUMONIA
+3369,PSORIASIS
+1792,DIABETES
+2820,COMMON COLD
+9169,PNEUMONIA
+9410,TYPHOID
+2679,VARICOSE VEINS
+14,URINARY TRACT INFECTION
+7816,TYPHOID
+7643,PNEUMONIA
+229,IMPETIGO
+10043,ALLERGY
+8371,DIMORPHIC HEMORRHOID.
+710,ARTHRITIS
+6118,PSORIASIS
+5730,"DIMORPHIC HEMORRHOID is not likely as it typically involves symptoms related to the rectal area. The given symptoms are more related to the stomach. Among the given options, the closest match is GASTROESOPHAGEAL REFLUX DISEASE or PEPTIC ULCER DISEASE, but the specific mention of ""constipation and stomach ache"" is more directly related to GASTROESOPHAGEAL REFLUX DISEASE, however, the most likely disease is PEPTIC ULCER DISEASE.
+
+PEPTIC ULCER DISEASE."
+10521,CHICKEN POX
+3685,PSORIASIS
+10983,PNEUMONIA
+10900,CHICKEN POX
+7678,DIABETES
+6819,TYPHOID
+9868,DENGUE
+8546,TYPHOID
+9744,COMMON COLD
+7899,DIABETES
+2736,PNEUMONIA
+9029,PSORIASIS
+5088,PSORIASIS
+8775,COMMON COLD
+1121,PSORIASIS
+335,PNEUMONIA
+1918,DENGUE
+5295,PNEUMONIA
+8662,CHICKEN POX
+1626,DIABETES
+5292,CHICKEN POX
+8184,URINARY TRACT INFECTION
+5082,MIGRAINE
+1569,PNEUMONIA
+5552,PSORIASIS
+781,DIMORPHIC HEMORRHOID
+405,PNEUMONIA
+407,TYPHOID
+3281,GASTROESOPHAGEAL REFLUX DISEASE
+1220,IMPETIGO
+10569,DIABETES
+762,PSORIASIS
+8961,CERVICAL SPONDYLOSIS
+7364,HYPERTENSION
+7243,GASTROESOPHAGEAL REFLUX DISEASE
+7924,DIABETES
+5170,MIGRAINE
+2597,"None of the given diseases directly match the described symptoms. However, based on the closest possible relation to the given options and the nature of the symptoms (which seem more related to mental or neurological conditions rather than the listed diseases directly), if I had to choose from the given list, I would relate the symptoms to MIGRAINE, as it can sometimes involve cognitive symptoms or aura that might be described as foggy or difficult to focus, though the primary symptoms of migraine include headache. Still, it's a bit of a stretch given the symptom description.
+
+MIGRAINE"
+8691,ALLERGY
+2099,PNEUMONIA
+7884,CHICKEN POX
+1225,DIMORPHIC HEMORRHOID.
+133,"None of the given diseases directly correlate with the symptoms described as they relate more to mental or cognitive functions rather than the specific medical conditions listed. However, if we are to choose a disease that could potentially have a secondary effect on mental status or is known to sometimes present with or be associated with cognitive or emotional symptoms, we might consider conditions that have systemic effects or are known to sometimes have neurological or psychological manifestations.
+
+Given the list, ""DIABETES"" could potentially be considered because uncontrolled diabetes can lead to symptoms like fatigue, difficulty concentrating, and mood changes due to fluctuations in blood glucose levels. However, the symptoms described are quite nonspecific and could be related to a wide range of conditions.
+
+DIABETES"
+2709,IMPETIGO
+523,JAUNDICE
+10417,IMPETIGO
+6056,PSORIASIS
+4828,CERVICAL SPONDYLOSIS
+3688,ALLERGY
+5085,JAUNDICE
+8707,GASTROESOPHAGEAL REFLUX DISEASE
+8266,ARTHRITIS
+8767,PSORIASIS
+856,CERVICAL SPONDYLOSIS
+1565,TYPHOID
+5203,VARICOSE VEINS
+10170,COMMON COLD
+2566,"None of the given diseases directly match the symptoms described. However, based on the closest possible relation to the symptoms (vaginal discharge), none of the listed diseases directly correlate with the given symptoms. But if I had to choose from the given list, the closest in terms of an infection or condition that could potentially cause discharge or related issues (though not directly related to vaginal discharge as it's not specific to the listed diseases), a possible match could be considered as a fungal or other type of infection. The closest from the given list is FUNGAL INFECTION."
+2984,ARTHRITIS
+5517,URINARY TRACT INFECTION
+10285,TYPHOID
+6329,PSORIASIS
+9828,MALARIA
+9925,DIMORPHIC HEMORRHOID
+3822,DENGUE
+2688,CERVICAL SPONDYLOSIS
+3075,PNEUMONIA
+3798,HYPERTENSION
+3269,ACNE
+10070,TYPHOID
+10367,TYPHOID
+900,URINARY TRACT INFECTION
+8741,GASTROESOPHAGEAL REFLUX DISEASE
+10741,CERVICAL SPONDYLOSIS
+1898,PNEUMONIA
+10,PSORIASIS
+4887,"DIMORPHIC HEMORRHOID is highly unlikely given the symptoms. The symptoms described relate more to mental or neurological conditions rather than the given options directly. However, among the given diseases, none directly correlate with the described symptoms except potentially for a condition that might have a psychological or neurological component. Yet, upon closer inspection, the closest match based on the potential for systemic or related effects might be considered for DIABETES due to its known association with mood swings and cognitive fogginess in cases of unmanaged or fluctuating blood sugar levels.
+
+DIABETES"
+7998,PSORIASIS
+2522,PNEUMONIA
+3744,DENGUE
+6196,BRONCHIAL ASTHMA
+7236,GASTROESOPHAGEAL REFLUX DISEASE
+5965,ARTHRITIS
+2042,PNEUMONIA
+5385,DENGUE
+2341,MIGRAINE
+6605,IMPETIGO
+4813,PNEUMONIA
+10499,MALARIA
+11074,URINARY TRACT INFECTION
+9132,MIGRAINE
+10787,GASTROESOPHAGEAL REFLUX DISEASE
+7559,IMPETIGO
+4274,PSORIASIS
+439,PNEUMONIA
+9100,DIABETES
+2795,CHICKEN POX
+6762,BRONCHIAL ASTHMA
+10235,TYPHOID
+3527,JAUNDICE
+1847,IMpetigo
+4099,ACNE
+6479,URINARY TRACT INFECTION
+7231,DIABETES
+7389,VARICOSE VEINS
+9063,MIGRAINE
+10888,VARICOSE VEINS
+5899,VARICOSE VEINS
+3802,DIABETES
+2485,GASTROESOPHAGEAL REFLUX DISEASE
+2674,DRUG REACTION
+9091,IMPETIGO
+1238,GASTROESOPHAGEAL REFLUX DISEASE
+9165,JAUNDICE
+11093,PNEUMONIA
+7793,URINARY TRACT INFECTION
+1795,DIMORPHIC HEMORRHOID
+934,GASTROESOPHAGEAL REFLUX DISEASE
+2516,PNEUMONIA
+10513,"DIMORPHIC HEMORRHOID is not likely as it is related to the rectal area. The given symptoms relate more to changes in bowel movements and general feelings of exhaustion and lack of appetite. Among the given options, the closest match is PEPTIC ULCER DISEASE, as it can cause changes in bowel habits and general symptoms like lack of appetite and exhaustion.
+
+PEPTIC ULCER DISEASE"
+5518,DIABETES
+104,TYPHOID
+5219,PSORIASIS
+1708,TYPHOID
+399,FUNGAL INFECTION
+2720,IMPETIGO
+5233,DIABETES
+773,ALLERGY
+7992,CERVICAL SPONDYLOSIS
+9478,PSORIASIS
+10183,PSORIASIS
+5911,TYPHOID
+10075,DIABETES
+1517,GASTROESOPHAGEAL REFLUX DISEASE
+5237,PNEUMONIA
+10287,MALARIA
+2742,PSORIASIS
+2574,ALLERGY
+3286,PSORIASIS
+9677,CERVICAL SPONDYLOSIS
+9228,JAUNDICE
+3915,ARTHRITIS
+449,IMpetigo
+1483,PSORIASIS
+3150,URINARY TRACT INFECTION
+8589,CERVICAL SPONDYLOSIS
+71,CERVICAL SPONDYLOSIS
+1494,PSORIASIS
+9534,GASTROESOPHAGEAL REFLUX DISEASE
+5904,PNEUMONIA
+5764,VARICOSE VEINS
+6059,DIMORPHIC HEMORRHOID.
+3014,BRONCHIAL ASTHMA
+220,JAUNDICE
+619,URINARY TRACT INFECTION
+91,TYPHOID
+8679,CERVICAL SPONDYLOSIS
+5330,URINARY TRACT INFECTION
+8057,GASTROESOPHAGEAL REFLUX DISEASE
+7323,JAUNDICE
+3762,PSORIASIS
+5440,PNEUMONIA
+8324,DIABETES
+8422,DIABETES
+2062,URINARY TRACT INFECTION
+2629,HYPERTENSION
+9560,DIABETES
+3991,PNEUMONIA
+5894,VARICOSE VEINS
+10664,PSORIASIS
+6026,CERVICAL SPONDYLOSIS
+9435,DIMORPHIC HEMORRHOID.
+4849,GASTROESOPHAGEAL REFLUX DISEASE
+971,IMPETIGO
+914,PSORIASIS
+5736,JAUNDICE
+5057,GASTROESOPHAGEAL REFLUX DISEASE
+8975,JAUNDICE
+4975,PEPTIC ULCER DISEASE
+2660,COMMON COLD
+8791,URINARY TRACT INFECTION
+8832,VARICOSE VEINS
+9144,MALARIA
+884,GASTROESOPHAGEAL REFLUX DISEASE
+7749,HYPERTENSION
+8109,PEPTIC ULCER DISEASE
+6751,PNEUMONIA
+1158,DIABETES
+10707,CERVICAL SPONDYLOSIS
+3742,DIABETES
+1376,HYPERTENSION
+3989,GASTROESOPHAGEAL REFLUX DISEASE
+8658,GASTROESOPHAGEAL REFLUX DISEASE
+135,TYPHOID
+8861,DIABETES
+6984,PNEUMONIA
+96,ALLERGY
+9544,ACNE
+76,COMMON COLD
+3995,GASTROESOPHAGEAL REFLUX DISEASE
+2519,PNEUMONIA
+3857,VARICOSE VEINS
+6376,IMPETIGO
+7440,PSORIASIS
+3706,ACNE
+5482,CHICKEN POX
+227,DENGUE
+4503,DIMORPHIC HEMORRHOID
+3840,GASTROESOPHAGEAL REFLUX DISEASE
+1893,TYPHOID
+5897,PNEUMONIA
+1232,PNEUMONIA
+8487,CERVICAL SPONDYLOSIS
+2853,PSORIASIS
+4762,CHICKEN POX
+8618,MIGRAINE
+3803,"IMpetigo is not the best fit here as it is typically associated with pus-filled lesions but not typically with blackheads. The description more closely matches ACNE, which is known for causing pus-filled pimples and blackheads, and can also cause skin sensitivity. 
+
+ACNE."
+7224,MIGRAINE
+10122,IMPETIGO
+9766,ACNE
+4212,DIABETES
+6560,URINARY TRACT INFECTION
+2261,GASTROESOPHAGEAL REFLUX DISEASE
+9251,CERVICAL SPONDYLOSIS
+5532,MIGRAINE
+10207,CHICKEN POX
+4403,MALARIA
+1937,ARTHRITIS
+9388,PSORIASIS
+2719,PSORIASIS
+57,PEPTIC ULCER DISEASE
+8249,VARICOSE VEINS
+2290,ALLERGY
+11085,PEPTIC ULCER DISEASE
+7988,VARICOSE VEINS
+9046,GASTROESOPHAGEAL REFLUX DISEASE
+9098,DIABETES
+1438,DIABETES
+1183,PSORIASIS
+1041,URINARY TRACT INFECTION
+1346,GASTROESOPHAGEAL REFLUX DISEASE
+8536,CERVICAL SPONDYLOSIS
+5434,TYPHOID
+9796,"To classify the given symptoms into one of the listed diseases, let's analyze the symptoms described:
+
+1. **Symptoms described**: 
+   - Intense scratching, chills, nausea, high fever, and feeling unwell.
+   - Headache, excessive sweating, severe muscle pain, and nausea.
+
+2. **Analysis**:
+   - The first set of symptoms includes intense scratching, which could be related to skin conditions or allergic reactions. However, when combined with chills, nausea, high fever, and feeling unwell, it suggests an infectious or a systemic condition.
+   - The second set of symptoms (headache, excessive sweating, severe muscle pain, and nausea) is more indicative of a systemic infection or a condition that causes significant bodily distress.
+
+3. **Matching symptoms to diseases**:
+   - **VARICOSE VEINS**: Not directly related to the symptoms described.
+   - **DRUG REACTION**: Could potentially cause some of the symptoms, but the combination doesn't directly point to a typical drug reaction.
+   - **DIABETES**: Not directly related to the acute symptoms described.
+   - **MALARIA**: Characterized by high fever, chills, and severe muscle pain, which matches some of the symptoms.
+   - **TYPHOID**: Also known as enteric fever, it presents with high fever, headache, nausea, and can cause a feeling of being unwell, which aligns with the symptoms.
+   - **DENGUE**: Characterized by high fever, severe muscle pain, and can cause nausea and headache.
+
+4. **Most likely disease**:
+   - Both sets of symptoms could be indicative of a febrile illness. 
+   - **MALARIA** and **DENGUE** are both plausible given the symptoms like high fever, chills, severe muscle pain, and headache.
+   - However, ""intense scratching"" is not a typical primary symptom for Malaria or Dengue, though itching can occur in various conditions.
+
+5. **Decision**:
+   - Given the symptoms like high fever, chills, severe muscle pain, and headache, **DENGUE** or **MALARIA** are strong candidates.
+   - Between the two, both are plausible, but the presence of ""intense scratching"" is not a hallmark for either. However, considering the overall symptomatology, **DENGUE** is a bit more likely due to its broader range of symptoms that can include severe pain and sometimes rash or itching in some cases.
+
+The best answer is DENGUE."
+7001,PNEUMONIA
+4780,MIGRAINE
+9287,DENGUE
+786,CERVICAL SPONDYLOSIS
+2413,DIABETES
+10488,URINARY TRACT INFECTION
+6403,ALLERGY
+10582,CERVICAL SPONDYLOSIS
+4210,HYPERTENSION
+4272,URINARY TRACT INFECTION
+7145,PSORIASIS
+6407,IMpetigo
+4206,CERVICAL SPONDYLOSIS
+10022,DIMORPHIC HEMORRHOID
+6063,FUNGAL INFECTION
+828,DENGUE
+9124,CHICKEN POX
+8129,PEPTIC ULCER DISEASE
+7038,ARTHRITIS
+2529,MALARIA
+374,DIMORPHIC HEMORRHOID
+3105,IMPETIGO
+293,PNEUMONIA
+871,ARTHRITIS
+3853,MIGRAINE
+5596,CERVICAL SPONDYLOSIS
+7161,DENGUE
+6896,IMPETIGO
+2666,HYPERTENSION
+9236,GASTROESOPHAGEAL REFLUX DISEASE
+5814,IMPETIGO
+9079,GASTROESOPHAGEAL REFLUX DISEASE
+10755,DIABETES
+8486,IMPETIGO
+2619,JAUNDICE
+9210,IMpetigo
+490,TYPHOID
+7155,PSORIASIS
+3913,URINARY TRACT INFECTION
+205,VARICOSE VEINS
+2590,CHICKEN POX
+8650,URINARY TRACT INFECTION
+2281,CHICKEN POX
+10154,TYPHOID
+6097,CHICKEN POX
+3574,URINARY TRACT INFECTION
+6351,COMMON COLD
+107,CHICKEN POX
+5364,HYPERTENSION
+5645,TYPHOID
+3201,URINARY TRACT INFECTION
+2973,DIABETES
+3496,ARTHRITIS
+8697,GASTROESOPHAGEAL REFLUX DISEASE
+1064,JAUNDICE
+4169,MALARIA
+8654,DIMORPHIC HEMORRHOID
+1558,TYPHOID
+9349,PNEUMONIA
+2057,DIABETES
+9143,CERVICAL SPONDYLOSIS
+6957,DIABETES
+4247,MIGRAINE
+1370,IMPETIGO
+696,"None of the given diseases directly relate to the symptoms described (visual disruptions, seeing things as distorted, and eyesight difficulties). However, based on the closest possible relation to the given options, the most plausible disease is MIGRAINE, as it can sometimes cause visual disturbances. 
+
+MIGRAINE"
+5351,CERVICAL SPONDYLOSIS
+10747,PSORIASIS
+510,MIGRAINE
+9315,CERVICAL SPONDYLOSIS
+4942,IMPETIGO
+10935,ALLERGY
+4176,PSORIASIS
+1864,VARICOSE VEINS
+8713,TYPHOID
+290,ALLERGY
+3647,PNEUMONIA
+5999,ARTHRITIS
+5115,PNEUMONIA
+3342,DENGUE
+5152,TYPHOID
+67,JAUNDICE
+2864,PSORIASIS
+10464,JAUNDICE

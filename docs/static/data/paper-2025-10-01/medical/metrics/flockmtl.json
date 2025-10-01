@@ -1,0 +1,39 @@
+{
+  "Q1": {
+    "query_id": 1,
+    "status": "success",
+    "execution_time": 12.413436889648438,
+    "token_usage": 0,
+    "money_cost": 0.0,
+    "row_count": 906,
+    "model_name": "gpt-4o-mini",
+    "concurrent_llm_worker": 20,
+    "accuracy": 0.08786610878661087,
+    "metric_type": "f1_score"
+  },
+  "Q4": {
+    "query_id": 4,
+    "status": "success",
+    "execution_time": 6.956474781036377,
+    "token_usage": 0,
+    "money_cost": 0.0,
+    "row_count": 1,
+    "model_name": "gpt-4o-mini",
+    "concurrent_llm_worker": 20,
+    "relative_error": 0.05950870526966081,
+    "absolute_error": 3.8121276595744717,
+    "mean_absolute_percentage_error": 5.950870526966081
+  },
+  "Q10": {
+    "query_id": 10,
+    "status": "success",
+    "execution_time": 156.2965166568756,
+    "token_usage": 0,
+    "money_cost": 0.0,
+    "row_count": 1200,
+    "model_name": "gpt-4o-mini",
+    "concurrent_llm_worker": 20,
+    "accuracy": 0.03182650524761636,
+    "metric_type": "f1_score"
+  }
+}

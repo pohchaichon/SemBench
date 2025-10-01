@@ -1,0 +1,7 @@
+# Additional privacy controls for Apache servers
+Header always set X-Robots-Tag "noindex, nofollow, noarchive, nosnippet"
+
+# Block search engine crawlers at server level
+RewriteEngine On
+RewriteCond %{HTTP_USER_AGENT} (googlebot|bingbot|slurp|duckduckbot) [NC]
+RewriteRule .* - [F,L]

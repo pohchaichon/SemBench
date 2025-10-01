@@ -1,0 +1,11 @@
+{
+  "Q1": {
+    "query_id": 1,
+    "status": "failed",
+    "execution_time": 0.0,
+    "error": "No columns to parse from file",
+    "row_count": 0,
+    "model_name": "vertex_ai/gemini-2.5-flash",
+    "concurrent_llm_worker": 20
+  }
+}

@@ -1,0 +1,337 @@
+patient_id,location,filtration_type,path,audio_id
+11056,Posterior Right Lower,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP57_COPD,E W,P R L ,42,M.wav",168
+11104,Anterior Right Upper,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP105_Lung Fibrosis,Crep,A U R,44,M.wav",328
+11032,Posterior Right Middle,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP33_Asthma,E W,P R M,43,F.wav",144
+11052,Posterior Right Middle,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP53_asthma,E W,P R M,72,F.wav",52
+11051,Posterior Left Lower,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP52_Lung Fibrosis,Crep,P L L,76,F.wav",163
+11076,Anterior Right Lower,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP77_Asthma,E W,A R L,40,M.wav",76
+11093,Posterior Left Lower,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP94_N,N,P L L,24,M.wav",205
+11010,Posterior Left Lower,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP11_Heart Failure,C,P L L,53,M.wav",122
+11031,Anterior Right Lower,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP32_N,N,A R L,30,M.wav",255
+11077,Posterior Right Middle,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP78_Asthma,E W,P R M,20,M.wav",189
+11101,Posterior Left Lower,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP102_N,N,P L L,41,M.wav",213
+11031,Anterior Right Lower,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP32_N,N,A R L,30,M.wav",31
+11005,Posterior Right Lower,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP6_Plueral Effusion,I C B,P L R,81,M.wav",229
+11040,Posterior Right Middle,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP41_pneumonia,Crep,P R M,51,M.wav",40
+11063,Posterior Left Upper,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP64_asthma,E W,P L U,60,M.wav",63
+11008,Posterior Right Lower,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP9_Asthma,E W,P R L ,59,M.wav",8
+11067,Posterior Right Lower,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP68_asthma,E W,P R L ,21,F.wav",67
+11052,Posterior Right Middle,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP53_asthma,E W,P R M,72,F.wav",164
+11026,Posterior Right Middle,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP27_asthma,E W,P R M,53,F.wav",138
+11025,Posterior Left Lower,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP26_Lung Fibrosis,Crep,P,90,F.wav",249
+11068,Posterior Right Lower,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP69_pneumonia,Bronchial,P R L ,64,M.wav",292
+11087,Anterior Right Upper,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP88_N,N,A R U,29,M.wav",199
+11091,Posterior Left Lower,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP92_N,N,P L L ,43,M.wav",315
+11015,Posterior Right Upper,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP16_heart failure,C,P R U,56,M.wav",239
+11043,Posterior Right Upper,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP44_asthma,E W,P R U,40,M.wav",43
+11100,Posterior Left Middle,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP101_Asthma,E W,P L M,12,F.wav",324
+11098,Posterior Right Middle,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP99_N,N,P R M,50,M.wav",210
+11111,Posterior Left Middle,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP112_N,N,P L M,30,M.wav",111
+11003,Posterior Right Lower,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP4_Heart Failure + Lung Fibrosis ,I C,P L R,72,F.wav",227
+11064,Posterior Right Lower,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP65_asthma,E W,P R L ,60,F.wav",64
+11071,Posterior Right Upper,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP72_N,N,P R U,24,F.wav",183
+11034,Anterior Right Lower,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP35_Asthma,E W,A R L,38,M.wav",146
+11103,Posterior Left Upper,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP104_Asthma,E W,P L U,45,F.wav",327
+11046,Posterior Left Middle,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP47_asthma,E W,P L M,60,M.wav",158
+11001,Posterior Left Lower,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP2_Asthma,E W,P L L R,52,F.wav",225
+11009,Posterior Right Upper,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP10_Asthma,E W,P R U,59,M.wav",121
+11104,Anterior Right Upper,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP105_Lung Fibrosis,Crep,A U R,44,M.wav",216
+11081,Posterior Left Upper,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP82_N,N,P L U,38,M.wav",305
+11004,Posterior Right Lower,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP5_Heart Failure + COPD,I C E W,P L R ,71,M.wav",228
+11081,Posterior Left Upper,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP82_N,N,P L U,38,M.wav",193
+11080,Posterior Left Upper,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP81_N,N,P L U,33,M.wav",304
+11000,Posterior Left Lower,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP1_Asthma,I E W,P L L,70,M.wav",0
+11079,Anterior Left Upper,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP80_asthma,E W,A L U,38,M.wav",303
+11002,Posterior Left Lower,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP3_Asthma,I E W,P L L R,50,F.wav",226
+11050,Posterior Left Middle,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP51_N,N,P L M,30,M.wav",162
+11073,Posterior Right Middle,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP74_N,N,P R M,74,M.wav",185
+11026,Posterior Right Middle,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP27_asthma,E W,P R M,53,F.wav",26
+11020,Posterior Right Lower,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP21_BRON,Crep,P R L ,20,M.wav",20
+11006,Posterior Right Lower,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP7_Heart Failure + COPD,I C E W,P L R,65,M.wav",6
+11067,Posterior Right Lower,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP68_asthma,E W,P R L ,21,F.wav",291
+11042,Posterior Left Middle,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP43_asthma,E W,P L M,15,M.wav",154
+11068,Posterior Right Lower,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP69_pneumonia,Bronchial,P R L ,64,M.wav",68
+11063,Posterior Left Upper,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP64_asthma,E W,P L U,60,M.wav",287
+11070,Posterior Right Upper,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP71_N,N,P R U,36,M.wav",70
+11075,Anterior Left Upper,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP76_N,N,A L U,31,M.wav",299
+11045,Posterior Left Upper,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP46_asthma,E W,P L U,41,F.wav",269
+11017,Posterior Right Upper,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP18_pneumonia,C,P R U,57,M.wav",241
+11053,Posterior Right Lower,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP54_heart failure,Crep,P R L ,73,F.wav",165
+11057,Posterior Left Middle,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP58_asthma,E W,P L M,40,M.wav",169
+11085,Posterior Right Upper,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP86_N,N,P R U,68,F.wav",197
+11109,Posterior Left Lower,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP110_COPD,E W,P L L,62,M.wav",109
+11027,Posterior Left Upper,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP28_BRON,Crep,P L U,68,F.wav",139
+11016,Anterior Right Middle,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP17_COPD,E W,A R M,57,M.wav",16
+11111,Posterior Left Middle,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP112_N,N,P L M,30,M.wav",335
+11013,Anterior Right Middle,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP14_Heart Failure,C,A R M,54,M.wav",13
+11101,Posterior Left Lower,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP102_N,N,P L L,41,M.wav",325
+11105,Posterior Left Upper,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP106_Asthma,E W,P L U,45,F.wav",217
+11043,Posterior Right Upper,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP44_asthma,E W,P R U,40,M.wav",155
+11028,Posterior Left Lower,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP29_heart failure,Crep,P L L,57,M.wav",252
+11049,Posterior Right Lower,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP50_N,N,P R L ,27,M.wav",161
+11029,Posterior Right Middle,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP30_N,N,P R M,18,F.wav",29
+11005,Posterior Right Lower,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP6_Plueral Effusion,I C B,P L R,81,M.wav",117
+11032,Posterior Right Middle,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP33_Asthma,E W,P R M,43,F.wav",32
+11100,Posterior Left Middle,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP101_Asthma,E W,P L M,12,F.wav",100
+11075,Anterior Left Upper,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP76_N,N,A L U,31,M.wav",187
+11070,Posterior Right Upper,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP71_N,N,P R U,36,M.wav",294
+11061,Posterior Left Middle,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP62_COPD,E W,P L M,53,M.wav",173
+11012,Posterior Left Lower,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP13_Heart Failure,C,P L L,55,M.wav",124
+11084,Anterior Right Upper,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP85_N,N,A R U,33,M.wav",308
+11096,Posterior Right Upper,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP97_Asthma,E W,P R U,24,M.wav",208
+11084,Anterior Right Upper,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP85_N,N,A R U,33,M.wav",84
+11005,Posterior Right Lower,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP6_Plueral Effusion,I C B,P L R,81,M.wav",5
+11101,Posterior Left Lower,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP102_N,N,P L L,41,M.wav",101
+11024,Posterior Left Lower,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP25_copd,E W,P L L,76,M.wav",248
+11035,Posterior Right Middle,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP36_pneumonia,Crep,P R M,36,F.wav",35
+11066,Posterior Right Lower,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP67_heart failure,Crep,P R L ,24,F.wav",178
+11053,Posterior Right Lower,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP54_heart failure,Crep,P R L ,73,F.wav",277
+11080,Posterior Left Upper,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP81_N,N,P L U,33,M.wav",80
+11080,Posterior Left Upper,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP81_N,N,P L U,33,M.wav",192
+11103,Posterior Left Upper,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP104_Asthma,E W,P L U,45,F.wav",103
+11003,Posterior Right Lower,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP4_Heart Failure + Lung Fibrosis ,I C,P L R,72,F.wav",3
+11105,Posterior Left Upper,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP106_Asthma,E W,P L U,45,F.wav",105
+11085,Posterior Right Upper,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP86_N,N,P R U,68,F.wav",85
+11018,Posterior Right Upper,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP19_heart failure,C,P R U,70,F.wav",130
+11012,Posterior Left Lower,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP13_Heart Failure,C,P L L,55,M.wav",12
+11050,Posterior Left Middle,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP51_N,N,P L M,30,M.wav",274
+11088,Posterior Left Middle,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP89_N,N,P L M,70,M.wav",312
+11089,Posterior Left Middle,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP90_heart failure,Crep,P L M,74,F.wav",201
+11110,Posterior Right Lower,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP111_COPD,E W,P R L ,51,M.wav",110
+11023,Posterior Right Lower,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP24_heart failure,Crep,P R L ,76,F.wav",135
+11013,Anterior Right Middle,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP14_Heart Failure,C,A R M,54,M.wav",125
+11008,Posterior Right Lower,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP9_Asthma,E W,P R L ,59,M.wav",232
+11011,Posterior Left Lower,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP12_Asthma,E W,P L L,50,F.wav",123
+11015,Posterior Right Upper,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP16_heart failure,C,P R U,56,M.wav",127
+11069,Posterior Left Upper,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP70_N,N,P L U,52,F.wav",181
+11036,Anterior Right Lower,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP37_pneumonia,Crep,A R L,70,F.wav",260
+11086,Posterior Right Middle,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP87_N,N,P R M,72,M.wav",310
+11058,Posterior Right Lower,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP59_heart failure,Crep,P R L ,83,F.wav",58
+11021,Posterior Right Upper,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP22_BRON,Crep,P R U,24,M.wav",245
+11094,Posterior Left Middle,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP95_N,N,P L M,18,M.wav",94
+11072,Posterior Left Lower,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP73_N,N,P L L,32,M.wav",184
+11059,Posterior Left Lower,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP60_heart failure,Crep,P L L,83,F.wav",171
+11021,Posterior Right Upper,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP22_BRON,Crep,P R U,24,M.wav",133
+11077,Posterior Right Middle,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP78_Asthma,E W,P R M,20,M.wav",77
+11057,Posterior Left Middle,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP58_asthma,E W,P L M,40,M.wav",57
+11091,Posterior Left Lower,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP92_N,N,P L L ,43,M.wav",91
+11082,Anterior Right Upper,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP83_N,N,A R U,18,F.wav",306
+11092,Posterior Right Middle,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP93_N,N,P R M,75,M.wav",92
+11087,Anterior Right Upper,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP88_N,N,A R U,29,M.wav",87
+11018,Posterior Right Upper,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP19_heart failure,C,P R U,70,F.wav",18
+11066,Posterior Right Lower,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP67_heart failure,Crep,P R L ,24,F.wav",66
+11059,Posterior Left Lower,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP60_heart failure,Crep,P L L,83,F.wav",59
+11033,Posterior Right Middle,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP34_heart failure,Crep,P R M,78,F.wav",33
+11060,Posterior Right Lower,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP61_COPD,E W,P R L ,53,M.wav",172
+11057,Posterior Left Middle,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP58_asthma,E W,P L M,40,M.wav",281
+11070,Posterior Right Upper,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP71_N,N,P R U,36,M.wav",182
+11041,Posterior Left Lower,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP42_heart failure,Crep,P L L,56,M.wav",153
+11014,Posterior Right Upper,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP15_Asthma,E W,P R U,49,F.wav",126
+11056,Posterior Right Lower,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP57_COPD,E W,P R L ,42,M.wav",280
+11084,Anterior Right Upper,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP85_N,N,A R U,33,M.wav",196
+11076,Anterior Right Lower,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP77_Asthma,E W,A R L,40,M.wav",188
+11060,Posterior Right Lower,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP61_COPD,E W,P R L ,53,M.wav",60
+11108,Posterior Left Middle,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP109_N,N,P L M,26,M.wav",108
+11052,Posterior Right Middle,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP53_asthma,E W,P R M,72,F.wav",276
+11028,Posterior Left Lower,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP29_heart failure,Crep,P L L,57,M.wav",28
+11001,Posterior Left Lower,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP2_Asthma,E W,P L L R,52,F.wav",1
+11061,Posterior Left Middle,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP62_COPD,E W,P L M,53,M.wav",61
+11051,Posterior Left Lower,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP52_Lung Fibrosis,Crep,P L L,76,F.wav",275
+11093,Posterior Left Lower,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP94_N,N,P L L,24,M.wav",93
+11072,Posterior Left Lower,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP73_N,N,P L L,32,M.wav",296
+11013,Anterior Right Middle,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP14_Heart Failure,C,A R M,54,M.wav",237
+11017,Posterior Right Upper,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP18_pneumonia,C,P R U,57,M.wav",129
+11004,Posterior Right Lower,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP5_Heart Failure + COPD,I C E W,P L R ,71,M.wav",4
+11074,Posterior Left Upper,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP75_N,N,P L U,73,F.wav",298
+11104,Anterior Right Upper,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP105_Lung Fibrosis,Crep,A U R,44,M.wav",104
+11049,Posterior Right Lower,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP50_N,N,P R L ,27,M.wav",273
+11106,Posterior Left Upper,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP107_Asthma,E W,P L U,59,F.wav",218
+11018,Posterior Right Upper,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP19_heart failure,C,P R U,70,F.wav",242
+11074,Posterior Left Upper,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP75_N,N,P L U,73,F.wav",186
+11064,Posterior Right Lower,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP65_asthma,E W,P R L ,60,F.wav",176
+11033,Posterior Right Middle,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP34_heart failure,Crep,P R M,78,F.wav",145
+11107,Posterior Right Lower,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP108_COPD,E W,P R L ,63,M.wav",107
+11048,Posterior Right Middle,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP49_N,N,P R M,21,M.wav",48
+11047,Posterior Left Upper,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP48_N,N,P L U,31,M.wav",47
+11038,Posterior Right Lower,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP39_heart failure,Crep,P R L ,67,M.wav",150
+11017,Posterior Right Upper,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP18_pneumonia,C,P R U,57,M.wav",17
+11054,Posterior Right Upper,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP55_asthma,E W,P R U,72,F.wav",278
+11021,Posterior Right Upper,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP22_BRON,Crep,P R U,24,M.wav",21
+11069,Posterior Left Upper,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP70_N,N,P L U,52,F.wav",69
+11079,Anterior Left Upper,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP80_asthma,E W,A L U,38,M.wav",79
+11090,Posterior Right Upper,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP91_asthma,E W,P R U,43,F.wav",314
+11024,Posterior Left Lower,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP25_copd,E W,P L L,76,M.wav",24
+11099,Posterior Right Middle,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP100_N,N,P R M,70,F.wav",99
+11039,Anterior Right Middle,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP40_heart failure,Crep,A R M,26,M.wav",151
+11078,Anterior Right Upper,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP79_asthma,E W,A R U,46,M.wav",78
+11096,Posterior Right Upper,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP97_Asthma,E W,P R U,24,M.wav",96
+11038,Posterior Right Lower,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP39_heart failure,Crep,P R L ,67,M.wav",262
+11044,Posterior Right Lower,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP45_heart failure,Crep,P R L ,30,M.wav",268
+11100,Posterior Left Middle,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP101_Asthma,E W,P L M,12,F.wav",212
+11089,Posterior Left Middle,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP90_heart failure,Crep,P L M,74,F.wav",89
+11039,Anterior Right Middle,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP40_heart failure,Crep,A R M,26,M.wav",39
+11029,Posterior Right Middle,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP30_N,N,P R M,18,F.wav",253
+11036,Anterior Right Lower,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP37_pneumonia,Crep,A R L,70,F.wav",148
+11075,Anterior Left Upper,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP76_N,N,A L U,31,M.wav",75
+11063,Posterior Left Upper,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP64_asthma,E W,P L U,60,M.wav",175
+11066,Posterior Right Lower,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP67_heart failure,Crep,P R L ,24,F.wav",290
+11102,Posterior Right Upper,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP103_N,N,P R U,81,F.wav",102
+11090,Posterior Right Upper,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP91_asthma,E W,P R U,43,F.wav",90
+11036,Anterior Right Lower,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP37_pneumonia,Crep,A R L,70,F.wav",36
+11019,Anterior Right Middle,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP20_Asthma and lung fibrosis,C,A R M,90,M.wav",243
+11053,Posterior Right Lower,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP54_heart failure,Crep,P R L ,73,F.wav",53
+11037,Posterior Right Middle,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP38_Asthma,E W,P R M,38,M.wav",149
+11009,Posterior Right Upper,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP10_Asthma,E W,P R U,59,M.wav",233
+11033,Posterior Right Middle,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP34_heart failure,Crep,P R M,78,F.wav",257
+11041,Posterior Left Lower,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP42_heart failure,Crep,P L L,56,M.wav",265
+11054,Posterior Right Upper,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP55_asthma,E W,P R U,72,F.wav",54
+11051,Posterior Left Lower,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP52_Lung Fibrosis,Crep,P L L,76,F.wav",51
+11050,Posterior Left Middle,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP51_N,N,P L M,30,M.wav",50
+11083,Anterior Right Upper,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP84_N,N,A R U,65,F.wav",83
+11094,Posterior Left Middle,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP95_N,N,P L M,18,M.wav",206
+11054,Posterior Right Upper,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP55_asthma,E W,P R U,72,F.wav",166
+11088,Posterior Left Middle,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP89_N,N,P L M,70,M.wav",200
+11092,Posterior Right Middle,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP93_N,N,P R M,75,M.wav",316
+11083,Anterior Right Upper,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP84_N,N,A R U,65,F.wav",195
+11040,Posterior Right Middle,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP41_pneumonia,Crep,P R M,51,M.wav",152
+11059,Posterior Left Lower,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP60_heart failure,Crep,P L L,83,F.wav",283
+11082,Anterior Right Upper,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP83_N,N,A R U,18,F.wav",82
+11065,Posterior Right Lower,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP66_heart failure,Crep,P R L ,43,M.wav",289
+11086,Posterior Right Middle,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP87_N,N,P R M,72,M.wav",86
+11073,Posterior Right Middle,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP74_N,N,P R M,74,M.wav",73
+11010,Posterior Left Lower,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP11_Heart Failure,C,P L L,53,M.wav",10
+11109,Posterior Left Lower,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP110_COPD,E W,P L L,62,M.wav",333
+11108,Posterior Left Middle,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP109_N,N,P L M,26,M.wav",220
+11083,Anterior Right Upper,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP84_N,N,A R U,65,F.wav",307
+11109,Posterior Left Lower,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP110_COPD,E W,P L L,62,M.wav",221
+11065,Posterior Right Lower,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP66_heart failure,Crep,P R L ,43,M.wav",177
+11056,Posterior Right Lower,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP57_COPD,E W,P R L ,42,M.wav",56
+11011,Posterior Left Lower,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP12_Asthma,E W,P L L,50,F.wav",11
+11003,Posterior Right Lower,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP4_Heart Failure + Lung Fibrosis ,I C,P L R,72,F.wav",115
+11099,Posterior Right Middle,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP100_N,N,P R M,70,F.wav",323
+11006,Posterior Right Lower,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP7_Heart Failure + COPD,I C E W,P L R,65,M.wav",230
+11006,Posterior Right Lower,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP7_Heart Failure + COPD,I C E W,P L R,65,M.wav",118
+11042,Posterior Left Middle,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP43_asthma,E W,P L M,15,M.wav",42
+11001,Posterior Left Lower,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP2_Asthma,E W,P L L R,52,F.wav",113
+11022,Posterior Right Lower,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP23_Lung Fibrosis,Crep,P R L ,50,M.wav",22
+11089,Posterior Left Middle,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP90_heart failure,Crep,P L M,74,F.wav",313
+11007,Posterior Left Lower,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP8_Plueral Effusion,I C B,P L L,70,M.wav",7
+11007,Posterior Left Lower,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP8_Plueral Effusion,I C B,P L L,70,M.wav",231
+11078,Anterior Right Upper,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP79_asthma,E W,A R U,46,M.wav",190
+11065,Posterior Right Lower,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP66_heart failure,Crep,P R L ,43,M.wav",65
+11044,Posterior Right Lower,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP45_heart failure,Crep,P R L ,30,M.wav",156
+11097,Posterior Left Lower,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP98_N,N,P L L,53,M.wav",97
+11048,Posterior Right Middle,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP49_N,N,P R M,21,M.wav",272
+11039,Anterior Right Middle,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP40_heart failure,Crep,A R M,26,M.wav",263
+11002,Posterior Left Lower,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP3_Asthma,I E W,P L L R,50,F.wav",114
+11102,Posterior Right Upper,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP103_N,N,P R U,81,F.wav",214
+11034,Anterior Right Lower,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP35_Asthma,E W,A R L,38,M.wav",34
+11071,Posterior Right Upper,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP72_N,N,P R U,24,F.wav",71
+11031,Anterior Right Lower,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP32_N,N,A R L,30,M.wav",143
+11019,Anterior Right Middle,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP20_Asthma and lung fibrosis,C,A R M,90,M.wav",131
+11000,Posterior Left Lower,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP1_Asthma,I E W,P L L,70,M.wav",224
+11095,Posterior Right Lower,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP96_N,N,P R L ,66,F.wav",95
+11030,Posterior Left Middle,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP31_N,N,P L M,27,F.wav",142
+11105,Posterior Left Upper,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP106_Asthma,E W,P L U,45,F.wav",329
+11007,Posterior Left Lower,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP8_Plueral Effusion,I C B,P L L,70,M.wav",119
+11076,Anterior Right Lower,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP77_Asthma,E W,A R L,40,M.wav",300
+11044,Posterior Right Lower,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP45_heart failure,Crep,P R L ,30,M.wav",44
+11062,Posterior Right Lower,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP63_COPD,E W,P R L ,58,F.wav",62
+11058,Posterior Right Lower,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP59_heart failure,Crep,P R L ,83,F.wav",282
+11010,Posterior Left Lower,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP11_Heart Failure,C,P L L,53,M.wav",234
+11096,Posterior Right Upper,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP97_Asthma,E W,P R U,24,M.wav",320
+11002,Posterior Left Lower,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP3_Asthma,I E W,P L L R,50,F.wav",2
+11035,Posterior Right Middle,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP36_pneumonia,Crep,P R M,36,F.wav",259
+11022,Posterior Right Lower,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP23_Lung Fibrosis,Crep,P R L ,50,M.wav",134
+11041,Posterior Left Lower,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP42_heart failure,Crep,P L L,56,M.wav",41
+11008,Posterior Right Lower,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP9_Asthma,E W,P R L ,59,M.wav",120
+11023,Posterior Right Lower,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP24_heart failure,Crep,P R L ,76,F.wav",23
+11015,Posterior Right Upper,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP16_heart failure,C,P R U,56,M.wav",15
+11055,Posterior Right Middle,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP56_asthma,E W,P R M,56,F.wav",167
+11098,Posterior Right Middle,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP99_N,N,P R M,50,M.wav",98
+11037,Posterior Right Middle,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP38_Asthma,E W,P R M,38,M.wav",261
+11027,Posterior Left Upper,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP28_BRON,Crep,P L U,68,F.wav",27
+11072,Posterior Left Lower,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP73_N,N,P L L,32,M.wav",72
+11090,Posterior Right Upper,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP91_asthma,E W,P R U,43,F.wav",202
+11030,Posterior Left Middle,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP31_N,N,P L M,27,F.wav",254
+11020,Posterior Right Lower,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP21_BRON,Crep,P R L ,20,M.wav",132
+11092,Posterior Right Middle,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP93_N,N,P R M,75,M.wav",204
+11043,Posterior Right Upper,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP44_asthma,E W,P R U,40,M.wav",267
+11020,Posterior Right Lower,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP21_BRON,Crep,P R L ,20,M.wav",244
+11060,Posterior Right Lower,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP61_COPD,E W,P R L ,53,M.wav",284
+11019,Anterior Right Middle,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP20_Asthma and lung fibrosis,C,A R M,90,M.wav",19
+11046,Posterior Left Middle,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP47_asthma,E W,P L M,60,M.wav",46
+11042,Posterior Left Middle,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP43_asthma,E W,P L M,15,M.wav",266
+11067,Posterior Right Lower,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP68_asthma,E W,P R L ,21,F.wav",179
+11045,Posterior Left Upper,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP46_asthma,E W,P L U,41,F.wav",157
+11047,Posterior Left Upper,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP48_N,N,P L U,31,M.wav",159
+11022,Posterior Right Lower,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP23_Lung Fibrosis,Crep,P R L ,50,M.wav",246
+11009,Posterior Right Upper,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP10_Asthma,E W,P R U,59,M.wav",9
+11097,Posterior Left Lower,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP98_N,N,P L L,53,M.wav",209
+11099,Posterior Right Middle,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP100_N,N,P R M,70,F.wav",211
+11107,Posterior Right Lower,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP108_COPD,E W,P R L ,63,M.wav",331
+11049,Posterior Right Lower,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP50_N,N,P R L ,27,M.wav",49
+11068,Posterior Right Lower,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP69_pneumonia,Bronchial,P R L ,64,M.wav",180
+11014,Posterior Right Upper,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP15_Asthma,E W,P R U,49,F.wav",238
+11028,Posterior Left Lower,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP29_heart failure,Crep,P L L,57,M.wav",140
+11106,Posterior Left Upper,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP107_Asthma,E W,P L U,59,F.wav",330
+11095,Posterior Right Lower,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP96_N,N,P R L ,66,F.wav",207
+11062,Posterior Right Lower,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP63_COPD,E W,P R L ,58,F.wav",174
+11098,Posterior Right Middle,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP99_N,N,P R M,50,M.wav",322
+11026,Posterior Right Middle,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP27_asthma,E W,P R M,53,F.wav",250
+11025,Posterior Left Lower,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP26_Lung Fibrosis,Crep,P,90,F.wav",137
+11038,Posterior Right Lower,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP39_heart failure,Crep,P R L ,67,M.wav",38
+11029,Posterior Right Middle,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP30_N,N,P R M,18,F.wav",141
+11077,Posterior Right Middle,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP78_Asthma,E W,P R M,20,M.wav",301
+11111,Posterior Left Middle,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP112_N,N,P L M,30,M.wav",223
+11079,Anterior Left Upper,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP80_asthma,E W,A L U,38,M.wav",191
+11093,Posterior Left Lower,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP94_N,N,P L L,24,M.wav",317
+11027,Posterior Left Upper,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP28_BRON,Crep,P L U,68,F.wav",251
+11081,Posterior Left Upper,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP82_N,N,P L U,38,M.wav",81
+11061,Posterior Left Middle,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP62_COPD,E W,P L M,53,M.wav",285
+11088,Posterior Left Middle,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP89_N,N,P L M,70,M.wav",88
+11110,Posterior Right Lower,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP111_COPD,E W,P R L ,51,M.wav",334
+11110,Posterior Right Lower,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP111_COPD,E W,P R L ,51,M.wav",222
+11012,Posterior Left Lower,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP13_Heart Failure,C,P L L,55,M.wav",236
+11032,Posterior Right Middle,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP33_Asthma,E W,P R M,43,F.wav",256
+11047,Posterior Left Upper,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP48_N,N,P L U,31,M.wav",271
+11107,Posterior Right Lower,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP108_COPD,E W,P R L ,63,M.wav",219
+11094,Posterior Left Middle,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP95_N,N,P L M,18,M.wav",318
+11024,Posterior Left Lower,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP25_copd,E W,P L L,76,M.wav",136
+11078,Anterior Right Upper,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP79_asthma,E W,A R U,46,M.wav",302
+11064,Posterior Right Lower,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP65_asthma,E W,P R L ,60,F.wav",288
+11016,Anterior Right Middle,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP17_COPD,E W,A R M,57,M.wav",240
+11097,Posterior Left Lower,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP98_N,N,P L L,53,M.wav",321
+11102,Posterior Right Upper,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP103_N,N,P R U,81,F.wav",326
+11004,Posterior Right Lower,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP5_Heart Failure + COPD,I C E W,P L R ,71,M.wav",116
+11025,Posterior Left Lower,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP26_Lung Fibrosis,Crep,P,90,F.wav",25
+11055,Posterior Right Middle,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP56_asthma,E W,P R M,56,F.wav",55
+11095,Posterior Right Lower,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP96_N,N,P R L ,66,F.wav",319
+11073,Posterior Right Middle,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP74_N,N,P R M,74,M.wav",297
+11091,Posterior Left Lower,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP92_N,N,P L L ,43,M.wav",203
+11055,Posterior Right Middle,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP56_asthma,E W,P R M,56,F.wav",279
+11062,Posterior Right Lower,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP63_COPD,E W,P R L ,58,F.wav",286
+11085,Posterior Right Upper,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP86_N,N,P R U,68,F.wav",309
+11014,Posterior Right Upper,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP15_Asthma,E W,P R U,49,F.wav",14
+11046,Posterior Left Middle,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP47_asthma,E W,P L M,60,M.wav",270
+11035,Posterior Right Middle,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP36_pneumonia,Crep,P R M,36,F.wav",147
+11082,Anterior Right Upper,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP83_N,N,A R U,18,F.wav",194
+11087,Anterior Right Upper,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP88_N,N,A R U,29,M.wav",311
+11108,Posterior Left Middle,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP109_N,N,P L M,26,M.wav",332
+11106,Posterior Left Upper,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP107_Asthma,E W,P L U,59,F.wav",106
+11069,Posterior Left Upper,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP70_N,N,P L U,52,F.wav",293
+11103,Posterior Left Upper,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP104_Asthma,E W,P L U,45,F.wav",215
+11086,Posterior Right Middle,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP87_N,N,P R M,72,M.wav",198
+11040,Posterior Right Middle,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP41_pneumonia,Crep,P R M,51,M.wav",264
+11023,Posterior Right Lower,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP24_heart failure,Crep,P R L ,76,F.wav",247
+11034,Anterior Right Lower,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP35_Asthma,E W,A R L,38,M.wav",258
+11037,Posterior Right Middle,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP38_Asthma,E W,P R M,38,M.wav",37
+11071,Posterior Right Upper,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP72_N,N,P R U,24,F.wav",295
+11000,Posterior Left Lower,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP1_Asthma,I E W,P L L,70,M.wav",112
+11048,Posterior Right Middle,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP49_N,N,P R M,21,M.wav",160
+11030,Posterior Left Middle,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP31_N,N,P L M,27,F.wav",30
+11016,Anterior Right Middle,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP17_COPD,E W,A R M,57,M.wav",128
+11058,Posterior Right Lower,bell,"files/medical/data/raw_data/lung-dataset/Audio Files/BP59_heart failure,Crep,P R L ,83,F.wav",170
+11074,Posterior Left Upper,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP75_N,N,P L U,73,F.wav",74
+11045,Posterior Left Upper,diaphragm,"files/medical/data/raw_data/lung-dataset/Audio Files/DP46_asthma,E W,P L U,41,F.wav",45
+11011,Posterior Left Lower,extended,"files/medical/data/raw_data/lung-dataset/Audio Files/EP12_Asthma,E W,P L L,50,F.wav",235

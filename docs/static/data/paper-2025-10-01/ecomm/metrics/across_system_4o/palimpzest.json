@@ -1,0 +1,74 @@
+{
+  "Q1": {
+    "query_id": 1,
+    "status": "success",
+    "execution_time": 156.15172696113586,
+    "money_cost": 1.0803900000000002,
+    "row_count": 7,
+    "model_name": "gpt-4o",
+    "concurrent_llm_worker": 20,
+    "accuracy": 1.0,
+    "metric_type": "f1-score",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0
+  },
+  "Q2": {
+    "query_id": 2,
+    "status": "success",
+    "execution_time": 181.45368075370789,
+    "money_cost": 1.4766299999999983,
+    "row_count": 8,
+    "model_name": "gpt-4o",
+    "concurrent_llm_worker": 20,
+    "accuracy": 0.7692307692307693,
+    "metric_type": "f1-score",
+    "precision": 0.625,
+    "recall": 1.0,
+    "f1_score": 0.7692307692307693
+  },
+  "Q3": {
+    "query_id": 3,
+    "status": "success",
+    "execution_time": 156.554105758667,
+    "money_cost": 1.6611399999999992,
+    "row_count": 468,
+    "model_name": "gpt-4o",
+    "concurrent_llm_worker": 20,
+    "accuracy": 0.8906342025721304,
+    "metric_type": "adjusted-rand-index"
+  },
+  "Q4": {
+    "query_id": 4,
+    "status": "success",
+    "execution_time": 165.22616600990295,
+    "money_cost": 0.9156074999999997,
+    "row_count": 257,
+    "model_name": "gpt-4o",
+    "concurrent_llm_worker": 20,
+    "accuracy": 0.7057790610593194,
+    "metric_type": "adjusted-rand-index"
+  },
+  "Q5": {
+    "query_id": 5,
+    "status": "success",
+    "execution_time": 73.41439890861511,
+    "money_cost": 0.7887125000000001,
+    "row_count": 198,
+    "model_name": "gpt-4o",
+    "concurrent_llm_worker": 20,
+    "accuracy": 0.9964710020085928,
+    "metric_type": "adjusted-rand-index"
+  },
+  "Q6": {
+    "query_id": 6,
+    "status": "success",
+    "execution_time": 164.8697919845581,
+    "money_cost": 1.9868699999999997,
+    "row_count": 468,
+    "model_name": "gpt-4o",
+    "concurrent_llm_worker": 20,
+    "accuracy": 0.8101392870385457,
+    "metric_type": "adjusted-rand-index"
+  }
+}

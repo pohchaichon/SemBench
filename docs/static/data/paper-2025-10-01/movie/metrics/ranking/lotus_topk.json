@@ -1,0 +1,14 @@
+{
+    "Q9": {
+      "query_id": 9,
+      "status": "success",
+      "execution_time": 368.03235960006714,
+      "token_usage": 833911,
+      "money_cost": 0.13028955000000025,
+      "row_count": 256,
+      "model_name": "gpt-4o-mini",
+      "concurrent_llm_worker": 20,
+      "spearman_correlation": 0.7547493403664015,
+      "kendall_tau": 0.6038964414742201
+    }
+}

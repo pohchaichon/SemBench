@@ -1,0 +1,80 @@
+{
+  "Q1": {
+    "query_id": "1",
+    "status": "success",
+    "execution_time": 61.333030462265015,
+    "token_usage": 197855,
+    "money_cost": 0.37331875000000003,
+    "row_count": 175,
+    "model_name": "gpt-5-mini",
+    "concurrent_llm_worker": 20,
+    "precision": 0.2571428571428571,
+    "recall": 0.9,
+    "f1_score": 0.39999999999999997
+  },
+  "Q3": {
+    "query_id": "3",
+    "status": "success",
+    "execution_time": 187.856369972229,
+    "token_usage": 707055,
+    "money_cost": 1.06336875,
+    "row_count": 5,
+    "model_name": "gpt-5-mini",
+    "concurrent_llm_worker": 20,
+    "precision": 0.8,
+    "recall": 0.8,
+    "f1_score": 0.8000000000000002
+  },
+  "Q4": {
+    "query_id": "4",
+    "status": "success",
+    "execution_time": 61.790151834487915,
+    "token_usage": 199055,
+    "money_cost": 0.37481875,
+    "row_count": 1,
+    "model_name": "gpt-5-mini",
+    "concurrent_llm_worker": 20,
+    "relative_error": 0.002437618578736325,
+    "absolute_error": 0.15615384615384897,
+    "mean_absolute_percentage_error": 0.24376185787363247
+  },
+  "Q8": {
+    "query_id": "8",
+    "status": "success",
+    "execution_time": 73.60075521469116,
+    "token_usage": 177158,
+    "money_cost": 0.316735,
+    "row_count": 100,
+    "model_name": "gpt-5-mini",
+    "concurrent_llm_worker": 20,
+    "precision": 0.6,
+    "recall": 0.6,
+    "f1_score": 0.6
+  },
+  "Q9": {
+    "query_id": "9",
+    "status": "success",
+    "execution_time": 234.08282041549683,
+    "token_usage": 748429,
+    "money_cost": 1.0992312499999999,
+    "row_count": 982,
+    "model_name": "gpt-5-mini",
+    "concurrent_llm_worker": 20,
+    "precision": 0.3788187372708758,
+    "recall": 0.7931769722814499,
+    "f1_score": 0.5127498277050311
+  },
+  "Q10": {
+    "query_id": "10",
+    "status": "success",
+    "execution_time": 90.53348207473755,
+    "token_usage": 464892,
+    "money_cost": 1.12218875,
+    "row_count": 1200,
+    "model_name": "gpt-5-mini",
+    "concurrent_llm_worker": 20,
+    "precision": 0.41924718467222466,
+    "recall": 0.44,
+    "f1_score": 0.4077300070959886
+  }
+}

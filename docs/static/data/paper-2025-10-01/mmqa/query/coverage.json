@@ -1,0 +1,60 @@
+{
+    "queries": [
+      {
+        "id": "Q1",
+        "modalities": ["table", "text"],
+        "operators": ["map"]
+      },
+      {
+        "id": "Q2a",
+        "modalities": ["table", "image"],
+        "operators": ["join"]
+      },
+      {
+        "id": "Q2b",
+        "modalities": ["table", "image"],
+        "operators": ["join", "map"]
+      },
+      {
+        "id": "Q3a",
+        "modalities": ["text"],
+        "operators": ["filter"]
+      },
+      {
+        "id": "Q3f",
+        "modalities": ["text"],
+        "operators": ["filter"]
+      },
+      {
+        "id": "Q4",
+        "modalities": ["text"],
+        "operators": ["map"]
+      },
+      {
+        "id": "Q5",
+        "modalities": ["text"],
+        "operators": ["map"]
+      },
+      {
+        "id": "Q6a",
+        "modalities": ["table"],
+        "operators": ["filter"]
+      },
+      {
+        "id": "Q6b",
+        "modalities": ["table"],
+        "operators": ["filter"]
+      },
+      {
+        "id": "Q6c",
+        "modalities": ["table"],
+        "operators": ["filter"]
+      },
+      {
+        "id": "Q7",
+        "modalities": ["table", "image"],
+        "operators": ["join"]
+      }
+    ]
+  }
+  

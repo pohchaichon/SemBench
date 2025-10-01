@@ -1,0 +1,228 @@
+================================================================================
+SYSTEM PERFORMANCE ANALYSIS
+================================================================================
+
+1. WINNERS BY SCENARIO
+----------------------------------------
+
+EXECUTION TIME WINNERS BY SCENARIO:
+
+  ANIMALS:
+    thalamusdb: 4.0/10 queries
+    palimpzest: 3.0/10 queries
+    bigquery: 3.0/10 queries
+
+  ECOMM:
+    bigquery: 6.0/13 queries
+    palimpzest: 4.0/13 queries
+    lotus: 3.0/13 queries
+
+  MEDICAL:
+    palimpzest: 3.0/10 queries
+    lotus: 3.0/10 queries
+    thalamusdb: 3.0/10 queries
+    bigquery: 1.0/10 queries
+
+  MMQA:
+    palimpzest: 5.0/10 queries
+    lotus: 2.0/10 queries
+    thalamusdb: 2.0/10 queries
+    bigquery: 1.0/10 queries
+
+  MOVIE:
+    thalamusdb: 4.0/10 queries
+    lotus: 3.0/10 queries
+    palimpzest: 2.0/10 queries
+    bigquery: 1.0/10 queries
+
+MONEY COST WINNERS BY SCENARIO:
+
+  ANIMALS:
+    thalamusdb: 8.0/10 queries
+    bigquery: 1.0/10 queries
+    palimpzest: 1.0/10 queries
+
+  ECOMM:
+    lotus: 10.0/13 queries
+    thalamusdb: 2.0/13 queries
+    bigquery: 1.0/13 queries
+
+  MEDICAL:
+    palimpzest: 4.0/10 queries
+    thalamusdb: 4.0/10 queries
+    bigquery: 2.0/10 queries
+
+  MMQA:
+    thalamusdb: 7.0/10 queries
+    bigquery: 2.0/10 queries
+    palimpzest: 1.0/10 queries
+
+  MOVIE:
+    thalamusdb: 7.0/10 queries
+    lotus: 2.0/10 queries
+    bigquery: 1.0/10 queries
+
+QUALITY WINNERS BY SCENARIO:
+
+  ANIMALS:
+    thalamusdb: 3.2/10 queries
+    lotus: 2.5/10 queries
+    palimpzest: 2.2/10 queries
+    bigquery: 2.2/10 queries
+
+  ECOMM:
+    palimpzest: 6.3/13 queries
+    bigquery: 3.5/13 queries
+    lotus: 2.8/13 queries
+    thalamusdb: 0.3/13 queries
+
+  MEDICAL:
+    lotus: 5.0/10 queries
+    palimpzest: 3.0/10 queries
+    bigquery: 2.0/10 queries
+
+  MMQA:
+    palimpzest: 4.7/10 queries
+    lotus: 3.2/10 queries
+    bigquery: 1.3/10 queries
+    thalamusdb: 0.8/10 queries
+
+  MOVIE:
+    thalamusdb: 3.5/10 queries
+    bigquery: 2.7/10 queries
+    palimpzest: 2.2/10 queries
+    lotus: 1.7/10 queries
+
+
+2. WINNERS ACROSS ALL SCENARIOS
+--------------------------------------------------
+
+EXECUTION TIME WINNERS ACROSS ALL SCENARIOS:
+  palimpzest: 17.0/53 queries (32.1%)
+  thalamusdb: 13.0/53 queries (24.5%)
+  bigquery: 12.0/53 queries (22.6%)
+  lotus: 11.0/53 queries (20.8%)
+
+MONEY COST WINNERS ACROSS ALL SCENARIOS:
+  thalamusdb: 28.0/53 queries (52.8%)
+  lotus: 12.0/53 queries (22.6%)
+  bigquery: 7.0/53 queries (13.2%)
+  palimpzest: 6.0/53 queries (11.3%)
+
+QUALITY WINNERS ACROSS ALL SCENARIOS:
+  palimpzest: 18.3/53 queries (34.6%)
+  lotus: 15.2/53 queries (28.6%)
+  bigquery: 11.7/53 queries (22.0%)
+  thalamusdb: 7.8/53 queries (14.8%)
+
+
+3. WINNERS BY OPERATOR TYPE
+--------------------------------------------------
+
+SEM_CLASSIFY:
+  Execution Time:
+    lotus: 3.0/7 queries (42.9%)
+    thalamusdb: 2.0/7 queries (28.6%)
+    bigquery: 1.0/7 queries (14.3%)
+    palimpzest: 1.0/7 queries (14.3%)
+  Money Cost:
+    bigquery: 3.0/7 queries (42.9%)
+    lotus: 2.0/7 queries (28.6%)
+    thalamusdb: 2.0/7 queries (28.6%)
+  Quality:
+    lotus: 3.0/7 queries (42.9%)
+    bigquery: 2.5/7 queries (35.7%)
+    palimpzest: 1.5/7 queries (21.4%)
+
+SEM_FILTER:
+  Execution Time:
+    palimpzest: 10.0/33 queries (30.3%)
+    thalamusdb: 10.0/33 queries (30.3%)
+    lotus: 7.0/33 queries (21.2%)
+    bigquery: 6.0/33 queries (18.2%)
+  Money Cost:
+    thalamusdb: 22.0/33 queries (66.7%)
+    palimpzest: 5.0/33 queries (15.2%)
+    lotus: 4.0/33 queries (12.1%)
+    bigquery: 2.0/33 queries (6.1%)
+  Quality:
+    lotus: 11.3/33 queries (34.3%)
+    palimpzest: 11.0/33 queries (33.3%)
+    thalamusdb: 5.8/33 queries (17.7%)
+    bigquery: 4.8/33 queries (14.6%)
+
+SEM_JOIN:
+  Execution Time:
+    bigquery: 5.0/11 queries (45.5%)
+    thalamusdb: 3.0/11 queries (27.3%)
+    palimpzest: 2.0/11 queries (18.2%)
+    lotus: 1.0/11 queries (9.1%)
+  Money Cost:
+    thalamusdb: 6.0/11 queries (54.5%)
+    lotus: 4.0/11 queries (36.4%)
+    bigquery: 1.0/11 queries (9.1%)
+  Quality:
+    palimpzest: 5.5/11 queries (50.0%)
+    bigquery: 2.0/11 queries (18.2%)
+    thalamusdb: 2.0/11 queries (18.2%)
+    lotus: 1.5/11 queries (13.6%)
+
+SEM_MAP:
+  Execution Time:
+    palimpzest: 3.0/5 queries (60.0%)
+    bigquery: 2.0/5 queries (40.0%)
+  Money Cost:
+    lotus: 2.0/5 queries (40.0%)
+    bigquery: 2.0/5 queries (40.0%)
+    palimpzest: 1.0/5 queries (20.0%)
+  Quality:
+    palimpzest: 2.3/5 queries (46.7%)
+    bigquery: 2.3/5 queries (46.7%)
+    lotus: 0.3/5 queries (6.7%)
+
+SEM_SCORE:
+  Execution Time:
+    bigquery: 1.0/3 queries (33.3%)
+    lotus: 1.0/3 queries (33.3%)
+    palimpzest: 1.0/3 queries (33.3%)
+  Money Cost:
+    lotus: 3.0/3 queries (100.0%)
+  Quality:
+    lotus: 1.0/3 queries (33.3%)
+    bigquery: 1.0/3 queries (33.3%)
+    palimpzest: 1.0/3 queries (33.3%)
+
+
+4. SUMMARY STATISTICS
+------------------------------
+Total scenarios analyzed: 5
+Total systems compared: 4
+Total query results analyzed: 197
+
+Query distribution by scenario:
+  animals: 10 queries
+  ecomm: 14 queries
+  medical: 10 queries
+  mmqa: 11 queries
+  movie: 10 queries
+
+4. INDIVIDUAL METRIC RANKINGS
+----------------------------------------
+
+EXECUTION TIME RANKINGS:
+  1. palimpzest: 17.0/53 queries (32.1%)
+  2. thalamusdb: 13.0/53 queries (24.5%)
+  3. bigquery: 12.0/53 queries (22.6%)
+  4. lotus: 11.0/53 queries (20.8%)
+
+MONEY COST RANKINGS:
+  1. thalamusdb: 28.0/53 queries (52.8%)
+  2. lotus: 12.0/53 queries (22.6%)
+  3. bigquery: 7.0/53 queries (13.2%)
+  4. palimpzest: 6.0/53 queries (11.3%)
+
+QUALITY RANKINGS:
+  1. palimpzest: 18.3/53 queries (34.6%)
+  2. lotus: 15.2/53 queries (28.6%)
+  3. bigquery: 11.7/53 queries (22.0%)
+  4. thalamusdb: 7.8/53 queries (14.8%)

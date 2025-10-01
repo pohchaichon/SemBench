@@ -1,0 +1,15 @@
+{
+  "Q1": {
+    "query_id": "1",
+    "status": "success",
+    "execution_time": 54.601181507110596,
+    "token_usage": 0,
+    "money_cost": 0.0,
+    "row_count": 5,
+    "model_name": null,
+    "concurrent_llm_worker": 1,
+    "precision": 0.8,
+    "recall": 0.8,
+    "f1_score": 0.8000000000000002
+  }
+}

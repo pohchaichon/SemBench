@@ -1,0 +1,223 @@
+{
+  "scenario_results": {
+    "animals": {
+      "execution_time": {
+        "palimpzest": 3.0,
+        "thalamusdb": 4.0,
+        "bigquery": 3.0
+      },
+      "money_cost": {
+        "bigquery": 1.0,
+        "thalamusdb": 8.0,
+        "palimpzest": 1.0
+      },
+      "quality": {
+        "palimpzest": 2.1666666666666665,
+        "bigquery": 2.1666666666666665,
+        "thalamusdb": 3.1666666666666665,
+        "lotus": 2.5
+      }
+    },
+    "ecomm": {
+      "execution_time": {
+        "palimpzest": 4.0,
+        "lotus": 3.0,
+        "bigquery": 6.0
+      },
+      "money_cost": {
+        "lotus": 10.0,
+        "thalamusdb": 2.0,
+        "bigquery": 1.0
+      },
+      "quality": {
+        "palimpzest": 6.333333333333333,
+        "lotus": 2.8333333333333335,
+        "thalamusdb": 0.3333333333333333,
+        "bigquery": 3.5
+      }
+    },
+    "medical": {
+      "execution_time": {
+        "palimpzest": 3.0,
+        "lotus": 3.0,
+        "thalamusdb": 3.0,
+        "bigquery": 1.0
+      },
+      "money_cost": {
+        "palimpzest": 4.0,
+        "thalamusdb": 4.0,
+        "bigquery": 2.0
+      },
+      "quality": {
+        "palimpzest": 3.0,
+        "lotus": 5.0,
+        "bigquery": 2.0
+      }
+    },
+    "mmqa": {
+      "execution_time": {
+        "lotus": 2.0,
+        "palimpzest": 5.0,
+        "bigquery": 1.0,
+        "thalamusdb": 2.0
+      },
+      "money_cost": {
+        "thalamusdb": 7.0,
+        "palimpzest": 1.0,
+        "bigquery": 2.0
+      },
+      "quality": {
+        "lotus": 3.1666666666666665,
+        "palimpzest": 4.666666666666666,
+        "bigquery": 1.3333333333333333,
+        "thalamusdb": 0.8333333333333333
+      }
+    },
+    "movie": {
+      "execution_time": {
+        "thalamusdb": 4.0,
+        "palimpzest": 2.0,
+        "lotus": 3.0,
+        "bigquery": 1.0
+      },
+      "money_cost": {
+        "thalamusdb": 7.0,
+        "lotus": 2.0,
+        "bigquery": 1.0
+      },
+      "quality": {
+        "bigquery": 2.6666666666666665,
+        "lotus": 1.6666666666666665,
+        "palimpzest": 2.1666666666666665,
+        "thalamusdb": 3.5
+      }
+    }
+  },
+  "cross_scenario_results": {
+    "execution_time": {
+      "palimpzest": 17.0,
+      "thalamusdb": 13.0,
+      "bigquery": 12.0,
+      "lotus": 11.0
+    },
+    "money_cost": {
+      "bigquery": 7.0,
+      "thalamusdb": 28.0,
+      "palimpzest": 6.0,
+      "lotus": 12.0
+    },
+    "quality": {
+      "palimpzest": 18.333333333333332,
+      "bigquery": 11.666666666666666,
+      "thalamusdb": 7.833333333333333,
+      "lotus": 15.166666666666666
+    }
+  },
+  "operator_type_results": {
+    "SEM_CLASSIFY": {
+      "execution_time": {
+        "lotus": 3.0,
+        "bigquery": 1.0,
+        "thalamusdb": 2.0,
+        "palimpzest": 1.0
+      },
+      "money_cost": {
+        "lotus": 2.0,
+        "bigquery": 3.0,
+        "thalamusdb": 2.0
+      },
+      "quality": {
+        "lotus": 3.0,
+        "bigquery": 2.5,
+        "palimpzest": 1.5
+      }
+    },
+    "SEM_FILTER": {
+      "execution_time": {
+        "lotus": 7.0,
+        "bigquery": 6.0,
+        "palimpzest": 10.0,
+        "thalamusdb": 10.0
+      },
+      "money_cost": {
+        "thalamusdb": 22.0,
+        "lotus": 4.0,
+        "palimpzest": 5.0,
+        "bigquery": 2.0
+      },
+      "quality": {
+        "lotus": 11.333333333333334,
+        "palimpzest": 11.0,
+        "thalamusdb": 5.833333333333333,
+        "bigquery": 4.833333333333333
+      }
+    },
+    "SEM_JOIN": {
+      "execution_time": {
+        "lotus": 1.0,
+        "bigquery": 5.0,
+        "palimpzest": 2.0,
+        "thalamusdb": 3.0
+      },
+      "money_cost": {
+        "lotus": 4.0,
+        "thalamusdb": 6.0,
+        "bigquery": 1.0
+      },
+      "quality": {
+        "palimpzest": 5.5,
+        "lotus": 1.5,
+        "bigquery": 2.0,
+        "thalamusdb": 2.0
+      }
+    },
+    "SEM_MAP": {
+      "execution_time": {
+        "palimpzest": 3.0,
+        "bigquery": 2.0
+      },
+      "money_cost": {
+        "lotus": 2.0,
+        "palimpzest": 1.0,
+        "bigquery": 2.0
+      },
+      "quality": {
+        "palimpzest": 2.333333333333333,
+        "bigquery": 2.333333333333333,
+        "lotus": 0.3333333333333333
+      }
+    },
+    "SEM_SCORE": {
+      "execution_time": {
+        "bigquery": 1.0,
+        "lotus": 1.0,
+        "palimpzest": 1.0
+      },
+      "money_cost": {
+        "lotus": 3.0
+      },
+      "quality": {
+        "lotus": 1.0,
+        "bigquery": 1.0,
+        "palimpzest": 1.0
+      }
+    }
+  },
+  "metadata": {
+    "scenarios": [
+      "animals",
+      "ecomm",
+      "medical",
+      "mmqa",
+      "movie"
+    ],
+    "systems": [
+      "bigquery",
+      "lotus",
+      "palimpzest",
+      "thalamusdb"
+    ],
+    "total_scenarios": 5,
+    "total_systems": 4
+  }
+}

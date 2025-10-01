@@ -1,0 +1,122 @@
+{
+  "Q1": {
+    "query_id": 1,
+    "status": "success",
+    "execution_time": 884.7157256603241,
+    "money_cost": 13.688083749999992,
+    "row_count": 395,
+    "model_name": "gemini-2.5-pro",
+    "concurrent_llm_worker": 20,
+    "precision": 0.12151898734177215,
+    "recall": 0.96,
+    "f1_score": 0.2157303370786517
+  },
+  "Q2": {
+    "query_id": 2,
+    "status": "success",
+    "execution_time": 122.28099966049194,
+    "money_cost": 1.5776999999999994,
+    "row_count": 8,
+    "model_name": "gemini-2.5-pro",
+    "concurrent_llm_worker": 20,
+    "precision": 0.2857142857142857,
+    "recall": 0.09090909090909091,
+    "f1_score": 0.13793103448275862
+  },
+  "Q3": {
+    "query_id": 3,
+    "status": "success",
+    "execution_time": 22.95387554168701,
+    "money_cost": 0.03180625,
+    "row_count": 5,
+    "model_name": "gemini-2.5-pro",
+    "concurrent_llm_worker": 20,
+    "precision": 0.8,
+    "recall": 0.8,
+    "f1_score": 0.8000000000000002
+  },
+  "Q4": {
+    "query_id": 4,
+    "status": "success",
+    "execution_time": 739.3501727581024,
+    "money_cost": 11.79407499999999,
+    "row_count": 1,
+    "model_name": "gemini-2.5-pro",
+    "concurrent_llm_worker": 20,
+    "relative_error": 0.019634751760883536,
+    "absolute_error": 1.2578021978021994,
+    "mean_absolute_percentage_error": 1.9634751760883535
+  },
+  "Q5": {
+    "query_id": 5,
+    "status": "success",
+    "execution_time": 19.021671533584595,
+    "money_cost": 0.06578,
+    "row_count": 1,
+    "model_name": "gemini-2.5-pro",
+    "concurrent_llm_worker": 20,
+    "relative_error": 1.0,
+    "absolute_error": 1.0,
+    "mean_absolute_percentage_error": 100.0
+  },
+  "Q6": {
+    "query_id": 6,
+    "status": "success",
+    "execution_time": 150.0274522304535,
+    "money_cost": 1.6638825000000002,
+    "row_count": 100,
+    "model_name": "gemini-2.5-pro",
+    "concurrent_llm_worker": 20,
+    "precision": 0.93,
+    "recall": 0.32517482517482516,
+    "f1_score": 0.4818652849740933
+  },
+  "Q7": {
+    "query_id": 7,
+    "status": "success",
+    "execution_time": 6083.207009792328,
+    "money_cost": 92.6275049999998,
+    "row_count": 8323,
+    "model_name": "gemini-2.5-pro",
+    "concurrent_llm_worker": 20,
+    "precision": 0.8531779406464015,
+    "recall": 0.9350803265736107,
+    "f1_score": 0.8922535653703588
+  },
+  "Q8": {
+    "query_id": 8,
+    "status": "success",
+    "execution_time": 599.9670560359955,
+    "money_cost": 5.068117499999999,
+    "row_count": 100,
+    "model_name": "gemini-2.5-pro",
+    "concurrent_llm_worker": 20,
+    "precision": 0.43,
+    "recall": 0.43,
+    "f1_score": 0.42999999999999994
+  },
+  "Q9": {
+    "query_id": 9,
+    "status": "success",
+    "execution_time": 1055.7388484477997,
+    "money_cost": 16.983295000000023,
+    "row_count": 1152,
+    "model_name": "gemini-2.5-pro",
+    "concurrent_llm_worker": 20,
+    "precision": 0.3776041666666667,
+    "recall": 0.9275053304904051,
+    "f1_score": 0.5367057371992597
+  },
+  "Q10": {
+    "query_id": 10,
+    "status": "success",
+    "execution_time": 1074.273288488388,
+    "money_cost": 18.65541499999998,
+    "row_count": 1200,
+    "model_name": "gemini-2.5-pro",
+    "concurrent_llm_worker": 20,
+    "precision": 0.6264228491265965,
+    "recall": 0.6207692307692307,
+    "f1_score": 0.6093757444754369
+  }
+}

@@ -1,0 +1,75 @@
+{
+    "queries": [
+      {
+        "id": "Q1",
+        "modalities": ["text"],
+        "operators": ["filter"]
+      },
+      {
+        "id": "Q2",
+        "modalities": ["image"],
+        "operators": ["filter"]
+      },
+      {
+        "id": "Q3",
+        "modalities": ["text"],
+        "operators": ["map"]
+      },
+      {
+        "id": "Q4",
+        "modalities": ["image"],
+        "operators": ["map"]
+      },
+      {
+        "id": "Q5",
+        "modalities": ["text"],
+        "operators": ["classify"]
+      },
+      {
+        "id": "Q6",
+        "modalities": ["image"],
+        "operators": ["classify"]
+      },
+      {
+        "id": "Q7",
+        "modalities": ["text"],
+        "operators": ["join"]
+      },
+      {
+        "id": "Q8",
+        "modalities": ["image", "text"],
+        "operators": ["join"]
+      },
+      {
+        "id": "Q9",
+        "modalities": ["image"],
+        "operators": ["join"]
+      },
+      {
+        "id": "Q10",
+        "modalities": ["image"],
+        "operators": ["filter", "join"]
+      },
+      {
+        "id": "Q11",
+        "modalities": ["text", "image"],
+        "operators": ["filter", "join"]
+      },
+      {
+        "id": "Q12",
+        "modalities": ["text", "image"],
+        "operators": ["map", "classify"]
+      },
+      {
+        "id": "Q13",
+        "modalities": ["text", "image"],
+        "operators": ["filter"]
+      },
+      {
+        "id": "Q14",
+        "modalities": ["text", "image"],
+        "operators": ["join", "filter", "rank"]
+      }
+    ]
+  }
+  

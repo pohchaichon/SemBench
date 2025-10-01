@@ -1,0 +1,26 @@
+{
+  "Q9": {
+    "query_id": 9,
+    "status": "success",
+    "execution_time": 9.290796041488647,
+    "token_usage": 56382,
+    "money_cost": 0.00857250000000001,
+    "row_count": 256,
+    "model_name": "gpt-4o-mini",
+    "concurrent_llm_worker": 20,
+    "spearman_correlation": 0.7470655263850274,
+    "kendall_tau": 0.6604452713424446
+  },
+  "Q10": {
+    "query_id": 10,
+    "status": "success",
+    "execution_time": 68.27893686294556,
+    "token_usage": 417372,
+    "money_cost": 0.06350580000000004,
+    "row_count": 105,
+    "model_name": "gpt-4o-mini",
+    "concurrent_llm_worker": 20,
+    "spearman_correlation": 0.3863907974061333,
+    "kendall_tau": 0.26999380124947564
+  }
+}

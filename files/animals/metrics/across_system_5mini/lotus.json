@@ -1,0 +1,54 @@
+{
+  "Q1": {
+    "query_id": 1,
+    "status": "success",
+    "execution_time": 110.8994345664978,
+    "token_usage": 235136,
+    "money_cost": 0.06298400000000018,
+    "row_count": 1,
+    "model_name": "gpt-5-mini",
+    "concurrent_llm_worker": 20,
+    "relative_error": 0.2727272727272727,
+    "absolute_error": 3.0,
+    "mean_absolute_percentage_error": 27.27272727272727
+  },
+  "Q3": {
+    "query_id": 3,
+    "status": "success",
+    "execution_time": 116.32304263114929,
+    "token_usage": 235136,
+    "money_cost": 0.06298400000000018,
+    "row_count": 1,
+    "model_name": "gpt-5-mini",
+    "concurrent_llm_worker": 20,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0
+  },
+  "Q7": {
+    "query_id": 7,
+    "status": "success",
+    "execution_time": 228.53357100486755,
+    "token_usage": 470472,
+    "money_cost": 0.12601799999999921,
+    "row_count": 5,
+    "model_name": "gpt-5-mini",
+    "concurrent_llm_worker": 20,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0
+  },
+  "Q10": {
+    "query_id": 10,
+    "status": "success",
+    "execution_time": 108.34494876861572,
+    "token_usage": 235136,
+    "money_cost": 0.06298400000000018,
+    "row_count": 1,
+    "model_name": "gpt-5-mini",
+    "concurrent_llm_worker": 20,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0
+  }
+}

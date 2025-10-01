@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta property="og:title" content="SemBench"/>
+  <meta property="og:description" content="SemBench: A Benchmark for Semantic Query Processing Engines"/>
+  <meta property="description" content="SemBench: A Benchmark for Semantic Query Processing Engines"/>
+
+  <meta property="og:url" content="https://sembench.ai/"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta name="keywords" content="LLM, Multi-modal, Data Systems, Semantic Query Processing, Benchmark, AI, Machine Learning, SemBench"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Privacy controls - prevent search engine indexing -->
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+  <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet">
+
+  <title>SemBench</title>
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/2.0.7/css/dataTables.dataTables.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/2.0.7/js/dataTables.min.js"></script>
+  <script src="static/js/index.js"></script>
+  
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">SemBench: A Benchmark for Semantic Query Processing Engines</h1>
+          <div class="is-size-5 publication-authors">
+            <!-- Institution logos moved to separate section below -->
+          </div>
+          <br>
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- GitHub link -->
+              <span class="link-block">
+                <a href="https://github.com/SolidLao/MMBench-System"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Paper link will be added when available -->
+              <!-- <span class="link-block">
+                <a href="paper.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section institutions-section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column has-text-centered">
+        <div class="institution-logos">
+          <img src="static/images/institutions/cornell-university.png" 
+               alt="Cornell University" 
+               class="institution-logo">
+          <img src="static/images/institutions/utn.png" 
+               alt="UTN" 
+               class="institution-logo">
+          <img src="static/images/institutions/bifold.png" 
+               alt="BIFOLD" 
+               class="institution-logo">
+          <img src="static/images/institutions/tub.png" 
+               alt="TU Berlin" 
+               class="institution-logo">
+          <img src="static/images/institutions/michigan.png" 
+               alt="University of Michigan" 
+               class="institution-logo">
+          <img src="static/images/institutions/mit.svg" 
+               alt="MIT" 
+               class="institution-logo">
+          <img src="static/images/institutions/vu.svg" 
+               alt="VU Amsterdam" 
+               class="institution-logo">
+          <img src="static/images/institutions/google.svg" 
+               alt="Google" 
+               class="institution-logo">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero is-light">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-ninety">
+          <h2 class="title is-2">What is SemBench?</h2>
+          <div class="content has-text-justified">
+            <p>
+              SemBench is a systematic benchmark designed to evaluate and compare recent LLM-powered multi-modal data systems in realistic settings. 
+              It includes well-defined use cases that integrate structured data (tables) with unstructured modalities (text, images, audio), 
+              enabling the assessment of systems' ability to process complex semantic queries with ground truth validation. 
+              These systems are expected to balance multiple objectives—accuracy, cost, and efficiency—especially when handling large-scale datasets. 
+              SemBench emphasizes the trade-offs among these dimensions rather than performance in isolation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-ninety">
+        <h2 class="title is-2">Performance Comparison across All Scenarios</h2>
+          <div class="content has-text-justified">
+            <div class="field is-grouped is-grouped-centered" style="margin-bottom: 2rem;">
+              <div class="control">
+                <div class="select">
+                  <select id="performanceVersionSelect">
+                    <option value="">Select Version</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <p>
+              This analysis examines how different systems perform across all scenarios when allowing for tolerance in measurements.
+              The tolerance analysis considers that systems with very similar results (e.g., 1.01s vs 1.04s latency) may not represent
+              meaningful distinctions in real-world applications.
+            </p>
+            
+            <div class="has-text-centered" style="margin: 2rem 0;" id="toleranceAnalysisContainer">
+              <img id="toleranceAnalysisImage"
+                   src="static/images/tolerance_analysis_plots_custom_ranges.png"
+                   alt="Performance Comparison across All Scenarios - Tolerance Analysis"
+                   style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;"
+                   onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <p style="display: none; color: #666; font-style: italic;">Tolerance analysis chart not available for this version</p>
+            </div>
+            
+            <p>
+              The charts above show tolerance analysis for three metrics: <strong>Execution Time</strong>, <strong>Monetary Cost</strong>, and <strong>Quality</strong>. 
+              Each colored line represents a different system's win count as tolerance increases from strict (0%) to more lenient thresholds.
+            </p>
+            
+            <p>
+              <strong>Understanding the Charts:</strong> The solid lines with markers show actual wins at each tolerance level, while the horizontal 
+              dashed lines represent the upper bound (maximum possible wins for each system). The vertical dotted lines indicate the convergence 
+              tolerance where each system reaches its upper bound for that metric. For execution time and monetary cost, tolerance is relative 
+              (percentage-based), while for quality metrics, tolerance is absolute (fixed amount).
+            </p>
+            
+            <p>
+              As tolerance increases, more systems become winners for queries where performance differences are small. The win count for each 
+              system should increase or remain constant as tolerance grows, since systems don't lose wins but may gain them when performance 
+              becomes similar enough to be considered equivalent.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="hero is-light">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-justified">
+          <div class="scenario-selection">
+            <h3 class="title is-3 has-text-centered">Select Version, Scenario and Model</h3>
+            <div class="field is-grouped is-grouped-centered" style="margin-bottom: 2rem;">
+              <div class="control">
+                <div class="select">
+                  <select id="versionSelect">
+                    <option value="">Select Version</option>
+                  </select>
+                </div>
+              </div>
+              <div class="control">
+                <div class="select">
+                  <select id="scenarioSelect" disabled>
+                    <option value="">Select Scenario</option>
+                    <option value="animals">Animals</option>
+                    <option value="movie">Movie</option>
+                    <option value="ecomm">E-Commerce</option>
+                    <option value="medical">Medical</option>
+                    <option value="mmqa">MMQA</option>
+                  </select>
+                </div>
+              </div>
+              <div class="control">
+                <div class="select">
+                  <select id="modelSelect" disabled>
+                    <option value="">Select Model</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="field is-grouped is-grouped-centered accessibility-controls" style="margin-bottom: 2rem;">
+              <div class="control">
+                <label class="checkbox colorblind-toggle">
+                  <input type="checkbox" id="colorblindToggle">
+                  <span class="checkmark"></span>
+                  <span class="checkbox-label">Colorblind-friendly mode</span>
+                  <span class="accessibility-hint">(Uses patterns and high contrast colors)</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          
+          <div id="benchmarkTable" style="display: none; overflow-x: auto;">
+            <!-- Legend for modality and operator abbreviations -->
+            <div id="tableLegend" class="table-legend">
+              <div class="legend-section">
+                <span class="legend-title">Modalities:</span>
+                <span class="legend-item"><span class="modality-badge image">I</span> Image</span>
+                <span class="legend-item"><span class="modality-badge audio">A</span> Audio</span>
+                <span class="legend-item"><span class="modality-badge text">T</span> Text</span>
+              </div>
+              <div class="legend-section">
+                <span class="legend-title">Operators:</span>
+                <span class="legend-item"><span class="operator-badge filter">F</span> Filter</span>
+                <span class="legend-item"><span class="operator-badge join">J</span> Join</span>
+                <span class="legend-item"><span class="operator-badge classify">C</span> Classify</span>
+                <span class="legend-item"><span class="operator-badge rank">R</span> Rank</span>
+                <span class="legend-item"><span class="operator-badge map">M</span> Map</span>
+              </div>
+            </div>
+            
+            <table id="myTopTable" class="display" style="width:100%">
+              <thead>
+                <tr>
+                  <th colspan="100" class="competition-name" id="tableTitle">
+                    <span id="tracesHint">
+                      <i>Click on query names in the first column (e.g., Q1) to see detailed results and implementation</i>
+                    </span>
+                  </th>
+                </tr>
+                <tr id="systemHeaderRow">
+                  <!-- Query column -->
+                  <th class="query-name"></th>
+                  <!-- System columns will be dynamically generated -->
+                </tr>
+                <tr id="metricHeaderRow">
+                  <!-- Query column -->
+                  <th></th>
+                  <!-- Metric sub-headers will be dynamically generated -->
+                </tr>
+              </thead>
+              <tbody id="tableBody">
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero" id="queryDetails" style="display: none;">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column">
+          <div id="queryDetailsContent">
+            <!-- JS fills this -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero" id="overallPerformance" style="display: none;">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h3 class="title is-3">Overall Performance</h3>
+          <div id="performanceCharts">
+            <!-- JS fills this -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-ninety">
+          <h2 class="title is-2">Frequently Asked Questions</h2>
+          <div class="content has-text-justified">
+            <div class="faq-container">
+              <div class="faq-item">
+                <div class="faq-question">
+                  What types of queries does SemBench target?
+                </div>
+                <div class="faq-answer" style="display: none;">
+                  SemBench targets complex semantic queries that integrate structured data (tables) with unstructured modalities, 
+                  including text, images, and audio. Each scenario includes at least 10 diverse queries that test various aspects 
+                  of multimodal data processing, ranging from simple retrieval to complex analytical tasks that require reasoning 
+                  across multiple data types and sources. Our queries cover various semantic operators, including semantic filtering, 
+                  semantic joining, semantic classification, semantic scoring, and semantic aggregation. Moreover, SemBench can be easily 
+                  extended to support more scenarios with more semantic operators.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-10">
+        <div class="content has-text-centered">
+          <div class="team-section">
+            <h2 class="team-title">SemBench Team</h2>
+            <p class="team-subtitle">Advancing the frontier of semantic query processing</p>
+            
+            <div class="team-grid">
+              <div class="team-member-card">
+                <div class="member-image">
+                  <img src="static/images/team/jiale.jpg" alt="Jiale Lao" onerror="this.src='static/images/team/placeholder.svg'">
+                </div>
+                <div class="member-info">
+                  <h3 class="member-name">Jiale Lao</h3>
+                  <p class="member-institution">Cornell University</p>
+                </div>
+              </div>
+              
+              <div class="team-member-card">
+                <div class="member-image">
+                  <img src="static/images/team/immanuel-trummer.png" alt="Immanuel Trummer" onerror="this.src='static/images/team/placeholder.svg'">
+                </div>
+                <div class="member-info">
+                  <h3 class="member-name">Immanuel Trummer</h3>
+                  <p class="member-institution">Cornell University</p>
+                </div>
+              </div>
+              
+              <div class="team-member-card">
+                <div class="member-image">
+                  <img src="static/images/team/andreas-zimmerer.png" alt="Andreas Zimmerer" onerror="this.src='static/images/team/placeholder.svg'">
+                </div>
+                <div class="member-info">
+                  <h3 class="member-name">Andreas Zimmerer</h3>
+                  <p class="member-institution">University of Technology Nuremberg</p>
+                </div>
+              </div>
+              
+              <div class="team-member-card">
+                <div class="member-image">
+                  <img src="static/images/team/andreas-kipf.png" alt="Andreas Kipf" onerror="this.src='static/images/team/placeholder.svg'">
+                </div>
+                <div class="member-info">
+                  <h3 class="member-name">Andreas Kipf</h3>
+                  <p class="member-institution">University of Technology Nuremberg</p>
+                </div>
+              </div>
+              
+              <div class="team-member-card">
+                <div class="member-image">
+                  <img src="static/images/team/olga-ovcharenko.png" alt="Olga Ovcharenko" onerror="this.src='static/images/team/placeholder.svg'">
+                </div>
+                <div class="member-info">
+                  <h3 class="member-name">Olga Ovcharenko</h3>
+                  <p class="member-institution">BIFOLD & TU Berlin</p>
+                </div>
+              </div>
+              
+              <div class="team-member-card">
+                <div class="member-image">
+                  <img src="static/images/team/sebastian-schelter.png" alt="Sebastian Schelter" onerror="this.src='static/images/team/placeholder.svg'">
+                </div>
+                <div class="member-info">
+                  <h3 class="member-name">Sebastian Schelter</h3>
+                  <p class="member-institution">BIFOLD & TU Berlin</p>
+                </div>
+              </div>
+              
+              <div class="team-member-card">
+                <div class="member-image">
+                  <img src="static/images/team/tianji-cong.png" alt="Tianji Cong" onerror="this.src='static/images/team/placeholder.svg'">
+                </div>
+                <div class="member-info">
+                  <h3 class="member-name">Tianji Cong</h3>
+                  <p class="member-institution">University of Michigan</p>
+                </div>
+              </div>
+              
+              <div class="team-member-card">
+                <div class="member-image">
+                  <img src="static/images/team/hv-jagadish.png" alt="H. V. Jagadish" onerror="this.src='static/images/team/placeholder.svg'">
+                </div>
+                <div class="member-info">
+                  <h3 class="member-name">H. V. Jagadish</h3>
+                  <p class="member-institution">University of Michigan</p>
+                </div>
+              </div>
+              
+              <div class="team-member-card">
+                <div class="member-image">
+                  <img src="static/images/team/matthew-russo.png" alt="Matthew Russo" onerror="this.src='static/images/team/placeholder.svg'">
+                </div>
+                <div class="member-info">
+                  <h3 class="member-name">Matthew Russo</h3>
+                  <p class="member-institution">MIT CSAIL</p>
+                </div>
+              </div>
+              
+              <div class="team-member-card">
+                <div class="member-image">
+                  <img src="static/images/team/gerardo-vitagliano.png" alt="Gerardo Vitagliano" onerror="this.src='static/images/team/placeholder.svg'">
+                </div>
+                <div class="member-info">
+                  <h3 class="member-name">Gerardo Vitagliano</h3>
+                  <p class="member-institution">MIT CSAIL</p>
+                </div>
+              </div>
+              
+              <div class="team-member-card">
+                <div class="member-image">
+                  <img src="static/images/team/michael-cochez.png" alt="Michael Cochez" onerror="this.src='static/images/team/placeholder.svg'">
+                </div>
+                <div class="member-info">
+                  <h3 class="member-name">Michael Cochez</h3>
+                  <p class="member-institution">ELLIS Institute Finland & Åbo Akademi, Turku, Finland</p>
+                </div>
+              </div>
+              
+              <div class="team-member-card">
+                <div class="member-image">
+                  <img src="static/images/team/thibaud-hottelier.png" alt="Thibaud Hottelier" onerror="this.src='static/images/team/placeholder.svg'">
+                </div>
+                <div class="member-info">
+                  <h3 class="member-name">Thibaud Hottelier</h3>
+                  <p class="member-institution">Google</p>
+                </div>
+              </div>
+              
+              <div class="team-member-card">
+                <div class="member-image">
+                  <img src="static/images/team/gautam-gupta.png" alt="Gautam Gupta" onerror="this.src='static/images/team/placeholder.svg'">
+                </div>
+                <div class="member-info">
+                  <h3 class="member-name">Gautam Gupta</h3>
+                  <p class="member-institution">Google</p>
+                </div>
+              </div>
+              
+              <div class="team-member-card">
+                <div class="member-image">
+                  <img src="static/images/team/kris-kissel.png" alt="Kris Kissel" onerror="this.src='static/images/team/placeholder.svg'">
+                </div>
+                <div class="member-info">
+                  <h3 class="member-name">Kris Kissel</h3>
+                  <p class="member-institution">Google</p>
+                </div>
+              </div>
+              
+              <div class="team-member-card">
+                <div class="member-image">
+                  <img src="static/images/team/fatma-ozcan.png" alt="Fatma Ozcan" onerror="this.src='static/images/team/placeholder.svg'">
+                </div>
+                <div class="member-info">
+                  <h3 class="member-name">Fatma Ozcan</h3>
+                  <p class="member-institution">Google</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="footer-institutions">
+              <div class="institution-logos-footer">
+                <img src="static/images/institutions/cornell-university.png" alt="Cornell University" class="institution-logo-footer">
+                <img src="static/images/institutions/utn.png" alt="UTN" class="institution-logo-footer">
+                <img src="static/images/institutions/bifold.png" alt="BIFOLD" class="institution-logo">
+                <img src="static/images/institutions/tub.png" alt="TU Berlin" class="institution-logo-footer">
+                <img src="static/images/institutions/michigan.png" alt="University of Michigan" class="institution-logo-footer">
+                <img src="static/images/institutions/mit.svg" alt="MIT" class="institution-logo-footer">
+                <img src="static/images/institutions/vu.svg" alt="VU Amsterdam" class="institution-logo-footer">
+                <img src="static/images/institutions/google.svg" alt="Google" class="institution-logo-footer">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="static/js/sembench.js"></script>
+
+</body>
+</html>

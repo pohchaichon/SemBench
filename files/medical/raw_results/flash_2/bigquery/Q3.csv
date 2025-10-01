@@ -1,0 +1,6 @@
+age,gender,smoking_history,did_family_have_cancer,patient_id
+41,Male,Never,1,5264
+30,Male,Current,1,1299
+39,Male,Former,1,7641
+73,Female,Former,1,5243
+86,Male,Never,1,2151

@@ -1,0 +1,16 @@
+operator_type,metric,winner,wins,total_queries,win_rate
+SEM_CLASSIFY,execution_time,lotus,3.0,7.0,42.857142857142854
+SEM_CLASSIFY,money_cost,bigquery,3.0,7.0,42.857142857142854
+SEM_CLASSIFY,quality,lotus,3.0,7.0,42.857142857142854
+SEM_FILTER,execution_time,palimpzest,10.0,33.0,30.303030303030305
+SEM_FILTER,money_cost,thalamusdb,22.0,33.0,66.66666666666666
+SEM_FILTER,quality,lotus,11.333333333333334,33.0,34.34343434343434
+SEM_JOIN,execution_time,bigquery,5.0,11.0,45.45454545454545
+SEM_JOIN,money_cost,thalamusdb,6.0,11.0,54.54545454545454
+SEM_JOIN,quality,palimpzest,5.5,11.0,50.0
+SEM_MAP,execution_time,palimpzest,3.0,5.0,60.0
+SEM_MAP,money_cost,lotus,2.0,5.0,40.0
+SEM_MAP,quality,palimpzest,2.333333333333333,4.999999999999999,46.666666666666664
+SEM_SCORE,execution_time,bigquery,1.0,3.0,33.33333333333333
+SEM_SCORE,money_cost,lotus,3.0,3.0,100.0
+SEM_SCORE,quality,lotus,1.0,3.0,33.33333333333333

@@ -1,0 +1,80 @@
+{
+  "Q1": {
+    "query_id": "1",
+    "status": "success",
+    "execution_time": 18.897048473358154,
+    "token_usage": 182594,
+    "money_cost": 0.0626982,
+    "row_count": 53,
+    "model_name": "gemini-2.5-flash",
+    "concurrent_llm_worker": 20,
+    "precision": 0.39622641509433965,
+    "recall": 0.42,
+    "f1_score": 0.4077669902912621
+  },
+  "Q3": {
+    "query_id": "3",
+    "status": "success",
+    "execution_time": 200.95577716827393,
+    "token_usage": 2404758,
+    "money_cost": 0.7327134,
+    "row_count": 5,
+    "model_name": "gemini-2.5-flash",
+    "concurrent_llm_worker": 20,
+    "precision": 0.6,
+    "recall": 0.6,
+    "f1_score": 0.6
+  },
+  "Q4": {
+    "query_id": "4",
+    "status": "success",
+    "execution_time": 17.649763107299805,
+    "token_usage": 183794,
+    "money_cost": 0.0630582,
+    "row_count": 1,
+    "model_name": "gemini-2.5-flash",
+    "concurrent_llm_worker": 20,
+    "relative_error": 0.006543344780934579,
+    "absolute_error": 0.41916666666666913,
+    "mean_absolute_percentage_error": 0.6543344780934579
+  },
+  "Q8": {
+    "query_id": "8",
+    "status": "success",
+    "execution_time": 165.76480865478516,
+    "token_usage": 331692,
+    "money_cost": 0.105078,
+    "row_count": 100,
+    "model_name": "gemini-2.5-flash",
+    "concurrent_llm_worker": 20,
+    "precision": 0.73,
+    "recall": 0.73,
+    "f1_score": 0.7299999999999999
+  },
+  "Q9": {
+    "query_id": "9",
+    "status": "success",
+    "execution_time": 173.63257122039795,
+    "token_usage": 1022704,
+    "money_cost": 0.3171006,
+    "row_count": 589,
+    "model_name": "gemini-2.5-flash",
+    "concurrent_llm_worker": 20,
+    "precision": 0.5127334465195246,
+    "recall": 0.6439232409381663,
+    "f1_score": 0.5708884688090737
+  },
+  "Q10": {
+    "query_id": "10",
+    "status": "success",
+    "execution_time": 22.49323344230652,
+    "token_usage": 386747,
+    "money_cost": 0.15860069999999998,
+    "row_count": 1200,
+    "model_name": "gemini-2.5-flash",
+    "concurrent_llm_worker": 20,
+    "precision": 0.5843700985291778,
+    "recall": 0.5592592592592592,
+    "f1_score": 0.5453638973106218
+  }
+}

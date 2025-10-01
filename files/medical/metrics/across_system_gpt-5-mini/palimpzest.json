@@ -1,0 +1,123 @@
+{
+  "Q1": {
+    "query_id": 1,
+    "status": "success",
+    "execution_time": 68.92365837097168,
+    "money_cost": 0.10768100000000004,
+    "row_count": 212,
+    "model_name": "gpt-5-mini",
+    "concurrent_llm_worker": 20,
+    "precision": 0.20754716981132076,
+    "recall": 0.88,
+    "f1_score": 0.3358778625954198
+  },
+  "Q2": {
+    "query_id": 2,
+    "status": "success",
+    "execution_time": 18.52756667137146,
+    "money_cost": 0.14728999999999987,
+    "row_count": 68,
+    "model_name": "gpt-5-mini",
+    "concurrent_llm_worker": 20,
+    "precision": 0.3275862068965517,
+    "recall": 0.8636363636363636,
+    "f1_score": 0.47500000000000003
+  },
+  "Q3": {
+    "query_id": 3,
+    "status": "success",
+    "execution_time": 3.6375234127044678,
+    "money_cost": 0.00161775,
+    "row_count": 5,
+    "model_name": "gpt-5-mini",
+    "concurrent_llm_worker": 20,
+    "precision": 0.6,
+    "recall": 0.6,
+    "f1_score": 0.6
+  },
+  "Q4": {
+    "query_id": 4,
+    "status": "success",
+    "execution_time": 67.33563327789307,
+    "money_cost": 0.10798100000000009,
+    "row_count": 1,
+    "model_name": "gpt-5-mini",
+    "concurrent_llm_worker": 20,
+    "relative_error": 0.018257712161971425,
+    "absolute_error": 1.1695890410958896,
+    "mean_absolute_percentage_error": 1.8257712161971424
+  },
+  "Q5": {
+    "query_id": 5,
+    "status": "success",
+    "execution_time": 4.136690855026245,
+    "money_cost": 0.0028235000000000005,
+    "row_count": 1,
+    "model_name": "gpt-5-mini",
+    "concurrent_llm_worker": 20,
+    "relative_error": 0.0,
+    "absolute_error": 0.0,
+    "mean_absolute_percentage_error": 0.0
+  },
+  "Q6": {
+    "query_id": 6,
+    "status": "success",
+    "execution_time": 24.257047414779663,
+    "money_cost": 0.03066624999999997,
+    "row_count": 99,
+    "model_name": "gpt-5-mini",
+    "concurrent_llm_worker": 20,
+    "precision": 0.9797979797979798,
+    "recall": 0.33916083916083917,
+    "f1_score": 0.503896103896104
+  },
+
+  "Q7": {
+    "query_id": 7,
+    "status": "success",
+    "execution_time": 863.0115489959717,
+    "money_cost": 1.9658975000001122,
+    "row_count": 6485,
+    "model_name": "gpt-5-mini",
+    "concurrent_llm_worker": 20,
+    "precision": 0.8895913646877409,
+    "recall": 0.7596786937055571,
+    "f1_score": 0.8195184317067973
+  },
+  "Q8": {
+    "query_id": 8,
+    "status": "success",
+    "execution_time": 32.46020030975342,
+    "money_cost": 0.05340175000000039,
+    "row_count": 100,
+    "model_name": "gpt-5-mini",
+    "concurrent_llm_worker": 20,
+    "precision": 0.54,
+    "recall": 0.54,
+    "f1_score": 0.54
+  },
+  "Q9": {
+    "query_id": 9,
+    "status": "success",
+    "execution_time": 116.2735984325409,
+    "money_cost": 0.3106579999999981,
+    "row_count": 793,
+    "model_name": "gpt-5-mini",
+    "concurrent_llm_worker": 20,
+    "precision": 0.38083228247162676,
+    "recall": 0.6439232409381663,
+    "f1_score": 0.4786053882725832
+  },
+  "Q10": {
+    "query_id": 10,
+    "status": "success",
+    "execution_time": 82.57256937026978,
+    "money_cost": 0.21813900000000008,
+    "row_count": 1200,
+    "model_name": "gpt-5-mini",
+    "concurrent_llm_worker": 20,
+    "precision": 0.3899616567443926,
+    "recall": 0.3567741935483871,
+    "f1_score": 0.3536114310231534
+  }
+}

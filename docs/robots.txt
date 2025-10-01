@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /
+
+# This website is for private access only
+# Please do not index or crawl this site

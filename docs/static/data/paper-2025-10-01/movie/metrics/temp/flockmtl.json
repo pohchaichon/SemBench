@@ -1,0 +1,93 @@
+{
+  "Q1": {
+    "query_id": 1,
+    "status": "success",
+    "execution_time": 7.614336013793945,
+    "token_usage": 0,
+    "money_cost": 0.0,
+    "row_count": 5,
+    "model_name": "gpt-4o-mini",
+    "concurrent_llm_worker": 20,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0
+  },
+  "Q2": {
+    "query_id": 2,
+    "status": "success",
+    "execution_time": 2.0819079875946045,
+    "token_usage": 0,
+    "money_cost": 0.0,
+    "row_count": 5,
+    "model_name": "gpt-4o-mini",
+    "concurrent_llm_worker": 20,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1_score": 0.0
+  },
+"Q3": {
+    "query_id": 3,
+    "status": "success",
+    "execution_time": 3.4722371101379395,
+    "token_usage": 0,
+    "money_cost": 0.0,
+    "row_count": 1,
+    "model_name": "gpt-4o-mini",
+    "concurrent_llm_worker": 20,
+    "relative_error": 0.5714285714285714,
+    "absolute_error": 8.0,
+    "mean_absolute_percentage_error": 57.14285714285714
+  },
+"Q4": {
+    "query_id": 4,
+    "status": "success",
+    "execution_time": 2.9089202880859375,
+    "token_usage": 0,
+    "money_cost": 0.0,
+    "row_count": 1,
+    "model_name": "gpt-4o-mini",
+    "concurrent_llm_worker": 20,
+    "relative_error": 0.785714328289032,
+    "absolute_error": 0.09166666716337205,
+    "mean_absolute_percentage_error": 78.5714328289032
+  },
+"Q5": {
+    "query_id": 5,
+    "status": "success",
+    "execution_time": 189.52306699752808,
+    "token_usage": 0,
+    "money_cost": 0.0,
+    "row_count": 10,
+    "model_name": "gpt-4.1",
+    "concurrent_llm_worker": 20,
+    "precision": 0.7777777777777778,
+    "recall": 0.7,
+    "f1_score": 0.7368421052631577
+  },
+  "Q6": {
+    "query_id": 6,
+    "status": "success",
+    "execution_time": 164.5526647567749,
+    "token_usage": 0,
+    "money_cost": 0.0,
+    "row_count": 10,
+    "model_name": "gpt-4.1",
+    "concurrent_llm_worker": 20,
+    "precision": 1.0,
+    "recall": 0.8,
+    "f1_score": 0.888888888888889
+  },
+  "Q7": {
+    "query_id": 7,
+    "status": "success",
+    "execution_time": 3.68391489982605,
+    "token_usage": 0,
+    "money_cost": 0.0,
+    "row_count": 2,
+    "model_name": "gpt-4o-mini",
+    "concurrent_llm_worker": 20,
+    "relative_error": 0.12129380053908355,
+    "absolute_error": 6.0,
+    "mean_absolute_percentage_error": 12.129380053908354
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "Q1": {
+    "query_id": "1",
+    "status": "failed",
+    "execution_time": 0.0,
+    "error": "No columns to parse from file",
+    "row_count": 0,
+    "model_name": "gemini-2.5-flash",
+    "concurrent_llm_worker": 20
+  },
+  "Q2a": {
+    "query_id": "2a",
+    "status": "success",
+    "execution_time": 0.09601926803588867,
+    "token_usage": 0,
+    "money_cost": 0.0,
+    "row_count": 0,
+    "model_name": "gemini-2.5-flash",
+    "concurrent_llm_worker": 20,
+    "error": "No columns to parse from file"
+  },
+  "Q2b": {
+    "query_id": "2b",
+    "status": "failed",
+    "execution_time": 0.0,
+    "error": "No columns to parse from file",
+    "row_count": 0,
+    "model_name": "gemini-2.5-flash",
+    "concurrent_llm_worker": 20
+  },
+  "Q3a": {
+    "query_id": "3a",
+    "status": "success",
+    "execution_time": 9.299407958984375,
+    "token_usage": 26266,
+    "money_cost": 0.00832,
+    "row_count": 19,
+    "model_name": "gemini-2.5-flash",
+    "concurrent_llm_worker": 20,
+    "precision": 0.631578947368421,
+    "recall": 0.9230769230769231,
+    "f1_score": 0.7499999999999999
+  },
+  "Q3f": {
+    "query_id": "3f",
+    "status": "success",
+    "execution_time": 6.920580148696899,
+    "token_usage": 26466,
+    "money_cost": 0.00838,
+    "row_count": 3,
+    "model_name": "gemini-2.5-flash",
+    "concurrent_llm_worker": 20,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0
+  },
+  "Q4": {
+    "query_id": "4",
+    "status": "failed",
+    "execution_time": 0.0,
+    "error": "No columns to parse from file",
+    "row_count": 0,
+    "model_name": "gemini-2.5-flash",
+    "concurrent_llm_worker": 20
+  },
+  "Q5": {
+    "query_id": "5",
+    "status": "failed",
+    "execution_time": 0.0,
+    "error": "No columns to parse from file",
+    "row_count": 0,
+    "model_name": "gemini-2.5-flash",
+    "concurrent_llm_worker": 20
+  },
+  "Q6a": {
+    "query_id": "6a",
+    "status": "success",
+    "execution_time": 5.541252374649048,
+    "token_usage": 6268,
+    "money_cost": 0.002235,
+    "row_count": 5,
+    "model_name": "gemini-2.5-flash",
+    "concurrent_llm_worker": 20,
+    "precision": 0.2,
+    "recall": 1.0,
+    "f1_score": 0.33333333333333337
+  },
+  "Q6b": {
+    "query_id": "6b",
+    "status": "success",
+    "execution_time": 6.191480398178101,
+    "token_usage": 6268,
+    "money_cost": 0.002235,
+    "row_count": 1,
+    "model_name": "gemini-2.5-flash",
+    "concurrent_llm_worker": 20,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0
+  },
+  "Q6c": {
+    "query_id": "6c",
+    "status": "success",
+    "execution_time": 39.96932768821716,
+    "token_usage": 6268,
+    "money_cost": 0.002235,
+    "row_count": 14,
+    "model_name": "gemini-2.5-flash",
+    "concurrent_llm_worker": 20,
+    "precision": 0.35714285714285715,
+    "recall": 1.0,
+    "f1_score": 0.5263157894736842
+  },
+  "Q7": {
+    "query_id": "7",
+    "status": "success",
+    "execution_time": 0.17069005966186523,
+    "token_usage": 0,
+    "money_cost": 0.0,
+    "row_count": 0,
+    "model_name": "gemini-2.5-flash",
+    "concurrent_llm_worker": 20,
+    "error": "No columns to parse from file"
+  }
+}

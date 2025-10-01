@@ -1,0 +1,186 @@
+# SemBench Website Deployment Guide
+
+This guide explains how to deploy the SemBench website with public access (link-only, not searchable).
+
+## Features
+
+- ✅ No password required for visitors
+- ✅ Persistent after SSH disconnect
+- ✅ Link-only access (not searchable by search engines)
+- ✅ Automatic public URL generation
+- ✅ Background process management with logging
+
+## Prerequisites
+
+### First-Time Setup (One-Time Only)
+
+1. **Install ngrok**
+   ```bash
+   # On Linux
+   snap install ngrok
+
+   # Or download manually from https://ngrok.com/download
+   # Or on macOS
+   brew install ngrok
+   ```
+
+2. **Authenticate ngrok** (get your token from https://dashboard.ngrok.com/get-started/your-authtoken)
+   ```bash
+   ngrok config add-authtoken YOUR_TOKEN_HERE
+   ```
+
+   Note: Free ngrok accounts work fine for this use case.
+
+## Deployment Commands
+
+### Deploy the Website
+
+```bash
+cd /home/jl4492/MMBench-System/scripts
+./deploy-website.sh
+```
+
+Optional: Specify a custom port (default is 8080)
+```bash
+./deploy-website.sh 9000
+```
+
+**What happens:**
+- Starts Python HTTP server on specified port
+- Creates ngrok tunnel with public URL
+- Both processes run with `nohup` in background
+- Continues running even after you disconnect
+- Saves logs to `/tmp/sembench_logs/`
+
+**Output:**
+- Public URL (e.g., `https://xxxx-xx-xxx-xxx-xxx.ngrok-free.app`)
+- Local URL (`http://localhost:8080`)
+- Ngrok dashboard (`http://localhost:4040`)
+- Process IDs saved for cleanup
+
+### Stop the Website
+
+```bash
+cd /home/jl4492/MMBench-System/scripts
+./stop-website.sh
+```
+
+**What happens:**
+- Stops ngrok tunnel process
+- Stops Python HTTP server
+- Cleans up PID files
+- Preserves logs for inspection
+
+### Check Status
+
+**Check if processes are running:**
+```bash
+ps aux | grep "python3 -m http.server"
+ps aux | grep "ngrok http"
+```
+
+**View logs:**
+```bash
+# Server logs
+cat /tmp/sembench_logs/server.log
+
+# Ngrok logs
+cat /tmp/sembench_logs/ngrok.log
+
+# Get saved public URL
+cat /tmp/sembench_url.txt
+```
+
+**Check ngrok dashboard (if running):**
+```bash
+curl http://localhost:4040
+# Or visit in browser: http://localhost:4040
+```
+
+## Troubleshooting
+
+### Website doesn't start
+
+1. **Check if ngrok is installed:**
+   ```bash
+   which ngrok
+   ngrok version
+   ```
+
+2. **Check if ngrok is authenticated:**
+   ```bash
+   ngrok config check
+   ```
+
+3. **Check if port is already in use:**
+   ```bash
+   lsof -i :8080
+   # If in use, kill the process or use different port
+   ./deploy-website.sh 9000
+   ```
+
+4. **Check logs:**
+   ```bash
+   cat /tmp/sembench_logs/server.log
+   cat /tmp/sembench_logs/ngrok.log
+   ```
+
+### Website is already running
+
+```bash
+# Stop the existing instance first
+./stop-website.sh
+
+# Then start again
+./deploy-website.sh
+```
+
+### Can't access the public URL
+
+1. **Check if ngrok tunnel is active:**
+   ```bash
+   curl http://localhost:4040/api/tunnels
+   ```
+
+2. **Restart the deployment:**
+   ```bash
+   ./stop-website.sh
+   ./deploy-website.sh
+   ```
+
+3. **Check ngrok account status** - Free accounts have connection limits
+
+### Processes don't persist after disconnect
+
+- The script uses `nohup` which should persist processes
+- Verify with: `ps aux | grep -E "python3 -m http.server|ngrok"`
+- If still dying, check if server has any session cleanup policies
+
+## Security & Privacy
+
+- Website includes `noindex` meta tags to prevent search engine indexing
+- ngrok URLs are random and hard to guess
+- No password required (unlike LocalTunnel)
+- Only people with the link can access
+- Free ngrok URLs change on each deployment
+- For permanent URLs, upgrade to ngrok paid plan with custom domains
+
+## Files Modified
+
+- `scripts/deploy-website.sh` - Main deployment script
+- `scripts/stop-website.sh` - Cleanup script
+- `docs/index.html` - Already contains `noindex` meta tags
+
+## Logs and Temporary Files
+
+- Server logs: `/tmp/sembench_logs/server.log`
+- Ngrok logs: `/tmp/sembench_logs/ngrok.log`
+- Server PID: `/tmp/sembench_server.pid`
+- Tunnel PID: `/tmp/sembench_tunnel.pid`
+- Public URL: `/tmp/sembench_url.txt`
+
+## Additional Resources
+
+- ngrok documentation: https://ngrok.com/docs
+- ngrok dashboard: https://dashboard.ngrok.com
+- Get auth token: https://dashboard.ngrok.com/get-started/your-authtoken

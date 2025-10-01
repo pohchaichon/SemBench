@@ -1,0 +1,26 @@
+{
+  "Q9": {
+    "query_id": 9,
+    "status": "success",
+    "execution_time": 14.876508951187134,
+    "token_usage": 50347,
+    "money_cost": 0.008646000000000003,
+    "row_count": 256,
+    "model_name": "gemini-2.0-flash-001",
+    "concurrent_llm_worker": 20,
+    "spearman_correlation": 0.7757481065787138,
+    "kendall_tau": 0.6848677680863259
+  },
+  "Q10": {
+    "query_id": 10,
+    "status": "success",
+    "execution_time": 30.647822856903076,
+    "token_usage": 366240,
+    "money_cost": 0.06348824999999993,
+    "row_count": 105,
+    "model_name": "gemini-2.0-flash-001",
+    "concurrent_llm_worker": 20,
+    "spearman_correlation": 0.4022233020052083,
+    "kendall_tau": 0.28941505916330673
+  }
+}

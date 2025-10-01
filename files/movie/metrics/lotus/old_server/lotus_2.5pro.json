@@ -1,0 +1,123 @@
+{
+  "Q1": {
+    "query_id": 1,
+    "status": "success",
+    "execution_time": 586.9878468513489,
+    "token_usage": 1255288,
+    "money_cost": 10.455960000000013,
+    "row_count": 5,
+    "model_name": "vertex_ai/gemini-2.5-pro",
+    "concurrent_llm_worker": 20,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0
+  },
+  "Q2": {
+    "query_id": 2,
+    "status": "success",
+    "execution_time": 35.04228210449219,
+    "token_usage": 70550,
+    "money_cost": 0.5843737500000001,
+    "row_count": 5,
+    "model_name": "vertex_ai/gemini-2.5-pro",
+    "concurrent_llm_worker": 20,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0
+  },
+  "Q3": {
+    "query_id": 3,
+    "status": "success",
+    "execution_time": 34.123695611953735,
+    "token_usage": 70961,
+    "money_cost": 0.5916337500000002,
+    "row_count": 1,
+    "model_name": "vertex_ai/gemini-2.5-pro",
+    "concurrent_llm_worker": 20,
+    "relative_error": 0.42857142857142855,
+    "absolute_error": 6.0,
+    "mean_absolute_percentage_error": 42.857142857142854
+  },
+  "Q4": {
+    "query_id": 4,
+    "status": "success",
+    "execution_time": 33.07438278198242,
+    "token_usage": 71867,
+    "money_cost": 0.5996437500000001,
+    "row_count": 1,
+    "model_name": "vertex_ai/gemini-2.5-pro",
+    "concurrent_llm_worker": 20,
+    "relative_error": 0.5000000021287376,
+    "absolute_error": 0.05833333383003874,
+    "mean_absolute_percentage_error": 50.000000212873765
+  },
+  "Q5": {
+    "query_id": 5,
+    "status": "failed",
+    "execution_time": 0.0,
+    "error": "No columns to parse from file",
+    "row_count": 0,
+    "model_name": "vertex_ai/gemini-2.5-pro",
+    "concurrent_llm_worker": 20
+  },
+  "Q6": {
+    "query_id": 6,
+    "status": "success",
+    "execution_time": 9717.500315666199,
+    "token_usage": 24027504,
+    "money_cost": 187.66126375000167,
+    "row_count": 10,
+    "model_name": "vertex_ai/gemini-2.5-pro",
+    "concurrent_llm_worker": 20,
+    "precision": 0.5714285714285714,
+    "recall": 0.4,
+    "f1_score": 0.47058823529411764
+  },
+  "Q7": {
+    "query_id": 7,
+    "status": "success",
+    "execution_time": 10952.494420289993,
+    "token_usage": 24002802,
+    "money_cost": 187.28135750000177,
+    "row_count": 5878,
+    "model_name": "vertex_ai/gemini-2.5-pro",
+    "concurrent_llm_worker": 20,
+    "precision": 0.44134665965281433,
+    "recall": 0.20503421309872924,
+    "f1_score": 0.2799933255464709
+  },
+  "Q8": {
+    "query_id": 8,
+    "status": "success",
+    "execution_time": 38.77705526351929,
+    "token_usage": 72808,
+    "money_cost": 0.6195537499999999,
+    "row_count": 2,
+    "model_name": "vertex_ai/gemini-2.5-pro",
+    "concurrent_llm_worker": 20,
+    "relative_error": 0.08086253369272237,
+    "absolute_error": 4.0,
+    "mean_absolute_percentage_error": 8.086253369272237
+  },
+  "Q9": {
+    "query_id": 9,
+    "status": "success",
+    "execution_time": 82.2379629611969,
+    "token_usage": 254465,
+    "money_cost": 2.0455675000000006,
+    "row_count": 256,
+    "model_name": "vertex_ai/gemini-2.5-pro",
+    "concurrent_llm_worker": 20,
+    "spearman_correlation": 0.79523482267631,
+    "kendall_tau": 0.6948356548312945
+  },
+  "Q10": {
+    "query_id": 10,
+    "status": "failed",
+    "execution_time": 0.0,
+    "error": "No columns to parse from file",
+    "row_count": 0,
+    "model_name": "vertex_ai/gemini-2.5-pro",
+    "concurrent_llm_worker": 20
+  }
+}

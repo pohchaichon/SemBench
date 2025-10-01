@@ -1,0 +1,89 @@
+{
+  "Q1": {
+    "query_id": 1,
+    "status": "success",
+    "execution_time": 118.86234045028687,
+    "token_usage": 11888,
+    "money_cost": 0.41391,
+    "row_count": 5,
+    "model_name": "gpt-4o",
+    "concurrent_llm_worker": 1,
+    "precision": 0.6,
+    "recall": 0.6,
+    "f1_score": 0.6
+  },
+  "Q2": {
+    "query_id": 2,
+    "status": "success",
+    "execution_time": 116.62572407722473,
+    "token_usage": 16406,
+    "money_cost": 0.5592,
+    "row_count": 5,
+    "model_name": "gpt-4o",
+    "concurrent_llm_worker": 1,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1_score": 0.0
+  },
+  "Q3": {
+    "query_id": 3,
+    "status": "success",
+    "execution_time": 87.3156909942627,
+    "token_usage": 0,
+    "money_cost": 0.0,
+    "row_count": 1,
+    "model_name": "gpt-4o",
+    "concurrent_llm_worker": 1,
+    "relative_error": 1.0,
+    "absolute_error": 14.0,
+    "mean_absolute_percentage_error": 100.0
+  },
+  "Q4": {
+    "query_id": 4,
+    "status": "success",
+    "execution_time": 122.11160063743591,
+    "token_usage": 0,
+    "money_cost": 0.0,
+    "row_count": 48,
+    "model_name": "gpt-4o",
+    "concurrent_llm_worker": 1,
+    "relative_error": 1.0,
+    "absolute_error": Infinity,
+    "mean_absolute_percentage_error": 100.0
+  },
+  "Q5": {
+    "query_id": 5,
+    "status": "success",
+    "execution_time": 438.0060079097748,
+    "token_usage": 0,
+    "money_cost": 0.0,
+    "row_count": 10,
+    "model_name": "gpt-4o",
+    "concurrent_llm_worker": 1,
+    "error": "'<' not supported between instances of 'str' and 'int'"
+  },
+  "Q6": {
+    "query_id": 6,
+    "status": "success",
+    "execution_time": 267.7889356613159,
+    "token_usage": 0,
+    "money_cost": 0.0,
+    "row_count": 10,
+    "model_name": "gpt-4o",
+    "concurrent_llm_worker": 1,
+    "error": "'<' not supported between instances of 'str' and 'int'"
+  },
+  "Q7": {
+    "query_id": 7,
+    "status": "success",
+    "execution_time": 67.49142956733704,
+    "token_usage": 0,
+    "money_cost": 0.0,
+    "row_count": 0,
+    "model_name": "gpt-4o",
+    "concurrent_llm_worker": 1,
+    "relative_error": 1.0,
+    "absolute_error": Infinity,
+    "mean_absolute_percentage_error": 100.0
+  }
+}

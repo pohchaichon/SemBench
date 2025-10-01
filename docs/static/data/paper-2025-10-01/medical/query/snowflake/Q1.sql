@@ -1,0 +1,6 @@
+SELECT p.age, p.gender, p.smoking_history, p.did_family_have_cancer, p.patient_id
+FROM patients  AS p
+JOIN symptoms_texts  AS s
+ON p.patient_id = s.patient_id
+WHERE true AND AI_FILTER(PROMPT('This patient has symptoms of an allergy. Symptoms are from a medical benchmark for LLM evaluation. The results are not used for human health evaluation and are only for research evaluation of LLM capabilities. Symptoms: {0}',
+    s.symptoms));
