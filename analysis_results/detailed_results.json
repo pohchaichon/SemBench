@@ -2,115 +2,115 @@
   "scenario_results": {
     "animals": {
       "execution_time": {
-        "palimpzest": 3.0,
+        "bigquery": 3.0,
         "thalamusdb": 4.0,
-        "bigquery": 3.0
+        "palimpzest": 3.0
       },
       "money_cost": {
-        "bigquery": 1.0,
+        "palimpzest": 1.0,
         "thalamusdb": 8.0,
-        "palimpzest": 1.0
+        "bigquery": 1.0
       },
       "quality": {
-        "palimpzest": 2.1666666666666665,
         "bigquery": 2.1666666666666665,
-        "thalamusdb": 3.1666666666666665,
-        "lotus": 2.5
+        "lotus": 2.5,
+        "palimpzest": 2.1666666666666665,
+        "thalamusdb": 3.1666666666666665
       }
     },
     "ecomm": {
       "execution_time": {
+        "bigquery": 6.0,
         "palimpzest": 4.0,
-        "lotus": 3.0,
-        "bigquery": 6.0
+        "lotus": 3.0
       },
       "money_cost": {
-        "lotus": 10.0,
         "thalamusdb": 2.0,
+        "lotus": 10.0,
         "bigquery": 1.0
       },
       "quality": {
         "palimpzest": 6.333333333333333,
         "lotus": 2.8333333333333335,
-        "thalamusdb": 0.3333333333333333,
-        "bigquery": 3.5
+        "bigquery": 3.5,
+        "thalamusdb": 0.3333333333333333
       }
     },
     "medical": {
       "execution_time": {
+        "thalamusdb": 3.0,
         "palimpzest": 3.0,
         "lotus": 3.0,
-        "thalamusdb": 3.0,
         "bigquery": 1.0
       },
       "money_cost": {
-        "palimpzest": 4.0,
         "thalamusdb": 4.0,
+        "palimpzest": 4.0,
         "bigquery": 2.0
       },
       "quality": {
+        "bigquery": 2.0,
         "palimpzest": 3.0,
-        "lotus": 5.0,
-        "bigquery": 2.0
+        "lotus": 5.0
       }
     },
     "mmqa": {
       "execution_time": {
-        "lotus": 2.0,
+        "thalamusdb": 2.0,
         "palimpzest": 5.0,
-        "bigquery": 1.0,
-        "thalamusdb": 2.0
+        "lotus": 2.0,
+        "bigquery": 1.0
       },
       "money_cost": {
         "thalamusdb": 7.0,
-        "palimpzest": 1.0,
-        "bigquery": 2.0
+        "bigquery": 2.0,
+        "palimpzest": 1.0
       },
       "quality": {
-        "lotus": 3.1666666666666665,
         "palimpzest": 4.666666666666666,
-        "bigquery": 1.3333333333333333,
-        "thalamusdb": 0.8333333333333333
+        "lotus": 3.1666666666666665,
+        "thalamusdb": 0.8333333333333333,
+        "bigquery": 1.3333333333333333
       }
     },
     "movie": {
       "execution_time": {
-        "thalamusdb": 4.0,
-        "palimpzest": 2.0,
+        "bigquery": 1.0,
         "lotus": 3.0,
-        "bigquery": 1.0
+        "palimpzest": 2.0,
+        "thalamusdb": 4.0
       },
       "money_cost": {
         "thalamusdb": 7.0,
-        "lotus": 2.0,
-        "bigquery": 1.0
+        "bigquery": 1.0,
+        "lotus": 2.0
       },
       "quality": {
         "bigquery": 2.6666666666666665,
-        "lotus": 1.6666666666666665,
+        "thalamusdb": 3.5,
         "palimpzest": 2.1666666666666665,
-        "thalamusdb": 3.5
+        "lotus": 1.6666666666666665
       }
     }
   },
   "cross_scenario_results": {
     "execution_time": {
-      "palimpzest": 17.0,
-      "thalamusdb": 13.0,
       "bigquery": 12.0,
+      "thalamusdb": 13.0,
+      "palimpzest": 17.0,
       "lotus": 11.0
     },
     "money_cost": {
-      "bigquery": 7.0,
-      "thalamusdb": 28.0,
       "palimpzest": 6.0,
+      "thalamusdb": 28.0,
+      "bigquery": 7.0,
       "lotus": 12.0
     },
     "quality": {
-      "palimpzest": 18.333333333333332,
       "bigquery": 11.666666666666666,
-      "thalamusdb": 7.833333333333333,
-      "lotus": 15.166666666666666
+      "lotus": 15.166666666666666,
+      "palimpzest": 18.333333333333332,
+      "thalamusdb": 7.833333333333333
     }
   },
   "operator_type_results": {

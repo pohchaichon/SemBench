@@ -1,6 +1,6 @@
 # System Performance Analysis with Tolerance
 
-**Analysis Date:** 2025-10-01 05:53:34
+**Analysis Date:** 2025-11-01 20:11:03
 **Total Scenarios:** 5
 **Total Systems:** 4
 
@@ -73,10 +73,10 @@ At infinite tolerance, each system's win count would converge to this upper boun
 
 | Rank | System | Wins | Win Rate |
 |------|--------|------|----------|
-| 1 | **palimpzest** | 41.0/124 | 33.1% |
-| 2 | **thalamusdb** | 32.0/124 | 25.8% |
-| 3 | **bigquery** | 27.0/124 | 21.8% |
-| 4 | **lotus** | 24.0/124 | 19.4% |
+| 1 | **palimpzest** | 41.0/53 | 77.4% |
+| 2 | **thalamusdb** | 32.0/53 | 60.4% |
+| 3 | **bigquery** | 27.0/53 | 50.9% |
+| 4 | **lotus** | 24.0/53 | 45.3% |
 
 
 ### Money Cost Tolerance Analysis
@@ -94,10 +94,10 @@ At infinite tolerance, each system's win count would converge to this upper boun
 
 | Rank | System | Wins | Win Rate |
 |------|--------|------|----------|
-| 1 | **thalamusdb** | 34.0/111 | 30.6% |
-| 2 | **bigquery** | 27.0/111 | 24.3% |
-| 3 | **lotus** | 26.0/111 | 23.4% |
-| 4 | **palimpzest** | 24.0/111 | 21.6% |
+| 1 | **thalamusdb** | 34.0/53 | 64.2% |
+| 2 | **bigquery** | 27.0/53 | 50.9% |
+| 3 | **lotus** | 26.0/53 | 49.1% |
+| 4 | **palimpzest** | 24.0/53 | 45.3% |
 
 
 ### Quality Tolerance Analysis
@@ -106,10 +106,10 @@ At infinite tolerance, each system's win count would converge to this upper boun
 
 | Rank | System | Wins | Win Rate |
 |------|--------|------|----------|
-| 1 | **palimpzest** | 27.0/79 | 34.2% |
-| 2 | **lotus** | 22.0/79 | 27.8% |
-| 3 | **bigquery** | 17.0/79 | 21.5% |
-| 4 | **thalamusdb** | 13.0/79 | 16.5% |
+| 1 | **palimpzest** | 27.0/53 | 50.9% |
+| 2 | **lotus** | 22.0/53 | 41.5% |
+| 3 | **bigquery** | 17.0/53 | 32.1% |
+| 4 | **thalamusdb** | 13.0/53 | 24.5% |
 
 
 ## Key Insights

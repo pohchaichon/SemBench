@@ -5,8 +5,8 @@ animals,quality,thalamusdb,3.1666666666666665,10.0,31.666666666666664
 ecomm,execution_time,bigquery,6.0,13.0,46.15384615384615
 ecomm,money_cost,lotus,10.0,13.0,76.92307692307693
 ecomm,quality,palimpzest,6.333333333333333,13.0,48.717948717948715
-medical,execution_time,palimpzest,3.0,10.0,30.0
-medical,money_cost,palimpzest,4.0,10.0,40.0
+medical,execution_time,thalamusdb,3.0,10.0,30.0
+medical,money_cost,thalamusdb,4.0,10.0,40.0
 medical,quality,lotus,5.0,10.0,50.0
 mmqa,execution_time,palimpzest,5.0,10.0,50.0
 mmqa,money_cost,thalamusdb,7.0,10.0,70.0

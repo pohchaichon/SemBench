@@ -792,12 +792,12 @@ class SystemAnalyzer:
     def find_winners_with_tolerance(self, tolerance_levels) -> Dict[str, Dict[float, Dict[str, float]]]:
         """
         Find winners across all scenarios with different tolerance levels.
-        
+
         Args:
             tolerance_levels: Dict with metric-specific tolerance levels or List for all metrics
-            
+
         Returns:
-            {metric: {tolerance: {system: wins}}}
+            {metric: {tolerance: {system: wins}}, 'query_counts': {metric: count}}
         """
         # Handle both dict (metric-specific) and list (same for all) inputs
         if isinstance(tolerance_levels, list):
@@ -808,13 +808,20 @@ class SystemAnalyzer:
             }
         else:
             metric_tolerances = tolerance_levels
-        
+
         tolerance_results = {
             'execution_time': {},
             'money_cost': {},
             'quality': {}
         }
-        
+
+        # Track the number of competitive queries for each metric
+        query_counts = {
+            'execution_time': 0,
+            'money_cost': 0,
+            'quality': 0
+        }
+
         # Initialize results for each metric and tolerance level
         for metric in ['execution_time', 'money_cost', 'quality']:
             for tolerance in metric_tolerances[metric]:
@@ -843,45 +850,55 @@ class SystemAnalyzer:
                 
                 if len(query_metrics) < 2:  # Need at least 2 systems to compare
                     continue
-                
+
                 # Process each metric with its specific tolerance levels
-                
+
                 # Execution time (lower is better, use relative tolerance)
                 if query_metrics:
                     min_time = min(metrics[0] for metrics in query_metrics.values())
-                    for tolerance in metric_tolerances['execution_time']:
-                        time_winners = []
-                        for sys, metrics in query_metrics.items():
-                            if self._is_winner_with_tolerance(metrics[0], min_time, tolerance, 'lower', 'relative'):
-                                time_winners.append(sys)
-                        
-                        for winner in time_winners:
-                            tolerance_results['execution_time'][tolerance][winner] += 1
-                
+                    # Only count if min_time is not inf (at least one system has valid time)
+                    if min_time != float('inf'):
+                        query_counts['execution_time'] += 1
+                        for tolerance in metric_tolerances['execution_time']:
+                            time_winners = []
+                            for sys, metrics in query_metrics.items():
+                                if self._is_winner_with_tolerance(metrics[0], min_time, tolerance, 'lower', 'relative'):
+                                    time_winners.append(sys)
+
+                            for winner in time_winners:
+                                tolerance_results['execution_time'][tolerance][winner] += 1
+
                 # Money cost (lower is better, use relative tolerance)
                 if query_metrics:
                     min_cost = min(metrics[1] for metrics in query_metrics.values())
-                    for tolerance in metric_tolerances['money_cost']:
-                        cost_winners = []
-                        for sys, metrics in query_metrics.items():
-                            if self._is_winner_with_tolerance(metrics[1], min_cost, tolerance, 'lower', 'relative'):
-                                cost_winners.append(sys)
-                        
-                        for winner in cost_winners:
-                            tolerance_results['money_cost'][tolerance][winner] += 1
-                
+                    # Only count if min_cost is not inf (at least one system has valid cost)
+                    if min_cost != float('inf'):
+                        query_counts['money_cost'] += 1
+                        for tolerance in metric_tolerances['money_cost']:
+                            cost_winners = []
+                            for sys, metrics in query_metrics.items():
+                                if self._is_winner_with_tolerance(metrics[1], min_cost, tolerance, 'lower', 'relative'):
+                                    cost_winners.append(sys)
+
+                            for winner in cost_winners:
+                                tolerance_results['money_cost'][tolerance][winner] += 1
+
                 # Quality (higher is better, use absolute tolerance)
                 if query_metrics:
                     max_quality = max(metrics[2] for metrics in query_metrics.values())
-                    for tolerance in metric_tolerances['quality']:
-                        quality_winners = []
-                        for sys, metrics in query_metrics.items():
-                            if self._is_winner_with_tolerance(metrics[2], max_quality, tolerance, 'higher', 'absolute'):
-                                quality_winners.append(sys)
-                        
-                        for winner in quality_winners:
-                            tolerance_results['quality'][tolerance][winner] += 1
-        
+                    # Only count if max_quality is > 0 (at least one system has valid quality)
+                    if max_quality > 0:
+                        query_counts['quality'] += 1
+                        for tolerance in metric_tolerances['quality']:
+                            quality_winners = []
+                            for sys, metrics in query_metrics.items():
+                                if self._is_winner_with_tolerance(metrics[2], max_quality, tolerance, 'higher', 'absolute'):
+                                    quality_winners.append(sys)
+
+                            for winner in quality_winners:
+                                tolerance_results['quality'][tolerance][winner] += 1
+
+        tolerance_results['query_counts'] = query_counts
         return tolerance_results
     
     def _is_winner_with_tolerance(self, value: float, best_value: float, tolerance: float, 
@@ -1105,12 +1122,15 @@ class SystemAnalyzer:
         })
         
         # Professional color palette (colorblind-friendly)
-        colors = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', 
+        colors = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd',
                  '#8c564b', '#e377c2', '#7f7f7f', '#bcbd22', '#17becf']
         markers = ['o', 's', '^', 'D', 'v', '<', '>', 'p', '*', 'h']
-        
+        # Different dash patterns for upper bound lines to distinguish overlapping lines
+        dash_styles = [(3, 1), (6, 2), (1, 1), (3, 1, 1, 1), (5, 2, 1, 2)]
+
         system_colors = {system: colors[i % len(colors)] for i, system in enumerate(self.systems)}
         system_markers = {system: markers[i % len(markers)] for i, system in enumerate(self.systems)}
+        system_dashes = {system: dash_styles[i % len(dash_styles)] for i, system in enumerate(self.systems)}
         
         # Create figure optimized for double-column ACM format
         fig, axes = plt.subplots(1, 3, figsize=(7.5, 2.5))  # Standard ACM double-column width
@@ -1162,22 +1182,26 @@ class SystemAnalyzer:
                        markeredgewidth=0.5)
             
             # Add horizontal lines showing upper bounds for each system
+            # Use different dash patterns to make overlapping lines distinguishable
             for system in self.systems:
                 if system in upper_bounds:
-                    ax.axhline(y=upper_bounds[system], 
-                              color=system_colors[system], 
-                              linestyle='--', 
-                              alpha=0.6, 
-                              linewidth=1.0)
+                    ax.axhline(y=upper_bounds[system],
+                              color=system_colors[system],
+                              linestyle='--',
+                              dashes=system_dashes[system],
+                              alpha=0.7,
+                              linewidth=1.2)
             
             # Add vertical lines showing convergence tolerances for each system
+            # Use different dash patterns to distinguish overlapping convergence lines
             if metric in convergence_tolerances:
                 for system in self.systems:
                     if system in convergence_tolerances[metric]:
                         convergence_pct = convergence_tolerances[metric][system] * 100
+                        # Use dotted style with custom dash pattern for convergence lines
                         ax.axvline(x=convergence_pct,
                                   color=system_colors[system],
-                                  linestyle=':',
+                                  linestyle=(0, system_dashes[system]),
                                   alpha=0.7,
                                   linewidth=1.2)
             
@@ -1373,33 +1397,38 @@ class SystemAnalyzer:
         else:
             available_tolerances = tolerance_levels
         
+        # Extract query counts from tolerance_results
+        query_counts = tolerance_results.get('query_counts', {})
+
         # Create tables for each metric separately
         for metric in ['execution_time', 'money_cost', 'quality']:
             metric_name = metric.replace('_', ' ').title()
             add_line(f"### {metric_name} Tolerance Analysis")
             add_line("")
-            
+
+            # Get the total number of competitive queries for this metric
+            total_queries = query_counts.get(metric, 0)
+
             for tolerance in metric_key_tolerances[metric]:
                 if tolerance in available_tolerances[metric] and tolerance in tolerance_results[metric]:
                     tolerance_pct = f"{tolerance*100:.0f}%" if tolerance > 0 else "0% (Strict)"
                     add_line(f"**Tolerance Level: {tolerance_pct}**")
                     add_line("")
-                    
+
                     system_wins = tolerance_results[metric][tolerance]
-                    if system_wins:
-                        total_queries = sum(system_wins.values())
+                    if system_wins and total_queries > 0:
                         sorted_systems = sorted(system_wins.items(), key=lambda x: x[1], reverse=True)
-                        
+
                         add_line("| Rank | System | Wins | Win Rate |")
                         add_line("|------|--------|------|----------|")
-                        
+
                         for i, (system, wins) in enumerate(sorted_systems, 1):
                             if wins > 0:
                                 win_rate = wins / total_queries * 100 if total_queries > 0 else 0
                                 add_line(f"| {i} | **{system}** | {wins:.1f}/{total_queries:.0f} | {win_rate:.1f}% |")
-                        
+
                         add_line("")
-            
+
             add_line("")
         
         add_line("## Key Insights")

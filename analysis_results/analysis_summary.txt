@@ -9,8 +9,8 @@ EXECUTION TIME WINNERS BY SCENARIO:
 
   ANIMALS:
     thalamusdb: 4.0/10 queries
-    palimpzest: 3.0/10 queries
     bigquery: 3.0/10 queries
+    palimpzest: 3.0/10 queries
 
   ECOMM:
     bigquery: 6.0/13 queries
@@ -18,15 +18,15 @@ EXECUTION TIME WINNERS BY SCENARIO:
     lotus: 3.0/13 queries
 
   MEDICAL:
+    thalamusdb: 3.0/10 queries
     palimpzest: 3.0/10 queries
     lotus: 3.0/10 queries
-    thalamusdb: 3.0/10 queries
     bigquery: 1.0/10 queries
 
   MMQA:
     palimpzest: 5.0/10 queries
-    lotus: 2.0/10 queries
     thalamusdb: 2.0/10 queries
+    lotus: 2.0/10 queries
     bigquery: 1.0/10 queries
 
   MOVIE:
@@ -39,8 +39,8 @@ MONEY COST WINNERS BY SCENARIO:
 
   ANIMALS:
     thalamusdb: 8.0/10 queries
-    bigquery: 1.0/10 queries
     palimpzest: 1.0/10 queries
+    bigquery: 1.0/10 queries
 
   ECOMM:
     lotus: 10.0/13 queries
@@ -48,8 +48,8 @@ MONEY COST WINNERS BY SCENARIO:
     bigquery: 1.0/13 queries
 
   MEDICAL:
-    palimpzest: 4.0/10 queries
     thalamusdb: 4.0/10 queries
+    palimpzest: 4.0/10 queries
     bigquery: 2.0/10 queries
 
   MMQA:
@@ -67,8 +67,8 @@ QUALITY WINNERS BY SCENARIO:
   ANIMALS:
     thalamusdb: 3.2/10 queries
     lotus: 2.5/10 queries
-    palimpzest: 2.2/10 queries
     bigquery: 2.2/10 queries
+    palimpzest: 2.2/10 queries
 
   ECOMM:
     palimpzest: 6.3/13 queries
