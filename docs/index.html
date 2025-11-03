@@ -188,10 +188,10 @@
           <h2 class="title is-2">What is SemBench?</h2>
           <div class="content has-text-justified">
             <p>
-              SemBench is a systematic benchmark designed to evaluate and compare recent LLM-powered multi-modal data systems in realistic settings. 
-              It includes well-defined use cases that integrate structured data (tables) with unstructured modalities (text, images, audio), 
-              enabling the assessment of systems' ability to process complex semantic queries with ground truth validation. 
-              These systems are expected to balance multiple objectives—accuracy, cost, and efficiency—especially when handling large-scale datasets. 
+              SemBench is a systematic benchmark designed to evaluate and compare recent LLM-powered multi-modal data systems in realistic settings.
+              It includes well-defined use cases that integrate structured data (tables) with unstructured modalities (text, images, audio),
+              enabling the assessment of systems' ability to process complex semantic queries with ground truth validation.
+              These systems are expected to balance multiple objectives—accuracy, cost, and efficiency—especially when handling large-scale datasets.
               SemBench emphasizes the trade-offs among these dimensions rather than performance in isolation.
             </p>
           </div>
@@ -201,59 +201,7 @@
   </div>
 </section>
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-ninety">
-        <h2 class="title is-2">Performance Comparison across All Scenarios</h2>
-          <div class="content has-text-justified">
-            <div class="field is-grouped is-grouped-centered" style="margin-bottom: 2rem;">
-              <div class="control">
-                <div class="select">
-                  <select id="performanceVersionSelect">
-                    <option value="">Select Version</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-
-            <p>
-              This analysis examines how different systems perform across all scenarios when allowing for tolerance in measurements.
-              The tolerance analysis considers that systems with very similar results (e.g., 1.01s vs 1.04s latency) may not represent
-              meaningful distinctions in real-world applications.
-            </p>
-            
-            <div class="has-text-centered" style="margin: 2rem 0;" id="toleranceAnalysisContainer">
-              <img id="toleranceAnalysisImage"
-                   src="static/images/tolerance_analysis_plots_custom_ranges.png"
-                   alt="Performance Comparison across All Scenarios - Tolerance Analysis"
-                   style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;"
-                   onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-              <p style="display: none; color: #666; font-style: italic;">Tolerance analysis chart not available for this version</p>
-            </div>
-            
-            <p>
-              The charts above show tolerance analysis for three metrics: <strong>Execution Time</strong>, <strong>Monetary Cost</strong>, and <strong>Quality</strong>. 
-              Each colored line represents a different system's win count as tolerance increases from strict (0%) to more lenient thresholds.
-            </p>
-            
-            <p>
-              <strong>Understanding the Charts:</strong> The solid lines with markers show actual wins at each tolerance level, while the horizontal 
-              dashed lines represent the upper bound (maximum possible wins for each system). The vertical dotted lines indicate the convergence 
-              tolerance where each system reaches its upper bound for that metric. For execution time and monetary cost, tolerance is relative 
-              (percentage-based), while for quality metrics, tolerance is absolute (fixed amount).
-            </p>
-            
-            <p>
-              As tolerance increases, more systems become winners for queries where performance differences are small. The win count for each 
-              system should increase or remain constant as tolerance grows, since systems don't lose wins but may gain them when performance 
-              becomes similar enough to be considered equivalent.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-</section>
+<hr style="margin: 0; border: none; border-top: 2px solid #dbdbdb;">
 
 <section class="hero is-light">
   <div class="hero-body">
@@ -380,6 +328,60 @@
       </div>
     </div>
   </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-ninety">
+        <h2 class="title is-2">Performance Comparison across All Scenarios</h2>
+          <div class="content has-text-justified">
+            <div class="field is-grouped is-grouped-centered" style="margin-bottom: 2rem;">
+              <div class="control">
+                <div class="select">
+                  <select id="performanceVersionSelect">
+                    <option value="">Select Version</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <p>
+              This analysis examines how different systems perform across all scenarios when allowing for tolerance in measurements.
+              The tolerance analysis considers that systems with very similar results (e.g., 1.01s vs 1.04s latency) may not represent
+              meaningful distinctions in real-world applications.
+            </p>
+
+            <div class="has-text-centered" style="margin: 2rem 0;" id="toleranceAnalysisContainer">
+              <img id="toleranceAnalysisImage"
+                   src="static/images/tolerance_analysis_plots_custom_ranges.png"
+                   alt="Performance Comparison across All Scenarios - Tolerance Analysis"
+                   style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;"
+                   onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <p style="display: none; color: #666; font-style: italic;">Tolerance analysis chart not available for this version</p>
+            </div>
+
+            <p>
+              The charts above show tolerance analysis for three metrics: <strong>Execution Time</strong>, <strong>Monetary Cost</strong>, and <strong>Quality</strong>.
+              Each colored line represents a different system's win count as tolerance increases from strict (0%) to more lenient thresholds.
+            </p>
+
+            <p>
+              <strong>Understanding the Charts:</strong> The solid lines with markers show actual wins at each tolerance level, while the horizontal
+              dashed lines represent the upper bound (maximum possible wins for each system). The vertical dotted lines indicate the convergence
+              tolerance where each system reaches its upper bound for that metric. For execution time and monetary cost, tolerance is relative
+              (percentage-based), while for quality metrics, tolerance is absolute (fixed amount).
+            </p>
+
+            <p>
+              As tolerance increases, more systems become winners for queries where performance differences are small. The win count for each
+              system should increase or remain constant as tolerance grows, since systems don't lose wins but may gain them when performance
+              becomes similar enough to be considered equivalent.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
 </section>
 
 <section class="section hero">
