@@ -16,7 +16,7 @@ We understand that every system is under rapid development, which is why we main
 ## Materials
 - [Online Leaderboard](https://sembench.ngrok.io/)
 - [Multi-Modal Datasets](https://drive.google.com/drive/folders/1pqf8DKFai16MR80Z7pcls5FgBbom-IJt?usp=sharing)
-- [Extended Paper](https://drive.google.com/drive/folders/1RypSI9Teke-qM254PBslulQnUah8iuMc?usp=sharing)
+- [Paper](https://arxiv.org/abs/2511.01716)
 
 ## 🌟 Overview
 
@@ -176,6 +176,20 @@ The modular architecture supports easy extension:
 ## 🤝 Contributing
 
 We welcome contributions for new scenarios, systems, metrics, and more semantic queries! 
+
+## Citation
+If you use this benchmark, or otherwise found our work valuable, please cite 📒:
+```
+@misc{lao2025sembenchbenchmarksemanticquery,
+      title={SemBench: A Benchmark for Semantic Query Processing Engines}, 
+      author={Jiale Lao and Andreas Zimmerer and Olga Ovcharenko and Tianji Cong and Matthew Russo and Gerardo Vitagliano and Michael Cochez and Fatma Özcan and Gautam Gupta and Thibaud Hottelier and H. V. Jagadish and Kris Kissel and Sebastian Schelter and Andreas Kipf and Immanuel Trummer},
+      year={2025},
+      eprint={2511.01716},
+      archivePrefix={arXiv},
+      primaryClass={cs.DB},
+      url={https://arxiv.org/abs/2511.01716}, 
+}
+```
 
 ---
 
