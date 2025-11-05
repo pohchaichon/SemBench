@@ -1,7 +1,7 @@
 import os
 from typing import Any, Dict, List
 import pandas as pd
-from .download import download_and_postprocess_data
+from .preparation.generate_data import prepare_data
 import glob
 import tomli
 import duckdb
@@ -74,16 +74,13 @@ class EcommScenario:
                 os.path.join(
                     ECOMM_FILES_DIR,
                     "data",
-                    f"fashion_product_images_{str(self.scale_factor)}",
+                    f"sf_{str(self.scale_factor)}",
                 )
             )
 
     def setup_scenario(self, systems: List[str]) -> None:
-        # Download data
-        target_dir = os.path.abspath(os.path.join(ECOMM_FILES_DIR, "data"))
-        self.data_dir = download_and_postprocess_data(
-            target_dir=target_dir, scale_factor=self.scale_factor
-        )
+        # Download and prepare data
+        self.data_dir = prepare_data(scale_factor=self.scale_factor)
 
         # Load data into the specified systems
         for system in systems:

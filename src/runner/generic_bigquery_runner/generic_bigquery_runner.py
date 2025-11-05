@@ -182,7 +182,7 @@ class GenericBigQueryRunner(GenericRunner):
             if metrics.status == "failed":
                 continue
 
-            max_retries = 12  # 12 * 5s = 1 minute max wait
+            max_retries = 3  # 12 * 5s max wait
             retry_count = 0
             cost_retrieved = False
 

@@ -14,6 +14,9 @@ following these principles:
 
 An example command, providing the folder to the original kaggle dataset, and the scaling factor:
 python3 generate_data.py .cache/kagglehub/datasets/andrezaza/clapper-massive-rotten-tomatoes-movies-and-reviews/versions/4 2000
+
+Or to use Google Drive download:
+python3 generate_data.py --download-from-drive --scale-factor 2000
 """
 
 import argparse
@@ -22,6 +25,113 @@ import numpy as np
 from pathlib import Path
 from collections import Counter
 import re
+import os
+
+
+def download_from_google_drive():
+    """Download movie.zip from Google Drive and extract it."""
+    base_dir = Path(__file__).resolve().parents[4]
+    source_data_dir = base_dir / "files" / "movie" / "source_data"
+    source_data_dir.mkdir(parents=True, exist_ok=True)
+
+    # The CSV files should be directly in source_data after extraction
+    data_path = source_data_dir
+    reviews_file = data_path / "rotten_tomatoes_movie_reviews.csv"
+    movies_file = data_path / "rotten_tomatoes_movies.csv"
+
+    # Check if data is already extracted
+    if reviews_file.exists() and movies_file.exists():
+        print(f"Data already available at: {data_path}")
+        print("Skipping download and extraction.")
+        return str(data_path)
+
+    # Download movie.zip directly using file ID
+    zip_file = source_data_dir / "movie.zip"
+
+    if not zip_file.exists():
+        print("Downloading movie data from Google Drive...")
+        print("Downloading movie.zip...")
+        # File ID: 1WkeXN3V5A6h-D_oeWvv2G_xs2PgzcQu0
+        file_id = "1WkeXN3V5A6h-D_oeWvv2G_xs2PgzcQu0"
+
+        # Try multiple download methods
+        success = False
+
+        # Method 1: Try gdown with fuzzy flag (handles large files better)
+        print("Attempting download with gdown (handles large files)...")
+        result = os.system(f"gdown --fuzzy 'https://drive.google.com/file/d/{file_id}/view?usp=sharing' -O {zip_file}")
+        if result == 0 and zip_file.exists() and zip_file.stat().st_size > 1000000:  # At least 1MB
+            success = True
+            print(f"Download successful with gdown (size: {zip_file.stat().st_size / 1024 / 1024:.1f}MB)")
+        else:
+            if zip_file.exists():
+                os.remove(zip_file)
+
+        # Method 2: Try wget with cookie handling for large files
+        if not success:
+            print("Attempting download with wget (handling Google Drive large file)...")
+            cookie_file = source_data_dir / "cookie.txt"
+            # First get the confirmation token
+            os.system(f"wget --save-cookies {cookie_file} --keep-session-cookies --no-check-certificate 'https://drive.google.com/uc?export=download&id={file_id}' -O- 2>&1 | grep -o 'confirm=[^&]*' | sed 's/confirm=//' > {source_data_dir}/confirm.txt")
+
+            # Read confirm token if exists
+            confirm_file = source_data_dir / "confirm.txt"
+            if confirm_file.exists():
+                with open(confirm_file, 'r') as f:
+                    confirm = f.read().strip()
+                if confirm:
+                    result = os.system(f"wget --load-cookies {cookie_file} --no-check-certificate 'https://drive.google.com/uc?export=download&confirm={confirm}&id={file_id}' -O {zip_file}")
+                    # Clean up
+                    os.remove(cookie_file)
+                    os.remove(confirm_file)
+
+                    if result == 0 and zip_file.exists() and zip_file.stat().st_size > 1000000:
+                        success = True
+                        print(f"Download successful with wget (size: {zip_file.stat().st_size / 1024 / 1024:.1f}MB)")
+                    else:
+                        if zip_file.exists():
+                            os.remove(zip_file)
+
+        # Method 3: Try curl with redirect handling
+        if not success:
+            print("Attempting download with curl...")
+            result = os.system(f"curl -L -o {zip_file} 'https://drive.google.com/uc?export=download&id={file_id}'")
+            if result == 0 and zip_file.exists() and zip_file.stat().st_size > 1000000:
+                success = True
+                print(f"Download successful with curl (size: {zip_file.stat().st_size / 1024 / 1024:.1f}MB)")
+            else:
+                if zip_file.exists():
+                    os.remove(zip_file)
+
+        if not success:
+            raise RuntimeError(
+                f"Failed to download movie.zip from Google Drive using all methods.\n"
+                f"The file might be too large for automated download.\n"
+                f"Please manually download from: https://drive.google.com/file/d/{file_id}/view\n"
+                f"And save it to: {zip_file}"
+            )
+    else:
+        print(f"Archive file already exists at: {zip_file}")
+        print("Skipping download.")
+
+    print(f"Unzipping {zip_file}...")
+    os.system(f"unzip -o {zip_file} -d {source_data_dir}")
+
+    # Clean up zip file after extraction
+    os.system(f"rm {zip_file}")
+
+    # Verify files exist
+    if not reviews_file.exists() or not movies_file.exists():
+        raise RuntimeError(
+            f"CSV files not found after extraction.\n"
+            f"Expected files:\n"
+            f"  - {reviews_file}\n"
+            f"  - {movies_file}\n"
+            f"Please check the zip file contents."
+        )
+
+    print(f"Download and extraction completed. Data available at: {data_path}")
+    return str(data_path)
 
 
 def load_data(data_path):
@@ -217,19 +327,34 @@ def print_statistics(movies_df, reviews_df, pattern_movie, pattern_pattern, nega
 
 def main():
     parser = argparse.ArgumentParser(description="Generate movie dataset")
-    parser.add_argument('data_path', help='Path to the Kaggle dataset directory')
-    parser.add_argument('scale_factor', type=int, help='Number of reviews to generate (up to 1375738 after filtering nulls)')
+    parser.add_argument('data_path', nargs='?', help='Path to the Kaggle dataset directory (optional if --download-from-drive is used)')
+    parser.add_argument('scale_factor', nargs='?', type=int, help='Number of reviews to generate (up to 1375738 after filtering nulls)')
+    parser.add_argument('--download-from-drive', action='store_true', help='Download data from Google Drive')
+    parser.add_argument('--scale-factor', type=int, dest='scale_factor_flag', help='Scale factor (alternative to positional argument)')
     args = parser.parse_args()
-    
+
+    # Determine data path
+    if args.download_from_drive:
+        data_path = download_from_google_drive()
+    elif args.data_path:
+        data_path = args.data_path
+    else:
+        parser.error("Either provide data_path or use --download-from-drive")
+
+    # Determine scale factor
+    scale_factor = args.scale_factor_flag if args.scale_factor_flag is not None else args.scale_factor
+    if scale_factor is None:
+        parser.error("scale_factor is required (either positional or --scale-factor)")
+
     # Load data
-    movies_df, reviews_df = load_data(args.data_path)
+    movies_df, reviews_df = load_data(data_path)
     
     # Validate scale_factor bounds
     max_reviews = len(reviews_df)  # Already filtered for nulls in load_data
-    if args.scale_factor > max_reviews:
-        print(f"Warning: scale_factor ({args.scale_factor}) exceeds available reviews ({max_reviews})")
+    if scale_factor > max_reviews:
+        print(f"Warning: scale_factor ({scale_factor}) exceeds available reviews ({max_reviews})")
         print(f"Using maximum available reviews: {max_reviews}")
-        args.scale_factor = max_reviews
+        scale_factor = max_reviews
     
     # Find special movies
     pattern_movie, pattern_pattern = find_pattern_movie(reviews_df)
@@ -240,8 +365,8 @@ def main():
     
     # Sample reviews
     selected_reviews = sample_reviews(
-        reviews_df, pattern_movie, pattern_pattern, negative_movie, 
-        top_movies, args.scale_factor
+        reviews_df, pattern_movie, pattern_pattern, negative_movie,
+        top_movies, scale_factor
     )
     
     # Generate movies table
@@ -250,27 +375,28 @@ def main():
     # Print statistics
     print_statistics(selected_movies, selected_reviews, pattern_movie, pattern_pattern, negative_movie)
     
-    # Save files
-    output_dir = Path(__file__).resolve().parents[4] / "files" / "movie" / "data"
+    # Save files to data/sf_{scale_factor}/ directory
+    base_output_dir = Path(__file__).resolve().parents[4] / "files" / "movie" / "data"
+    output_dir = base_output_dir / f"sf_{scale_factor}"
     output_dir.mkdir(parents=True, exist_ok=True)
-    
-    movies_file = output_dir / f"Movies_{args.scale_factor}.csv"
-    reviews_file = output_dir / f"Reviews_{args.scale_factor}.csv"
-    
+
+    movies_file = output_dir / "Movies.csv"
+    reviews_file = output_dir / "Reviews.csv"
+
     # Clean reviewText to prevent CSV formatting issues
     selected_reviews = selected_reviews.copy()
     selected_reviews['reviewText'] = selected_reviews['reviewText'].str.replace('\n', ' ', regex=False).str.replace('\r', ' ', regex=False)
-    
+
     selected_movies.to_csv(movies_file, index=False)
     selected_reviews.to_csv(reviews_file, index=False)
-    
+
     print(f"\nFiles saved:")
     print(f"  {movies_file}")
     print(f"  {reviews_file}")
-    
+
     print(f"\n=== Generated Tables Summary ===")
-    print(f"Movies_{args.scale_factor}.csv: {len(selected_movies)} rows")
-    print(f"Reviews_{args.scale_factor}.csv: {len(selected_reviews)} rows")
+    print(f"Movies.csv: {len(selected_movies)} rows")
+    print(f"Reviews.csv: {len(selected_reviews)} rows")
     print(f"Maximum table size: {max(len(selected_movies), len(selected_reviews))} rows")
 
 

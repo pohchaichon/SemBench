@@ -26,7 +26,7 @@ class AnimalsEvaluator(GenericEvaluator):
 
     def _load_domain_data(self) -> None:
         """Load the animals data CSV files."""
-        data_path = self._root / "data"
+        data_path = self._root / "data" / f"sf_{self.scale_factor}"
         self.image_data_df = pd.read_csv(data_path / "image_data.csv")
         self.audio_data_df = pd.read_csv(data_path / "audio_data.csv")
 

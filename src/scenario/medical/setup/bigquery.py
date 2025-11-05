@@ -202,7 +202,16 @@ class BigQueryMedicalSetup:
             print(f"An error occurred: {e}")
             return False
 
-    def setup_data(self, data_dir: str = "files/medical/data/", scale_factor: int = 11112):
+    def setup_data(self, scale_factor: int = 11112, data_dir: str = "files/medical/data/"):
+        """Setup BigQuery tables for medical scenario.
+
+        Args:
+            scale_factor: The scale factor used to generate the data (determines subfolder)
+            data_dir: Base data directory (will look in data_dir/sf_{scale_factor}/)
+        """
+        # Use scale-factor-specific subdirectory
+        actual_data_dir = os.path.join(data_dir, f"sf_{scale_factor}")
+
         dataset_id = f"{self.bq_client.project}.medical_dataset"
         dataset = bigquery.Dataset(dataset_id)
         dataset.location = "US"
@@ -210,15 +219,15 @@ class BigQueryMedicalSetup:
 
         if not self.table_exists("patients"):
             print("Uploading patient data to BigQuery...")
-            self.upload_csv_to_bigquery(BQ_DATASET_ID, csv_file_path=os.path.join(data_dir, "patient_data.csv" if scale_factor == 11112 else f"patient_data_{scale_factor}.csv"),  table_name='patients')
-        
+            self.upload_csv_to_bigquery(BQ_DATASET_ID, csv_file_path=os.path.join(actual_data_dir, "patient_data.csv"),  table_name='patients')
+
         if not self.table_exists("symptoms_texts"):
             print("Uploading symptoms texts to BigQuery...")
-            self.upload_csv_to_bigquery(BQ_DATASET_ID, csv_file_path=os.path.join(data_dir, "text_symptoms_data.csv" if scale_factor == 11112 else f"text_symptoms_data_{scale_factor}.csv"),  table_name='symptoms_texts')
+            self.upload_csv_to_bigquery(BQ_DATASET_ID, csv_file_path=os.path.join(actual_data_dir, "text_symptoms_data.csv"),  table_name='symptoms_texts')
 
         if not self.table_exists("x_ray_images") or not self.table_exists("x_ray_mm"):
             print("Uploading X-ray images to BigQuery...")
-            self.upload_images(local_path="files/medical/data/image_x_ray_data.csv" if scale_factor == 11112 else f"files/medical/data/image_x_ray_data_{scale_factor}.csv", 
+            self.upload_images(local_path=os.path.join(actual_data_dir, "image_x_ray_data.csv"), 
                             gcs_folder="patient_images", 
                             path_col="image_path", 
                             table_id="x_ray_images")
@@ -231,7 +240,7 @@ class BigQueryMedicalSetup:
 
         if not self.table_exists("lung_audio") or not self.table_exists("audio_mm"):
             print("Uploading lung audio data to BigQuery...")
-            self.upload_images(local_path="files/medical/data/audio_lung_data.csv" if scale_factor == 11112 else f"files/medical/data/audio_lung_data_{scale_factor}.csv", 
+            self.upload_images(local_path=os.path.join(actual_data_dir, "audio_lung_data.csv"), 
                             gcs_folder="lung_audios", 
                             path_col="path", 
                             table_id="lung_audio")
@@ -245,7 +254,7 @@ class BigQueryMedicalSetup:
 
         if not self.table_exists("skin_cancer_image") or not self.table_exists("skin_cancer_mm"):
             print("Uploading skin cancer data to BigQuery...")
-            self.upload_images(local_path="files/medical/data/image_skin_data.csv" if scale_factor == 11112 else f"files/medical/data/image_skin_data_{scale_factor}.csv", 
+            self.upload_images(local_path=os.path.join(actual_data_dir, "image_skin_data.csv"), 
                             gcs_folder="skin_cancer_images", 
                             path_col="image_path", 
                             table_id="skin_cancer_image")

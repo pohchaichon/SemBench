@@ -38,13 +38,56 @@ def replace_multiple(text, replacements):
     return text
 
 
-def _download_from_drive(id: str, file_name: str = "raw_data.zip", folder: str = "./files/medical/data/"):
-    os.system(f"gdown --id {id}")
-    # os.system(f"gdown --id {id} -O files/medical/data")
+def _download_from_drive(id: str, file_name: str = "raw_data.zip", folder: str = None):
+    """Download and extract data from Google Drive.
+
+    Args:
+        id: Google Drive file ID
+        file_name: Name of the zip file
+        folder: Target folder for extraction. If None, uses appropriate default based on file_name.
+    """
+    # Use absolute path if folder not specified
+    if folder is None:
+        base_path = Path(__file__).resolve().parents[4]
+        # medical_data.zip contains processed CSVs, goes to files/medical/
+        # raw_data.zip contains raw source data, goes to files/medical/source_data/
+        if file_name == "medical_data.zip":
+            folder = str(base_path / "files" / "medical")
+        else:
+            folder = str(base_path / "files" / "medical" / "source_data")
+
+    # Check if data is already extracted
+    raw_data_dir = os.path.join(folder, "raw_data")
+    # Check for key subdirectories that should exist after extraction
+    expected_dirs = [
+        os.path.join(raw_data_dir, "lung-dataset"),
+        os.path.join(raw_data_dir, "x-ray"),
+    ]
+
+    if os.path.exists(raw_data_dir) and all(os.path.exists(d) for d in expected_dirs):
+        print(f"Data already available at: {raw_data_dir}")
+        print("Skipping download and extraction.")
+        return
+
+    # Ensure folder exists
+    os.makedirs(folder, exist_ok=True)
+
+    # Download to the target folder
+    zip_path = os.path.join(folder, file_name)
+
+    if not os.path.exists(zip_path):
+        print(f"Downloading {file_name} from Google Drive to {folder}...")
+        os.system(f"gdown --id {id} -O {zip_path}")
+    else:
+        print(f"Archive file already exists at: {zip_path}")
+        print("Skipping download.")
+
+    # Use -o flag to overwrite files without prompting
+    print(f"Extracting {zip_path} to {folder}...")
     os.system(
-        f"unzip {file_name} -d {folder}"
+        f"unzip -o {zip_path} -d {folder}"
     )
-    os.system(f"rm {file_name}")
+    os.system(f"rm {zip_path}")
 
 
 def _download_kaggle_datasets():
@@ -53,56 +96,64 @@ def _download_kaggle_datasets():
     Note: For the X-ray dataset, there can be error when trying to fully download the dataset via cURL.
     Solution is to download the dataset manually from Kaggle and place it in the correct folder.
     """
-    if not os.path.exists("files/medical/data/raw_data"):
-        os.system("mkdir ./files/medical/data/raw_data/")
+    # Use absolute paths
+    base_path = Path(__file__).resolve().parents[4]
+    source_data_path = base_path / "files" / "medical" / "source_data" / "raw_data"
 
-    if not os.path.exists("files/medical/data/raw_data/lung-dataset/"):
-        os.system(
-            "curl -L -o ./files/medical/data/raw_data/lung-dataset.zip https://www.kaggle.com/api/v1/datasets/download/arashnic/lung-dataset"
-        )
-        os.system(
-            "unzip ./files/medical/data/raw_data/lung-dataset.zip -d ./files/medical/data/raw_data/lung-dataset"
-        )
-        os.system("rm ./files/medical/data/raw_data/lung-dataset.zip")
+    if not os.path.exists(source_data_path):
+        os.makedirs(source_data_path, exist_ok=True)
 
-    if not os.path.exists("files/medical/data/raw_data/lungcanc2024/"):
+    lung_dataset_path = source_data_path / "lung-dataset"
+    if not os.path.exists(lung_dataset_path):
         os.system(
-            "curl -L -o ./files/medical/data/raw_data/lungcanc2024.zip https://www.kaggle.com/api/v1/datasets/download/datasetengineer/lungcanc2024"
+            f"curl -L -o {source_data_path}/lung-dataset.zip https://www.kaggle.com/api/v1/datasets/download/arashnic/lung-dataset"
         )
         os.system(
-            "unzip ./files/medical/data/raw_data/lungcanc2024.zip -d ./files/medical/data/raw_data/lungcanc2024"
+            f"unzip {source_data_path}/lung-dataset.zip -d {lung_dataset_path}"
         )
-        os.system("rm ./files/medical/data/raw_data/lungcanc2024.zip")
+        os.system(f"rm {source_data_path}/lung-dataset.zip")
 
-    if not os.path.exists("files/medical/data/raw_data/x-ray/"):
+    lungcanc_path = source_data_path / "lungcanc2024"
+    if not os.path.exists(lungcanc_path):
         os.system(
-            "curl -L -o ./files/medical/data/raw_data/x-ray-lung-diseases-images-9-classes.zip https://www.kaggle.com/api/v1/datasets/download/fernando2rad/x-ray-lung-diseases-images-9-classes"
+            f"curl -L -o {source_data_path}/lungcanc2024.zip https://www.kaggle.com/api/v1/datasets/download/datasetengineer/lungcanc2024"
         )
         os.system(
-            "unzip ./files/medical/data/raw_data/x-ray-lung-diseases-images-9-classes.zip -d ./files/medical/data/raw_data/x-ray"
+            f"unzip {source_data_path}/lungcanc2024.zip -d {lungcanc_path}"
+        )
+        os.system(f"rm {source_data_path}/lungcanc2024.zip")
+
+    xray_path = source_data_path / "x-ray"
+    if not os.path.exists(xray_path):
+        os.system(
+            f"curl -L -o {source_data_path}/x-ray-lung-diseases-images-9-classes.zip https://www.kaggle.com/api/v1/datasets/download/fernando2rad/x-ray-lung-diseases-images-9-classes"
         )
         os.system(
-            "rm ./files/medical/data/raw_data/x-ray-lung-diseases-images-9-classes.zip"
+            f"unzip {source_data_path}/x-ray-lung-diseases-images-9-classes.zip -d {xray_path}"
+        )
+        os.system(
+            f"rm {source_data_path}/x-ray-lung-diseases-images-9-classes.zip"
         )
 
-    if not os.path.exists("files/medical/data/raw_data/diagnosis/"):
+    diagnosis_path = source_data_path / "diagnosis"
+    if not os.path.exists(diagnosis_path):
         os.system(
-            "curl -L -o ./files/medical/data/raw_data/symptom2disease.zip https://www.kaggle.com/api/v1/datasets/download/niyarrbarman/symptom2disease"
+            f"curl -L -o {source_data_path}/symptom2disease.zip https://www.kaggle.com/api/v1/datasets/download/niyarrbarman/symptom2disease"
         )
         os.system(
-            "unzip ./files/medical/data/raw_data/symptom2disease.zip -d ./files/medical/data/raw_data/diagnosis"
+            f"unzip {source_data_path}/symptom2disease.zip -d {diagnosis_path}"
         )
-        os.system("rm ./files/medical/data/raw_data/symptom2disease.zip")
-    
-    if not os.path.exists("files/medical/data/raw_data/skin_cancer"):
-        #!/bin/bash
+        os.system(f"rm {source_data_path}/symptom2disease.zip")
+
+    skin_cancer_path = source_data_path / "skin_cancer"
+    if not os.path.exists(skin_cancer_path):
         os.system(
-            "curl -L -o ./files/medical/data/raw_data/skin_cancer.zip https://www.kaggle.com/api/v1/datasets/download/fanconic/skin-cancer-malignant-vs-benign"
+            f"curl -L -o {source_data_path}/skin_cancer.zip https://www.kaggle.com/api/v1/datasets/download/fanconic/skin-cancer-malignant-vs-benign"
         )
         os.system(
-            "unzip ./files/medical/data/raw_data/skin_cancer.zip -d ./files/medical/data/raw_data/skin_cancer"
+            f"unzip {source_data_path}/skin_cancer.zip -d {skin_cancer_path}"
         )
-        os.system("rm ./files/medical/data/raw_data/skin_cancer.zip")
+        os.system(f"rm {source_data_path}/skin_cancer.zip")
 
 def _add_random_patient_history(
     df: pd.DataFrame, smoking, family_cancer
@@ -309,7 +360,8 @@ def _prepare_xray_data(data_path: str) -> pd.DataFrame:
     x_rays["diagnosis"] = x_rays["diagnosis"].str.lower()
 
     # Create nested directory with all images together
-    new_folder_path = 'files/medical/data/raw_data/all_x_rays/'
+    base_path = Path(__file__).resolve().parents[4]
+    new_folder_path = str(base_path / 'files' / 'medical' / 'source_data' / 'raw_data' / 'all_x_rays')
     is_created = False
     try:
         os.makedirs(new_folder_path)
@@ -349,7 +401,8 @@ def _prepare_skin_image_data(data_path: str) -> pd.DataFrame:
     cancer_images["diagnosis"] = cancer_images["diagnosis"].str.lower()
 
     # Create nested directory with all images together
-    new_folder_path = 'files/medical/data/raw_data/all_skin_images/'
+    base_path = Path(__file__).resolve().parents[4]
+    new_folder_path = str(base_path / 'files' / 'medical' / 'source_data' / 'raw_data' / 'all_skin_images')
     is_created = False
     try:
         os.makedirs(new_folder_path)
@@ -635,7 +688,7 @@ def _prepare_data_from_scratch(args: argparse.Namespace) -> None:
                 ]
             ]
         ):
-            _download_from_drive(id="1v4--C7PE_SQDNZj6hZ8wNn4OvswIyu2s", file_name="medical_data.zip", folder="./files/medical/")
+            _download_from_drive(id="1v4--C7PE_SQDNZj6hZ8wNn4OvswIyu2s", file_name="medical_data.zip")
     else:
         _download_kaggle_datasets()
 
@@ -674,7 +727,8 @@ def _prepare_data_from_scratch(args: argparse.Namespace) -> None:
     )
 
     # Check a folder for saving
-    folder = Path(__file__).resolve().parents[4] / "files" / "medical" / "data"
+    base_folder = Path(__file__).resolve().parents[4] / "files" / "medical" / "data"
+    folder = base_folder / f"sf_{args.scaling_factor}"
     os.makedirs(folder, exist_ok=True)
 
     # Scale down tables
@@ -691,18 +745,18 @@ def _prepare_data_from_scratch(args: argparse.Namespace) -> None:
         )
 
         # Save patient table with labels
-        patient_table_sf.to_csv(f"{folder}/patient_data_with_labels_{args.scaling_factor}.csv", index=False)
+        patient_table_sf.to_csv(f"{folder}/patient_data_with_labels.csv", index=False)
         patient_table_sf.drop(
             columns=["audio_diagnosis", "x_ray_diagnosis", "text_diagnosis", "skin_cancer_diagnosis", "is_sick"],
             inplace=True,
         )
 
         # Save tables to CSV files
-        patient_table_sf.to_csv(f"{folder}/patient_data_{args.scaling_factor}.csv", index=False)
-        audio_table_sf.to_csv(f"{folder}/audio_lung_data_{args.scaling_factor}.csv", index=False)
-        lung_x_ray_table_sf.to_csv(f"{folder}/image_x_ray_data_{args.scaling_factor}.csv", index=False)
-        text_symptoms_table_sf.to_csv(f"{folder}/text_symptoms_data_{args.scaling_factor}.csv", index=False)
-        skin_image_table_sf.to_csv(f"{folder}/image_skin_data_{args.scaling_factor}.csv", index=False)
+        patient_table_sf.to_csv(f"{folder}/patient_data.csv", index=False)
+        audio_table_sf.to_csv(f"{folder}/audio_lung_data.csv", index=False)
+        lung_x_ray_table_sf.to_csv(f"{folder}/image_x_ray_data.csv", index=False)
+        text_symptoms_table_sf.to_csv(f"{folder}/text_symptoms_data.csv", index=False)
+        skin_image_table_sf.to_csv(f"{folder}/image_skin_data.csv", index=False)
 
     patient_table, audio_table, lung_x_ray_table, text_symptoms_table, skin_image_table = (
         _shuffle_tables(patient_table),
@@ -763,10 +817,10 @@ def prepare_data(scaling_factor: int = 11112) -> None:
         return
 
     if csv_files_exists and not raw_data_exists:
-        _download_from_drive(id="1P4V_RWWDMxz4X-oG65Ph5-K2gmNGFpP-", file_name="raw_data.zip", folder="./files/medical/data/")
+        _download_from_drive(id="1P4V_RWWDMxz4X-oG65Ph5-K2gmNGFpP-", file_name="raw_data.zip")
 
-    if not csv_files_exists: 
-        _download_from_drive(id="1v4--C7PE_SQDNZj6hZ8wNn4OvswIyu2s", file_name="medical_data.zip", folder="./files/medical/")
+    if not csv_files_exists:
+        _download_from_drive(id="1v4--C7PE_SQDNZj6hZ8wNn4OvswIyu2s", file_name="medical_data.zip")
 
     folder = Path(__file__).resolve().parents[4] / "files" / "medical" / "data"
 
@@ -800,7 +854,7 @@ def prepare_data(scaling_factor: int = 11112) -> None:
         # Save patient table with labels
         patient_table_sf.to_csv(f"{folder}/patient_data_with_labels_{scaling_factor}.csv", index=False)
         patient_table_sf.drop(
-            columns=["audio_diagnosis", "x_ray_diagnosis", "text_diagnosis", "skin_cancer_diagnosis" "is_sick"],
+            columns=["audio_diagnosis", "x_ray_diagnosis", "text_diagnosis", "skin_cancer_diagnosis", "is_sick"],
             inplace=True,
         )
 
@@ -814,7 +868,7 @@ def prepare_data(scaling_factor: int = 11112) -> None:
     # Save patient table with labels
     patient_table.to_csv(f"{folder}/patient_data_with_labels.csv", index=False)
     patient_table.drop(
-        columns=["audio_diagnosis", "x_ray_diagnosis", "text_diagnosis", "skin_cancer_diagnosis" "is_sick"],
+        columns=["audio_diagnosis", "x_ray_diagnosis", "text_diagnosis", "skin_cancer_diagnosis", "is_sick"],
         inplace=True,
     )
 
@@ -857,14 +911,18 @@ def main():
             for file_name in ["patient", "audio_lung", "image_x_ray", "text_symptoms", "image_skin"]
         ]
     ):
-        _download_from_drive(id="1P4V_RWWDMxz4X-oG65Ph5-K2gmNGFpP-", file_name="raw_data.zip", folder="./files/medical/data/")
+        _download_from_drive(id="1P4V_RWWDMxz4X-oG65Ph5-K2gmNGFpP-", file_name="raw_data.zip")
         
     else:
+        # Use absolute paths for default arguments
+        base_path = Path(__file__).resolve().parents[4]
+        source_data = base_path / "files" / "medical" / "source_data" / "raw_data"
+
         parser.add_argument(
             "--lung_audio",
             type=str,
             nargs="?",
-            default="files/medical/data/raw_data/lung-dataset/",
+            default=str(source_data / "lung-dataset"),
             help="Path to the downloaded Kaggle lung audio dataset.",
         )
 
@@ -872,7 +930,7 @@ def main():
             "--lung_patient",
             type=str,
             nargs="?",
-            default="files/medical/data/raw_data/lungcanc2024/",
+            default=str(source_data / "lungcanc2024"),
             help="Path to the downloaded Kaggle lung audio dataset.",
         )
 
@@ -880,7 +938,7 @@ def main():
             "--x_ray",
             type=str,
             nargs="?",
-            default="files/medical/data/raw_data/x-ray",
+            default=str(source_data / "x-ray"),
             help="Path to the downloaded Kaggle lung X-ray dataset.",
         )
 
@@ -888,7 +946,7 @@ def main():
             "--text_diagnosis",
             type=str,
             nargs="?",
-            default="files/medical/data/raw_data/diagnosis",
+            default=str(source_data / "diagnosis"),
             help="Path to the downloaded Kaggle symptoms dataset.",
         )
 
@@ -896,7 +954,7 @@ def main():
             "--skin_cancer",
             type=str,
             nargs="?",
-            default="files/medical/data/raw_data/skin_cancer/archive/data",
+            default=str(source_data / "skin_cancer" / "archive" / "data"),
             help="Path to the downloaded Kaggle skin cancer dataset.",
         )
 

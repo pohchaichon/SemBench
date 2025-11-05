@@ -1,9 +1,9 @@
 from pathlib import Path
 
-from src.runner.generic_bigquery_runner.generic_bigquery_runner import (
+from runner.generic_bigquery_runner.generic_bigquery_runner import (
     GenericBigQueryRunner,
 )
-from src.scenario.mmqa.setup.bigquery import BigQueryMMQASetup
+from scenario.mmqa.setup.bigquery import BigQueryMMQASetup
 
 
 class BigQueryRunner(GenericBigQueryRunner):
@@ -33,4 +33,5 @@ class BigQueryRunner(GenericBigQueryRunner):
             / "files"
             / "mmqa"
             / "data"
+            / f"sf_{self.scale_factor}"
         )

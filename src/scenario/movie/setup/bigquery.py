@@ -282,14 +282,23 @@ class BigQueryMovieSetup:
             with open(hash_file, 'w') as f:
                 f.write(current_hash)
 
-    def setup_data(self, data_dir: str):
+    def setup_data(self, scale_factor: int = 2000, data_dir: str = "files/movie/data/"):
+        """Setup BigQuery tables for movie scenario.
+
+        Args:
+            scale_factor: The scale factor used to generate the data (determines subfolder)
+            data_dir: Base data directory (will look in data_dir/sf_{scale_factor}/)
+        """
+        # Use scale-factor-specific subdirectory
+        actual_data_dir = os.path.join(data_dir, f"sf_{scale_factor}")
+
         dataset_id = f"{self.bq_client.project}.{BQ_DATASET_ID}"
         dataset = bigquery.Dataset(dataset_id)
         dataset.location = "US"
         self.bq_client.create_dataset(dataset, exists_ok=True)
 
         # Upload Movies table
-        movies_csv_path = os.path.join(data_dir, "Movies_2000.csv")
+        movies_csv_path = os.path.join(actual_data_dir, "Movies.csv")
         needs_upload = (not self.table_exists("movies") or 
                        not self.is_data_synchronized(movies_csv_path, "movies"))
         
@@ -301,7 +310,7 @@ class BigQueryMovieSetup:
             print("Movies table exists and is synchronized, skipping upload.")
 
         # Upload Reviews table
-        reviews_csv_path = os.path.join(data_dir, "Reviews_2000.csv")
+        reviews_csv_path = os.path.join(actual_data_dir, "Reviews.csv")
         needs_upload = (not self.table_exists("reviews") or 
                        not self.is_data_synchronized(reviews_csv_path, "reviews"))
         

@@ -4,7 +4,7 @@ from typing import Any, Dict
 
 import duckdb
 
-from src.runner.generic_thalamusdb_runner.generic_thalamusdb_runner import (
+from runner.generic_thalamusdb_runner.generic_thalamusdb_runner import (
     GenericThalamusDBRunner,
 )
 
@@ -32,7 +32,7 @@ class ThalamusDBRunner(GenericThalamusDBRunner):
         # Set database path to `mmqa_thalamusdb` database
         db_name = "mmqa_thalamusdb.duckdb"
         db_folder = (
-            Path(__file__).resolve().parents[5] / "files" / use_case / "data"
+            Path(__file__).resolve().parents[5] / "files" / use_case / "data" / f"sf_{scale_factor}"
         )
         db_path = db_folder / db_name
 

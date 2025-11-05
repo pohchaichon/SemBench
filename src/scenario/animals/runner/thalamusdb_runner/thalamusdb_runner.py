@@ -51,7 +51,7 @@ class ThalamusDBRunner(GenericThalamusDBRunner):
         # Set database path to animals database
         db_name = "animals_database.duckdb"
         db_folder = (
-            Path(__file__).resolve().parents[5] / "files" / use_case / "data"
+            Path(__file__).resolve().parents[5] / "files" / use_case / "data" / f"sf_{scale_factor}"
         )
         db_path = db_folder / db_name
 

@@ -95,11 +95,17 @@ class GenericThalamusDBRunner(GenericRunner):
         """
         try:
             # Get the query implementation method
+            # First try to find query files, if not found, fall back to _execute_q* methods
+            query_fn = None
             if self.scenario_handler is not None:
-                query_text = self.scenario_handler.get_query_text(
-                    query_id, self.get_system_name()
-                )
-                query_fn = lambda: self.execute_thalamusdb_query(query_text)
+                try:
+                    query_text = self.scenario_handler.get_query_text(
+                        query_id, self.get_system_name()
+                    )
+                    query_fn = lambda: self.execute_thalamusdb_query(query_text)
+                except FileNotFoundError:
+                    # Query file not found, try to use _execute_q* method
+                    query_fn = self._discover_query_impl(query_id)
             else:
                 query_fn = self._discover_query_impl(query_id)
 

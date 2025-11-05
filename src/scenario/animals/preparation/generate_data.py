@@ -9,6 +9,9 @@ Creates test database from two Kaggle datasets:
 
 @improved by: Jiale Lao
 different cities have different numbers of images for different animal species
+
+Or to use Google Drive download:
+python3 generate_data.py --download-from-drive --scale-factor 500
 '''
 import argparse
 import pandas as pd
@@ -16,6 +19,110 @@ import random
 import os
 
 from pathlib import Path
+
+
+def download_from_google_drive():
+    """Download wildlife.zip from Google Drive and extract it."""
+    base_dir = Path(__file__).resolve().parents[4]
+    source_data_dir = base_dir / "files" / "animals" / "source_data"
+    source_data_dir.mkdir(parents=True, exist_ok=True)
+
+    # The files should be directly under source_data_dir after extraction
+    audio_path = source_data_dir / "rushibalajiputthewad" / "sound-classification-of-animal-voice" / "versions" / "1"
+    image_path = source_data_dir / "hypnotu" / "dsail-porini" / "versions" / "2"
+
+    # Check if data is already extracted
+    if audio_path.exists() and image_path.exists():
+        print(f"Data already available at:")
+        print(f"  Audio: {audio_path}")
+        print(f"  Image: {image_path}")
+        print("Skipping download and extraction.")
+        return str(audio_path), str(image_path)
+
+    # Download wildlife.zip directly using file ID
+    zip_file = source_data_dir / "wildlife.zip"
+
+    if not zip_file.exists():
+        print("Downloading animals data from Google Drive...")
+        print("Downloading wildlife.zip...")
+        # File ID: 1HG6tvXIA0BtpqbZqCR46oNSeY2yZ4Lko
+        file_id = "1HG6tvXIA0BtpqbZqCR46oNSeY2yZ4Lko"
+
+        # Try multiple download methods
+        success = False
+
+        # Method 1: Try gdown with fuzzy flag (handles large files better)
+        print("Attempting download with gdown (handles large files)...")
+        result = os.system(f"gdown --fuzzy 'https://drive.google.com/file/d/{file_id}/view?usp=sharing' -O {zip_file}")
+        if result == 0 and zip_file.exists() and zip_file.stat().st_size > 1000000:  # At least 1MB
+            success = True
+            print(f"Download successful with gdown (size: {zip_file.stat().st_size / 1024 / 1024:.1f}MB)")
+        else:
+            if zip_file.exists():
+                os.remove(zip_file)
+
+        # Method 2: Try wget with cookie handling for large files
+        if not success:
+            print("Attempting download with wget (handling Google Drive large file)...")
+            cookie_file = source_data_dir / "cookie.txt"
+            # First get the confirmation token
+            os.system(f"wget --save-cookies {cookie_file} --keep-session-cookies --no-check-certificate 'https://drive.google.com/uc?export=download&id={file_id}' -O- 2>&1 | grep -o 'confirm=[^&]*' | sed 's/confirm=//' > {source_data_dir}/confirm.txt")
+
+            # Read confirm token if exists
+            confirm_file = source_data_dir / "confirm.txt"
+            if confirm_file.exists():
+                with open(confirm_file, 'r') as f:
+                    confirm = f.read().strip()
+                if confirm:
+                    result = os.system(f"wget --load-cookies {cookie_file} --no-check-certificate 'https://drive.google.com/uc?export=download&confirm={confirm}&id={file_id}' -O {zip_file}")
+                    # Clean up
+                    os.remove(cookie_file)
+                    os.remove(confirm_file)
+
+                    if result == 0 and zip_file.exists() and zip_file.stat().st_size > 1000000:
+                        success = True
+                        print(f"Download successful with wget (size: {zip_file.stat().st_size / 1024 / 1024:.1f}MB)")
+                    else:
+                        if zip_file.exists():
+                            os.remove(zip_file)
+
+        # Method 3: Try curl with redirect handling
+        if not success:
+            print("Attempting download with curl...")
+            result = os.system(f"curl -L -o {zip_file} 'https://drive.google.com/uc?export=download&id={file_id}'")
+            if result == 0 and zip_file.exists() and zip_file.stat().st_size > 1000000:
+                success = True
+                print(f"Download successful with curl (size: {zip_file.stat().st_size / 1024 / 1024:.1f}MB)")
+            else:
+                if zip_file.exists():
+                    os.remove(zip_file)
+
+        if not success:
+            raise RuntimeError(
+                f"Failed to download wildlife.zip from Google Drive using all methods.\n"
+                f"The file might be too large for automated download.\n"
+                f"Please manually download from: https://drive.google.com/file/d/{file_id}/view\n"
+                f"And save it to: {zip_file}"
+            )
+    else:
+        print(f"Archive file already exists at: {zip_file}")
+        print("Skipping download.")
+
+    print(f"Unzipping {zip_file}...")
+    os.system(f"unzip -o {zip_file} -d {source_data_dir}")
+
+    # Clean up zip file after extraction
+    os.system(f"rm {zip_file}")
+
+    if not audio_path.exists():
+        raise RuntimeError(f"Download completed but expected audio data not found at {audio_path}")
+    if not image_path.exists():
+        raise RuntimeError(f"Download completed but expected image data not found at {image_path}")
+
+    print(f"Download and extraction completed.")
+    print(f"Audio data available at: {audio_path}")
+    print(f"Image data available at: {image_path}")
+    return str(audio_path), str(image_path)
 
 
 
@@ -420,25 +527,47 @@ def _generate_image_table(
     return df_filtered
     
 if __name__ == '__main__':
-    
+
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        'audio_path', type=str, 
-        help='Path to Kaggle data with audio files recording animal sounds'
+        'audio_path', nargs='?', type=str,
+        help='Path to Kaggle data with audio files recording animal sounds (optional if --download-from-drive is used)'
         )
     parser.add_argument(
-        'image_path', type=str,
-        help='Path to Kaggle data with images (camera traps to record animals'
+        'image_path', nargs='?', type=str,
+        help='Path to Kaggle data with images (camera traps to record animals) (optional if --download-from-drive is used)'
         )
     parser.add_argument(
-        'scaling_factor', type=int,
+        'scaling_factor', nargs='?', type=int,
         help='The number of rows in the image table (audio table will be min(scaling_factor/3, 650))'
+        )
+    parser.add_argument(
+        '--download-from-drive', action='store_true',
+        help='Download data from Google Drive'
+        )
+    parser.add_argument(
+        '--scale-factor', type=int, dest='scale_factor_flag',
+        help='Scale factor (alternative to positional argument)'
         )
     parser.add_argument(
         '--seed', type=int, default=42,
         help='Random seed for reproducible results'
         )
     args = parser.parse_args()
+
+    # Determine data paths
+    if args.download_from_drive:
+        audio_path, image_path = download_from_google_drive()
+    elif args.audio_path and args.image_path:
+        audio_path = args.audio_path
+        image_path = args.image_path
+    else:
+        parser.error("Either provide audio_path and image_path or use --download-from-drive")
+
+    # Determine scale factor
+    scaling_factor = args.scale_factor_flag if args.scale_factor_flag is not None else args.scaling_factor
+    if scaling_factor is None:
+        parser.error("scaling_factor is required (either positional or --scale-factor)")
 
     # Set random seed for reproducibility
     random.seed(args.seed)
@@ -448,20 +577,20 @@ if __name__ == '__main__':
     # Image: scaling_factor (up to 8718 available images)
     max_audio_files = 650
     max_image_files = 8718
-    
-    audio_size = min(args.scaling_factor // 3, max_audio_files)
-    image_size = min(args.scaling_factor, max_image_files)
-    
+
+    audio_size = min(scaling_factor // 3, max_audio_files)
+    image_size = min(scaling_factor, max_image_files)
+
     print(f"Generating tables: Audio={audio_size}, Image={image_size}")
-    
+
     # Validate scaling factor bounds
-    if args.scaling_factor > max_image_files:
-        print(f"Warning: scaling_factor ({args.scaling_factor}) exceeds available images ({max_image_files})")
+    if scaling_factor > max_image_files:
+        print(f"Warning: scaling_factor ({scaling_factor}) exceeds available images ({max_image_files})")
         print(f"Using maximum available images: {max_image_files}")
         image_size = max_image_files
-    
-    audio_table = _generate_audio_table(args.audio_path, audio_size)
-    image_table = _generate_image_table(args.image_path, image_size)
+
+    audio_table = _generate_audio_table(audio_path, audio_size)
+    image_table = _generate_image_table(image_path, image_size)
     
     
     # Ensure co-occurrence patterns for complex queries
@@ -486,11 +615,13 @@ if __name__ == '__main__':
     q9_cities = cities_with_monkey_images & cities_with_monkey_audio  
     print(f"Q9 - Cities with both monkey images and audio: {sorted(q9_cities)} (count: {len(q9_cities)})")
     
-    folder = Path(__file__).resolve().parents[4] / "files" / "animals" / "data"
+    # Save to data/sf_{scaling_factor}/ directory
+    base_folder = Path(__file__).resolve().parents[4] / "files" / "animals" / "data"
+    folder = base_folder / f"sf_{scaling_factor}"
     os.makedirs(folder, exist_ok=True)
     audio_table.to_csv(f'{folder}/audio_data.csv', index=False)
     image_table.to_csv(f'{folder}/image_data.csv', index=False)
-    
+
     print(f"\n=== Tables saved to {folder} ===")
     print(f"\n=== Generated Tables Summary ===")
     print(f"audio_data.csv: {len(audio_table)} rows")

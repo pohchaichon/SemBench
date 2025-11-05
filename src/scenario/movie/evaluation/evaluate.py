@@ -27,9 +27,9 @@ class MovieEvaluator(GenericEvaluator):
 
     def _load_domain_data(self) -> None:
         """Load the movie data CSV files."""
-        data_path = self._root / "data"
-        self.movies_df = pd.read_csv(data_path / "Movies_2000.csv")
-        self.reviews_df = pd.read_csv(data_path / "Reviews_2000.csv")
+        data_path = self._root / "data" / f"sf_{self.scale_factor}"
+        self.movies_df = pd.read_csv(data_path / "Movies.csv")
+        self.reviews_df = pd.read_csv(data_path / "Reviews.csv")
 
     def _get_ground_truth(self, query_id: int) -> pd.DataFrame:  
         """Generate ground truth using DuckDB and gold SQL files."""

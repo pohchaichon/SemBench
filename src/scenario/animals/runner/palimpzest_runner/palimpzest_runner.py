@@ -48,7 +48,7 @@ class PalimpzestRunner(GenericPalimpzestRunner):
             concurrent_llm_worker: Number of concurrent workers
         """
         super().__init__(
-            use_case, model_name, concurrent_llm_worker, skip_setup
+            use_case, scale_factor, model_name, concurrent_llm_worker, skip_setup
         )
 
     def _execute_q1(self) -> DataRecordCollection:

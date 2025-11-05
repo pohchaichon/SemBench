@@ -315,14 +315,23 @@ class BigQueryAnimalsSetup:
             with open(hash_file, 'w') as f:
                 f.write(current_hash)
 
-    def setup_data(self, data_dir: str = "files/animals/data/"):
+    def setup_data(self, scale_factor: int = 200, data_dir: str = "files/animals/data/"):
+        """Setup BigQuery tables for animals scenario.
+
+        Args:
+            scale_factor: The scale factor used to generate the data (determines subfolder)
+            data_dir: Base data directory (will look in data_dir/sf_{scale_factor}/)
+        """
+        # Use scale-factor-specific subdirectory
+        actual_data_dir = os.path.join(data_dir, f"sf_{scale_factor}")
+
         dataset_id = f"{self.bq_client.project}.{BQ_DATASET_ID}"
         dataset = bigquery.Dataset(dataset_id)
         dataset.location = "US"
         self.bq_client.create_dataset(dataset, exists_ok=True)
 
         # Upload ImageData table with animal images
-        image_csv_path = os.path.join(data_dir, "image_data.csv")
+        image_csv_path = os.path.join(actual_data_dir, "image_data.csv")
         needs_upload = (not self.table_exists("image_data_images") or 
                        not self.table_exists("image_data_mm") or 
                        not self.table_exists("image_data_external") or
@@ -355,7 +364,7 @@ class BigQueryAnimalsSetup:
             print("ImageData tables exist and are synchronized, skipping upload.")
 
         # Upload AudioData table with animal audio
-        audio_csv_path = os.path.join(data_dir, "audio_data.csv")
+        audio_csv_path = os.path.join(actual_data_dir, "audio_data.csv")
         needs_upload = (not self.table_exists("audio_data_files") or 
                        not self.table_exists("audio_data_mm") or 
                        not self.table_exists("audio_data_external") or

@@ -5,7 +5,7 @@ from typing import Union
 
 import pandas as pd
 
-from src.evaluator.generic_evaluator import (
+from evaluator.generic_evaluator import (
     GenericEvaluator,
     QueryMetricAggregation,
     QueryMetricRetrieval,

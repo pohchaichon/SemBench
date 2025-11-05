@@ -35,7 +35,7 @@ class MedicalScenario:
                 from scenario.medical.setup.bigquery import BigQueryMedicalSetup
 
                 setup = BigQueryMedicalSetup()
-                setup.setup_data(self.data_dir, self.scale_factor)
+                setup.setup_data(data_dir=self.data_dir, scale_factor=self.scale_factor)
 
             elif system == "snowflake":
                 from scenario.medical.setup.snowflake import (

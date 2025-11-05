@@ -38,7 +38,7 @@ class ThalamusDBRunner(GenericThalamusDBRunner):
         use_case: str,
         scale_factor: int,
         model_name: str = "gpt-5-mini",
-        concurrent_llm_worker: int = 10,
+        concurrent_llm_worker: int = 20,
         skip_setup: bool = False,
     ):
         """
@@ -52,7 +52,7 @@ class ThalamusDBRunner(GenericThalamusDBRunner):
         # Set database path to medical database
         db_name = "medical_database_tdb.duckdb"
 
-        db_folder = Path(__file__).resolve().parents[5]
+        db_folder = Path(__file__).resolve().parents[5] / "files" / use_case / "data"
         db_path = db_folder / db_name
 
         db = FlockMTLMedicalSetup(

@@ -51,14 +51,14 @@ class ThalamusDBRunner(GenericThalamusDBRunner):
         # Set database path to movie database
         db_name = "movie_database.duckdb"
         db_folder = (
-            Path(__file__).resolve().parents[5] / "files" / use_case / "data"
+            Path(__file__).resolve().parents[5] / "files" / use_case / "data" / f"sf_{scale_factor}"
         )
         db_path = db_folder / db_name
 
         if not os.path.exists(db_path):
             # Step 1: Read CSVs
-            movies_df = pd.read_csv(f"{db_folder}/Movies_2000.csv")
-            reviews_df = pd.read_csv(f"{db_folder}/Reviews_2000.csv")
+            movies_df = pd.read_csv(f"{db_folder}/Movies.csv")
+            reviews_df = pd.read_csv(f"{db_folder}/Reviews.csv")
 
             # Step 2: Connect to a persistent DuckDB file
             conn = duckdb.connect(

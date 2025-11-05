@@ -55,7 +55,7 @@ class PalimpzestRunner(GenericPalimpzestRunner):
 
         # dev branch
         reviews = pz.MemoryDataset(
-            id="reviews", vals=self.load_data("Reviews_2000.csv")
+            id="reviews", vals=self.load_data("Reviews.csv")
         )
         reviews = reviews.sem_filter(
             "Determine if the following movie review is clearly positive.",
@@ -78,7 +78,7 @@ class PalimpzestRunner(GenericPalimpzestRunner):
         # dev branch
         reviews = pz.MemoryDataset(
             id="reviews",
-            vals=self.load_data("Reviews_2000.csv").rename(
+            vals=self.load_data("Reviews.csv").rename(
                 columns={"id": "movieId"}
             ),
         )
@@ -104,7 +104,7 @@ class PalimpzestRunner(GenericPalimpzestRunner):
         # dev branch
         reviews = pz.MemoryDataset(
             id="reviews",
-            vals=self.load_data("Reviews_2000.csv").rename(
+            vals=self.load_data("Reviews.csv").rename(
                 columns={"id": "movieId"}
             ),
         )
@@ -129,7 +129,7 @@ class PalimpzestRunner(GenericPalimpzestRunner):
         # dev branch
         reviews = pz.MemoryDataset(
             id="reviews",
-            vals=self.load_data("Reviews_2000.csv").rename(
+            vals=self.load_data("Reviews.csv").rename(
                 columns={"id": "movieId"}
             ),
         )
@@ -158,7 +158,7 @@ class PalimpzestRunner(GenericPalimpzestRunner):
         Returns:
             DataFrame with columns: id, reviewId_left, reviewId_right
         """
-        reviews_df = self.load_data("Reviews_2000.csv").rename(
+        reviews_df = self.load_data("Reviews.csv").rename(
             columns={"id": "movieId"}
         )
 
@@ -195,7 +195,7 @@ class PalimpzestRunner(GenericPalimpzestRunner):
             DataFrame with columns: id, reviewId_left, reviewId_right
         """
 
-        reviews_df = self.load_data("Reviews_2000.csv").rename(
+        reviews_df = self.load_data("Reviews.csv").rename(
             columns={"id": "movieId"}
         )
 
@@ -232,7 +232,7 @@ class PalimpzestRunner(GenericPalimpzestRunner):
             DataFrame with columns: movieId, reviewId_left, reviewId_right
         """
 
-        reviews_df = self.load_data("Reviews_2000.csv").rename(
+        reviews_df = self.load_data("Reviews.csv").rename(
             columns={"id": "movieId"}
         )
 
@@ -269,7 +269,7 @@ class PalimpzestRunner(GenericPalimpzestRunner):
         """
         reviews = pz.MemoryDataset(
             id="reviews",
-            vals=self.load_data("Reviews_2000.csv").rename(
+            vals=self.load_data("Reviews.csv").rename(
                 columns={"id": "movieId"}
             ),
         )
@@ -303,7 +303,7 @@ class PalimpzestRunner(GenericPalimpzestRunner):
             DataFrame with columns: reviewId, reviewScore
         """
         # Load and filter reviews data for specific movie
-        reviews_df = self.load_data("Reviews_2000.csv").rename(
+        reviews_df = self.load_data("Reviews.csv").rename(
             columns={"id": "movieId"}
         )
         filtered_reviews = reviews_df[
@@ -350,7 +350,7 @@ Only provide the score number (1-5) with no other comments.""",
             DataFrame with columns: movieId, movieScore
         """
         # Load all reviews data
-        reviews_df = self.load_data("Reviews_2000.csv").rename(
+        reviews_df = self.load_data("Reviews.csv").rename(
             columns={"id": "movieId"}
         )
 

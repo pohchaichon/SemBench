@@ -40,10 +40,17 @@ SemBenchKey.pem
 *.duckdb
 files/mmqa/_data
 files/mmqa/data
+
 files/mmqa/source_data/*
+files/movie/source_data/*
+files/animals/source_data/*
+files/ecomm/source_data/*
+files/medical/source_data/*
 
 run_ec2.sh
 logs
 run_all.sh
 
 files/mmqa/data/images/*
+files/mmqa/data_sf=200/*
+files/mmqa/data/sf_200/*

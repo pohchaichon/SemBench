@@ -76,7 +76,7 @@ class LotusRunner(GenericLotusRunner):
             DataFrame with columns: reviewId
         """
         # Load reviews data
-        reviews = self.load_data("Reviews_2000.csv")
+        reviews = self.load_data("Reviews.csv")
 
         # Semantic filter for clearly positive reviews
         filtered_reviews = reviews.sem_filter(
@@ -112,7 +112,7 @@ class LotusRunner(GenericLotusRunner):
             DataFrame with columns: reviewId
         """
         # Load reviews data
-        reviews = self.load_data("Reviews_2000.csv")
+        reviews = self.load_data("Reviews.csv")
         reviews = reviews[reviews["id"] == "taken_3"]
 
         # Semantic filter for clearly positive reviews
@@ -149,7 +149,7 @@ class LotusRunner(GenericLotusRunner):
             DataFrame with columns: positive_review_cnt
         """
         # Load reviews data
-        reviews = self.load_data("Reviews_2000.csv")
+        reviews = self.load_data("Reviews.csv")
 
         # Filter for taken_3 movie
         filtered_reviews = reviews[reviews["id"] == "taken_3"]
@@ -175,7 +175,7 @@ class LotusRunner(GenericLotusRunner):
             DataFrame with columns: positivity_ratio
         """
         # Load reviews data
-        reviews = self.load_data("Reviews_2000.csv")
+        reviews = self.load_data("Reviews.csv")
 
         # Filter for taken_3 movie
         taken_reviews = reviews[reviews["id"] == "taken_3"]
@@ -205,7 +205,7 @@ class LotusRunner(GenericLotusRunner):
         self._configure_lotus_for_join_type("text")
 
         # Load reviews data and filter for specific movie
-        reviews = self.load_data("Reviews_2000.csv")
+        reviews = self.load_data("Reviews.csv")
         reviews = reviews[reviews["id"] == "ant_man_and_the_wasp_quantumania"]
 
         # Reset index for approximate policy
@@ -269,7 +269,7 @@ class LotusRunner(GenericLotusRunner):
         self._configure_lotus_for_join_type("text")
 
         # Load reviews data and filter for specific movie
-        reviews = self.load_data("Reviews_2000.csv")
+        reviews = self.load_data("Reviews.csv")
         reviews = reviews[reviews["id"] == "ant_man_and_the_wasp_quantumania"]
 
         # Reset index for approximate policy
@@ -335,7 +335,7 @@ class LotusRunner(GenericLotusRunner):
         self._configure_lotus_for_join_type("text")
 
         # Load reviews data and filter for specific movie
-        reviews = self.load_data("Reviews_2000.csv")
+        reviews = self.load_data("Reviews.csv")
         reviews = reviews[reviews["id"] == "ant_man_and_the_wasp_quantumania"]
 
         # Reset index for approximate policy
@@ -395,7 +395,7 @@ class LotusRunner(GenericLotusRunner):
             DataFrame with columns: scoreSentiment, count
         """
         # Load reviews data
-        reviews = self.load_data("Reviews_2000.csv")
+        reviews = self.load_data("Reviews.csv")
 
         # Filter for taken_3 movie
         filtered_reviews = reviews[reviews["id"] == "taken_3"]
@@ -439,7 +439,7 @@ class LotusRunner(GenericLotusRunner):
             DataFrame with columns: reviewId, reviewScore
         """
         # Load reviews data
-        reviews = self.load_data("Reviews_2000.csv")
+        reviews = self.load_data("Reviews.csv")
 
         # Filter for ant_man_and_the_wasp_quantumania movie
         filtered_reviews = reviews[
@@ -544,7 +544,7 @@ Only provide the score number (1-5) with no other comments."""
             DataFrame with columns: movieId, movieScore
         """
         # Load reviews data
-        reviews = self.load_data("Reviews_2000.csv")
+        reviews = self.load_data("Reviews.csv")
 
         if len(reviews) == 0:
             print("  Warning: No reviews found")

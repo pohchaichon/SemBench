@@ -38,7 +38,7 @@ class MMQADataGenerator:
             self.working_dir, "files/mmqa/source_data"
         )
         self.output_data_dir = os.path.join(
-            self.working_dir, f"files/mmqa/data_sf={self.scale_factor}"
+            self.working_dir, "files/mmqa/data", f"sf_{self.scale_factor}"
         )
 
         if skip_download:
@@ -52,20 +52,38 @@ class MMQADataGenerator:
         os.makedirs(self.output_data_dir, exist_ok=True)
 
     def _download_source_data(self):
-        print(f"Downloading source data to {self.source_data_dir}...")
+        # Check if data is already extracted
+        # MMQA source data should have these fixed files
+        required_files = [
+            os.path.join(self.source_data_dir, BASE_BEN_PIAZZA_TEXT_DATA_FILENAME),
+            os.path.join(self.source_data_dir, ADDITIONAL_MOVIES_FILENAME),
+        ]
+
+        if all(os.path.exists(f) for f in required_files):
+            print(f"Source data already available at: {self.source_data_dir}")
+            print("Skipping download and extraction.")
+            return
+
+        zip_file = os.path.join(self.source_data_dir, "mmqa_source_data.zip")
+
+        if not os.path.exists(zip_file):
+            print(f"Downloading source data to {self.source_data_dir}...")
+            os.system(
+                f"gdown 1oHXq5oxIfsyoNy9aCQ0V9G3W4puqHC6i -O {zip_file}"  # noqa: E501
+            )
+        else:
+            print(f"Archive file already exists at: {zip_file}")
+            print("Skipping download.")
 
         os.system(
-            f"gdown 1tfIPbuCVtOfL563glCBSf_KArJEz6CUi -O {self.source_data_dir}/mmqa_source_data.zip"  # noqa: E501
+            f"unzip {zip_file} -d {self.source_data_dir}"  # noqa: E501
         )
+        os.system(f"rm {zip_file}")
+        os.system(f"rm -r {self.source_data_dir}/__MACOSX 2>/dev/null || true")
         os.system(
-            f"unzip {self.source_data_dir}/mmqa_source_data.zip -d {self.source_data_dir}"  # noqa: E501
+            f"mv {self.source_data_dir}/mmqa_data/* {self.source_data_dir}/ 2>/dev/null || true"
         )
-        os.system(f"rm {self.source_data_dir}/mmqa_source_data.zip")
-        os.system(f"rm -r {self.source_data_dir}/__MACOSX")
-        os.system(
-            f"mv {self.source_data_dir}/mmqa_data/* {self.source_data_dir}/"
-        )
-        os.system(f"rm -r {self.source_data_dir}/mmqa_data")
+        os.system(f"rm -r {self.source_data_dir}/mmqa_data 2>/dev/null || true")
 
         print("Download completed.")
 

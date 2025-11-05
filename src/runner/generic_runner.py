@@ -67,7 +67,7 @@ class GenericRunner(ABC):
         # Set up paths
         self.base_path = Path(__file__).resolve().parents[2]
         self.files_path = self.base_path / "files" / use_case
-        self.data_path = self.files_path / "data"
+        self.data_path = self.files_path / "data" / f"sf_{scale_factor}"
         self.query_path = self.files_path / "query"
         self.results_path = self.files_path / "raw_results" / self.system_name
         self.metrics_path = self.files_path / "metrics"
@@ -320,9 +320,19 @@ class GenericRunner(ABC):
             from scenario.medical.medical_scenario import MedicalScenario
 
             return MedicalScenario(scale_factor=scale_factor)
-        elif use_case in ["movie", "detective", "animals"]:
-            return None  # Scenario does not have a specific handler
+        elif use_case == "animals":
+            from scenario.animals.animals_scenario import AnimalsScenario
+
+            return AnimalsScenario(scale_factor=scale_factor)
         elif use_case == "mmqa":
+            from scenario.mmqa.mmqa_scenario import MMQAScenario
+
+            return MMQAScenario(scale_factor=scale_factor)
+        elif use_case == "movie":
+            from scenario.movie.movie_scenario import MovieScenario
+
+            return MovieScenario(scale_factor=scale_factor)
+        elif use_case == "detective":
             return None  # Scenario does not have a specific handler
         else:
             raise ValueError(f"Unknown use case: {use_case}.")
