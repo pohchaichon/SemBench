@@ -23,7 +23,7 @@ let scenarioData = {
         'modelNames': {
             '2.0flash': 'Gemini 2.0 Flash',
             '2.5flash': 'Gemini 2.5 Flash',
-            '5mini': 'GPT-4o Mini (5mini)'
+            '5mini': 'GPT-5 Mini'
         },
         'pathPrefix': 'across_system_' // animals uses across_system_ without 's'
     },
@@ -33,7 +33,7 @@ let scenarioData = {
             '2.0flash': 'Gemini 2.0 Flash',
             '2.5flash': 'Gemini 2.5 Flash',
             '4omini': 'GPT-4o Mini',
-            '5mini': 'GPT-4o Mini (5mini)'
+            '5mini': 'GPT-5 Mini'
         },
         'pathPrefix': 'across_system_' // movie uses across_system_ without 's'
     },
@@ -829,8 +829,10 @@ function calculateSystemSummary(systemData, summaryType) {
                 costs.push(queryData.money_cost);
             }
 
-            if ('accuracy' in queryData && queryData.accuracy !== null) {
-                qualities.push(queryData.accuracy);
+            // Use getQualityMetric to extract quality from various field names
+            const qualityMetric = getQualityMetric(queryData);
+            if (qualityMetric !== null) {
+                qualities.push(qualityMetric);
             }
 
             if ('execution_time' in queryData && queryData.execution_time !== null) {
@@ -1156,12 +1158,42 @@ function createSystemsSummary(queryId) {
 
 // Old createQueryHeader and createCoverageIndicators functions removed
 
-function showPerformanceCharts() {
+async function showPerformanceCharts() {
     const pathPrefix = scenarioData[currentScenario].pathPrefix;
+    const basePath = `${getFiguresBasePath()}/${currentScenario}/${pathPrefix}${currentModel}`;
+
+    // Try to find the performance chart with error_bar first, then without
+    const performanceImageWithErrorBar = `${basePath}/${currentScenario}_${currentModel}_performance_error_bar.png`;
+    const performanceImageWithoutErrorBar = `${basePath}/${currentScenario}_${currentModel}_performance.png`;
+
+    let performanceImageSrc = null;
+
+    // Check if error_bar version exists
+    try {
+        const response = await fetch(performanceImageWithErrorBar, { method: 'HEAD' });
+        if (response.ok) {
+            performanceImageSrc = performanceImageWithErrorBar;
+        }
+    } catch (error) {
+        // Error bar version doesn't exist, continue to check non-error_bar version
+    }
+
+    // If error_bar version doesn't exist, check non-error_bar version
+    if (!performanceImageSrc) {
+        try {
+            const response = await fetch(performanceImageWithoutErrorBar, { method: 'HEAD' });
+            if (response.ok) {
+                performanceImageSrc = performanceImageWithoutErrorBar;
+            }
+        } catch (error) {
+            // Neither version exists
+        }
+    }
+
     const content = `
         <div class="performance-chart">
             <h4>Pareto Frontier - Cost vs Quality</h4>
-            <img src="${getFiguresBasePath()}/${currentScenario}/${pathPrefix}${currentModel}/${currentScenario}_${currentModel}_pareto.png"
+            <img src="${basePath}/${currentScenario}_${currentModel}_pareto.png"
                  alt="Pareto Chart"
                  style="max-width: 100%; height: auto;"
                  onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
@@ -1170,11 +1202,13 @@ function showPerformanceCharts() {
 
         <div class="performance-chart">
             <h4>Performance Metrics Overview</h4>
-            <img src="${getFiguresBasePath()}/${currentScenario}/${pathPrefix}${currentModel}/${currentScenario}_${currentModel}_performance_error_bar.png"
-                 alt="Performance Chart"
-                 style="max-width: 100%; height: auto;"
-                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-            <p style="display: none; color: #666; font-style: italic;">Performance chart not available</p>
+            ${performanceImageSrc ?
+                `<img src="${performanceImageSrc}"
+                     alt="Performance Chart"
+                     style="max-width: 100%; height: auto;"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">` :
+                ''}
+            <p style="${performanceImageSrc ? 'display: none;' : ''} color: #666; font-style: italic;">Performance chart not available</p>
         </div>
     `;
 
