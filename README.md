@@ -13,6 +13,12 @@ Currently SemBench is evalulated on **three academic systems (LOTUS, Palimpzest,
 
 We understand that every system is under rapid development, which is why we maintain an [online leaderboard](https://sembench.ngrok.io/). We encourage you to submit your system's results and participate in the benchmark. Please reach out to discuss how to contribute your results to the leaderboard.
 
+## To Users: SemBench — A Simple, Ready-to-Use Benchmark
+
+We understand that downloading datasets, generating databases, and setting up environments can be tedious—especially in the systems area, where each system often requires a unique setup. SemBench automates all of these steps for you! It automatically downloads datasets and generates multi-modal databases. Setting up environments for SemBench and four supported systems (LOTUS, Palimpzest, ThalamusDB, and BigQuery) takes just one script.
+
+So, enjoy using SemBench! We believe a good benchmark should minimize user effort—and SemBench is designed exactly for that.
+
 ## Materials
 - [Online Leaderboard](https://sembench.ngrok.io/)
 - [Multi-Modal Datasets](https://drive.google.com/drive/folders/1pqf8DKFai16MR80Z7pcls5FgBbom-IJt?usp=sharing)
@@ -114,21 +120,12 @@ Each system implements a standardized runner interface enabling fair comparison 
 
 ## ⚡ Quick Start
 
-### Prerequisites
+### Automatic Environment Setup
 ```bash
-# Recommand using Miniconda to manage the Python environment
-conda create -n sembench python=3.10
-conda activate sembench
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Use SemBench as an editable package
-conda install conda-build
-conda develop <path to the SemBench directory, e.g., ~/Desktop/MMBench-System>
+bash scripts/setup_environment.sh
 ```
 
-### Dataset Download and Database Generation
+### Automatic Dataset Download and Database Generation
 Note
 
 - SemBench automatically downloads the required datasets from Google Drive and constructs multi-modal databases according to the specified scale factor.
