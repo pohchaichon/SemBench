@@ -90,9 +90,13 @@ class MovieScenario:
         for system in systems:
             if system == "bigquery":
                 from scenario.movie.setup.bigquery import BigQueryMovieSetup
+                from pathlib import Path
 
                 setup = BigQueryMovieSetup()
-                setup.setup_data()
+                setup.setup_data(
+                    scale_factor=self.scale_factor,
+                    data_dir=Path(MOVIE_FILES_DIR) / "data"
+                )
             elif system == "flockmtl":
                 from scenario.movie.setup.flockmtl import FlockMTLMovieSetup
 

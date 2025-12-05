@@ -41,16 +41,5 @@ class BigQueryRunner(GenericBigQueryRunner):
             concurrent_llm_worker,
             skip_setup,
         )
-
-        if not skip_setup:
-            self._bigquery_setup()
-
-    def _bigquery_setup(self):
-        setup = BigQueryAnimalsSetup()
-        setup.setup_data(
-            scale_factor=self.scale_factor,
-            data_dir=Path(__file__).resolve().parents[5]
-            / "files"
-            / "animals"
-            / "data"
-        )
+        # Note: BigQuery setup is handled by scenario_handler.setup_scenario()
+        # in GenericRunner.__init__() when skip_setup=False

@@ -81,9 +81,13 @@ class AnimalsScenario:
         for system in systems:
             if system == "bigquery":
                 from scenario.animals.setup.bigquery import BigQueryAnimalsSetup
+                from pathlib import Path
 
                 setup = BigQueryAnimalsSetup()
-                setup.setup_data(self.data_dir)
+                setup.setup_data(
+                    scale_factor=self.scale_factor,
+                    data_dir=Path(ANIMALS_FILES_DIR) / "data"
+                )
             elif system == "lotus":
                 pass  # Nothing to do. LOTUS works on raw files.
             elif system == "palimpzest":
