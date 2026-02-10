@@ -1,0 +1,8 @@
+{
+  "proxy_model": "gpt-4o-mini",
+  "oracle_model": "gpt-4o",
+  "accuracy_target": 0.8,
+  "delta": 0.1,
+  "is_binary": false,
+  "description": "Configuration for BARGAIN with local/test models. Note: For true local models, custom Proxy/Oracle implementations are needed."
+}

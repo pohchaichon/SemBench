@@ -30,6 +30,7 @@ def get_runner_class(system: str, use_case: str):
         "thalamusdb": "ThalamusDBRunner",
         "flockmtl": "FlockMTLRunner",
         "caesura": "CaesuraRunner",
+        "bargain": "BargainRunner",
     }
 
     if system not in runner_classes:
