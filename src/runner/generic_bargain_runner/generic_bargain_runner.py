@@ -21,7 +21,7 @@ import os
 import pandas as pd
 
 # BARGAIN is already installed in the environment
-from BARGAIN import BARGAIN_A, OpenAIProxy, OpenAIOracle, Oracle, Proxy
+from BARGAIN import BARGAIN_A, VLLMProxy, VLLMOracle
 
 from runner.generic_runner import GenericRunner, GenericQueryMetric
 
@@ -121,24 +121,38 @@ class GenericBargainRunner(GenericRunner):
         """
         # Use configuration if available, otherwise use defaults
         if self.config_data:
-            proxy_model_name = self.config_data.get("proxy_model", self.model_name)
-            oracle_model_name = self.config_data.get("oracle_model", "gpt-4o")
+            proxy_model_name = self.config_data.get("proxy_model", "google/gemma-3-4b-it")
+            oracle_model_name = self.config_data.get("oracle_model", "google/gemma-3-27b-it")
             is_binary = self.config_data.get("is_binary", is_binary)
         else:
-            # Default configuration: use specified model as proxy, gpt-4o as oracle
-            proxy_model_name = self.model_name
-            oracle_model_name = "gpt-4o"
+            # Default configuration: use Gemma models
+            proxy_model_name = "google/gemma-3-4b-it"
+            oracle_model_name = "google/gemma-3-27b-it"
         
-        # Initialize OpenAI-based proxy and oracle
-        # Note: For local models, we would need custom Proxy/Oracle implementations
-        self.proxy_model = OpenAIProxy(task_template, model=proxy_model_name, is_binary=is_binary)
-        self.oracle_model = OpenAIOracle(task_template, model=oracle_model_name, is_binary=is_binary)
+        # Initialize VLLM-based proxy and oracle
+        # Use VLLMProxy on port 8001 and VLLMOracle on port 8000
+        self.proxy_model = VLLMProxy(
+            task_template,
+            model=proxy_model_name,
+            is_binary=is_binary,
+            base_url="http://localhost:8001/v1",
+            api_key=None,
+            verbose=True
+        )
+        self.oracle_model = VLLMOracle(
+            task_template,
+            model=oracle_model_name,
+            is_binary=is_binary,
+            base_url="http://localhost:8000/v1",
+            api_key=None,
+            verbose=True
+        )
         
         # Create BARGAIN instance
         self.bargain_instance = BARGAIN_A(
-            self.proxy_model, 
-            self.oracle_model, 
-            target=self.accuracy_target, 
+            self.proxy_model,
+            self.oracle_model,
+            target=self.accuracy_target,
             delta=self.delta,
             seed=42  # Fixed seed for reproducibility
         )

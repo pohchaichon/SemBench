@@ -1,16 +1,11 @@
-"""
-BARGAIN system runner implementation for MMQA scenario.
-Only implements Q1, Q4, and Q5 as requested.
-"""
-
-import os
-import sys
 import pandas as pd
 from typing import List
 
 # Add parent directory to path for imports
-sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__)))))
-from src.runner.generic_bargain_runner.generic_bargain_runner import GenericBargainRunner
+# sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__)))))
+# from src.runner.generic_bargain_runner.generic_bargain_runner import GenericBargainRunner
+
+from runner.generic_bargain_runner.generic_bargain_runner import GenericBargainRunner
 
 
 class BargainRunner(GenericBargainRunner):

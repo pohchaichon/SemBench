@@ -63,6 +63,8 @@ class MMQAScenario:
                 pass  # Nothing to do. Palimpzest works on raw files.
             elif system == "thalamusdb":
                 pass  # Nothing to do. ThalamusDB works on raw files.
+            elif system == "bargain":
+                pass  # Nothing to do. BARGAIN works on raw files.
             else:
                 raise ValueError(f"Unsupported system: {system}")
 
